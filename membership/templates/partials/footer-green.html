@@ -1,0 +1,28 @@
+<!--
+    templateType: global_partial
+    isAvailableForNewContent: false
+    label: Membership portal footer green
+-->
+<!-- Begin partial -->
+<footer class="footer footer-green bg-cover bg-no-repeat bg-top" style="background-image: url('{{ get_asset_url('../../images/footer-bg-green.svg') }}');">
+    <div class="padding-content">   
+      <div class="content-wrapper">
+          <div class="quick-contact text-center">
+              {% module "footer_green_info"
+                 path="@hubspot/rich_text",
+                  html="<h3 style='font-weight: bold; color: #666E5A;'>Still have a Question?</h3><a href='tel:1800546344' rel='noopener'>1800 546 344</a>"
+              %}
+          
+            
+            {#<div class="button-wrap">
+                  <a href="" class="hs-button white-btn-primary border-rad-32">Send us a message</a>
+                 <a href="" class="hs-button white-btn-primary border-rad-32">Book a meeting</a>
+             </div> #}
+          </div>
+          {% module "footer_buttons" path="../../modules/multi-buttons" label="Footer buttons" %} 
+          
+      </div>
+    </div>
+   {% module "member_footer" path="../../modules/global/footer-member-loggedin" %}
+</footer>
+<!-- End partial -->

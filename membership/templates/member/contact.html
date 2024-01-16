@@ -1,0 +1,46 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: Contact
+   screenshotPath: ../images/template-previews/contact.png
+-->
+{% extends '../layouts/base-member.html' %}
+
+{% block body %}
+
+{% if request_contact.is_logged_in %}
+  {% set membership_contact = crm_object(	'contact', request.contact.contact_vid,
+    'firstname,
+    lastname,
+    hcp_type
+  ') %}
+  {% endif %}
+
+<div class="main-container contact-us" >
+  
+  <div class="book-a-consultation">
+    
+    
+  </div>
+  <div class="get-in-touch">
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          css: "",
+          region: "na1",
+          portalId: "2660972",
+          formId: "71cff79a-a85c-4dce-8262-ecf4fe313101"
+        });
+      </script>
+   </div>
+</div>
+
+{#
+<div class="modal open" id="book-now-modal">
+  <div class="modal-content large">
+    when click book now open meeting link in iframe
+  </div>
+</div>
+#}
+
+{% endblock body %}

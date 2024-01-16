@@ -1,0 +1,164 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: false
+    label: Admin check pending member account details 
+   screenshotPath: ../images/template-previews/admin-pending-mem-account-details.png
+-->
+{% extends '../layouts/base-admin.html' %}
+
+{% block body %}
+<div class="padding-content">
+  <div class="admin-container inactive-account-details-container">
+    <div class="body-content">
+      <div class="review-registration">
+        <a href="/manual-registrations" class="text-blue-dark font-bold no-underline back-link pos-relative">Review registrations </a>
+      </div>
+      <div class="inactive-mem-info mem-content-wrap">
+          <div class="full-name">
+            <h3 class="text-blue-dark text-center">
+              Lisa Jones
+            </h3>
+          </div>
+        <form method="" id="inactive_account-details-form" class="form-transparent " novalidate="novalidate">
+          <div class="section form-section light-secondary-label">
+            <div class="form-two-column-group">
+              <div class="form-group">
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" id="firstname" value="">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last name</label>
+                <input type="text" name="lastname" id="lastname" value="">
+              </div>
+            </div>
+            <div class="form-group custom-select md">
+              <label for="hcp-type">HCP Type</label>
+              <select name="hcp_type" id="hcp-type">
+                <option value="">Please Select</option>
+                <option value="general_practitioner" selected="">General Practitioner</option>
+                <option value="medical_specialist">Medical Specialist</option>
+                <option value="nurse_or_practitioner">Nurse or Practitioner</option>
+                <option value="allied_health_profesional">Allied Health Profesional</option>
+                <option value="pharmacist">Pharmacist</option>
+                <option value="pharmacist_technician">Pharmacist Technician</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ahpra_number">AHPRA Number</label>
+              <input type="text" name="ahpra_number" id="ahpra-number" value="">
+            </div>
+            <div class="form-group">
+              <label for="practice-name">Practice Name</label>
+              <input type="text" name="practice_name" id="practice-name" value="">
+            </div>
+            <div class="form-group">
+              <label for="practice-address">Practice Address</label>
+              <input type="text" name="practice_address" id="practice-address" value="">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" name="phone" id="phone" value="">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" value="">
+            </div>
+            <div class="form-group custom-select md black">
+              <label for="what_is_your_level_of_medicinal_cannabis_education">What is your level of medicinal cannabis education?</label>
+               <select name="what_is_your_level_of_medicinal_cannabis_education" id="level-of-medicinal-cannabis">
+                <option value="">Please Select</option>
+                <option value="beginner" selected="">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+             <div class="form-group custom-select md black">
+              <label for="how_many_medicinal_cannabis_scripts_do_you_write_or_dispense_on_average_each_month">How many medicinal cannabis scripts do you write or dispense on average each month?</label>
+               <select name="how_many_medicinal_cannabis_scripts_do_you_write_or_dispense_on_average_each_month" id="medicinal-cannbis-scripts">
+                <option value="">Please Select</option>
+                <option value="0-20" selected="">0-20</option>
+                <option value="21-100">21-100</option>
+                <option value="More than 100">More than 100</option>
+              </select>
+            </div>
+            <div class="form-group clearfix multi-input">
+              <label for="what_information_do_you_want_from_the_portal" class="title">What information do you want from the portal?</label>
+                <ul class="checkbox-lists">
+                  <li>
+                    <label class="checkbox-label">General education about medicinal cannabis
+                      <input type="checkbox" name="what_information_do_you_want_from_the_portal">
+                      <span class="checkbox"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-label">Information about Kind products
+                      <input type="checkbox" name="what_information_do_you_want_from_the_portal">
+                      <span class="checkbox"></span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="checkbox-label">Patient support tools
+                      <input type="checkbox" name="what_information_do_you_want_from_the_portal">
+                      <span class="checkbox"></span>
+                    </label>
+                  </li> 
+                </ul>
+            </div>
+            
+             <div class="form-group">
+              <label for="what_information_do_you_want_from_the_portal_other">Other</label>
+              <input type="text" name="what_information_do_you_want_from_the_portal_other" value="">
+             </div>
+            
+            
+            <div class="form-group clearfix multi-input mb-0">
+              <label for="what_is_your_area_of_interest_relating_to_medical_cannabis" class="title">What is your area of interest relating to medicinal cannabis?</label>
+                <ul class="checkbox-lists">
+                  <li>
+                    <label class="checkbox-label">Mood Disorder
+                      <input type="checkbox" name="what_is_your_area_of_interest_relating_to_medical_cannabis">
+                      <span class="checkbox"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-label">Sleep
+                      <input type="checkbox" name="what_is_your_area_of_interest_relating_to_medical_cannabis">
+                      <span class="checkbox"></span>
+                    </label>
+                  </li>
+
+                  <li>
+                    <label class="checkbox-label">Pain
+                      <input type="checkbox" name="what_is_your_area_of_interest_relating_to_medical_cannabis">
+                      <span class="checkbox"></span>
+                    </label>
+                  </li> 
+                </ul>
+            </div>
+            
+             <div class="form-group">
+              <label for="what_is_your_area_of_interest_relating_to_medical_cannabis_other">Other</label>
+              <input type="text" name="what_is_your_area_of_interest_relating_to_medical_cannabis_other" value="">
+              </div>
+          </div>
+
+          <div class="section">
+            <div class="button-wrap flex justify-between">
+               <button class="submit-btn reject-member hs-button black-btn-secondary">
+                  Reject
+                 <img class="submit-spin" width="18" src="{{ get_asset_url('../../../membership/images/loading.gif') }}">
+                </button>
+                <button class="submit-btn accept-member hs-button black-btn-primary">
+                  Accept
+                  <img class="submit-spin" width="18" src="{{ get_asset_url('../../../membership/images/loading.gif') }}">
+                </button>
+             </div>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+</div>
+</div>
+{% endblock body %}

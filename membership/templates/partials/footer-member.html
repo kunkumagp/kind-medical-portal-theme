@@ -1,0 +1,39 @@
+<!--
+    templateType: global_partial
+    isAvailableForNewContent: false
+    label: Membership portal footer
+-->
+<!-- Begin partial -->
+<footer class="footer">
+  
+   {% module "member_footer" path="../../modules/global/footer-member-loggedin" %}
+{#   <div class="padding-content">
+    <div class="content-wrapper">
+      <div class="footer-links">
+        <div class="inner flex justify-between">
+          <div class="copy-right">
+            {% module_block module 'footer_link'
+                    label='Footer link',
+                    path='@hubspot/rich_text'
+                  %}
+            {% module_attribute 'html' %}
+            <p>&copy; {{year}} Kind Medical</p>
+            {% end_module_attribute %}
+            {% end_module_block %}
+         </div>
+          <div class="links">
+           {% module_block module 'footer_link'
+                    label='Footer link',
+                    path='@hubspot/rich_text'
+                  %}
+            {% module_attribute 'html' %}
+            <p><a href="/terms-and-conditions" target="_blank">Privacy Policy</a></p>
+            {% end_module_attribute %}
+            {% end_module_block %}
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> #}
+</footer>
+<!-- End partial -->

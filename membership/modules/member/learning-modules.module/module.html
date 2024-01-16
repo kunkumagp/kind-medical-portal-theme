@@ -1,0 +1,47 @@
+<div class="learning-modules">
+  <div class="bg-learning-modules bg-cover bg-no-repeat w-full bg-position-center" style="background-image:url('{{ get_asset_url('../../../images/bg-learning-modules.svg') }}');">
+    <div class="padding-content">
+      <div class="content-wrapper">
+        <div class="heading text-center">
+         {{ module.heading }}
+        </div>
+        <div class="search-learning-products mt-30">
+            <i class="icon-search"></i>
+            <input type="search" name="search_learning_modules" class="learning-modules" placeholder="Search learning modules">
+         </div>
+        <div class="learning-module-lists">
+          {% for item in module.content_group %}
+            <div class="single-module flex">
+              <div class="left">
+                 {% if item.image.src %}
+                    {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+                    {% if item.image.size_type == 'auto' %}
+                      {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
+                    {% elif item.image.size_type == 'auto_custom_max' %}
+                      {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                     {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
+                    <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+              </div>
+              <div class="right">
+                  {{ item.content }}
+                 <div class="inner-info flex">
+                   <div class="content-info">
+                     {{ item.content_info }}
+                   </div>
+                   <div class="time">
+                     {{ item.time }}
+                   </div> 
+                 </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h1>
+  Learning modules
+</h1>
