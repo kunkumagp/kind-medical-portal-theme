@@ -1,0 +1,42 @@
+.head-topic{
+  padding-bottom:15px;
+}
+.head-topic p{
+  color: #666E5A;
+  text-align: center;
+  font-family: FS Me;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  padding-top:10px;
+}
+.filter-box p{
+  font-size:12px;
+  color: #666E5A;
+  font-family: FS Me;
+  margin-bottom:12px !important;
+}
+.filter-block span{
+  color: #666E5A;
+  font-family: FS Me;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.filter-block{
+  padding:14px 5px;
+  text-align:center;
+  width:195px;
+  border-radius:16px;
+  background-color:#EBEFE7;
+  border: 1.5px solid #DBE0D3;
+}
+.filter-box-container{
+  gap:16px;
+}
+.drop-checkbox-container{
+  border-radius: 16px;
+  background: var(--Grey-5, #E0E0E1);
+  box-shadow: 0px 4px 38px 0px rgba(102, 110, 90, 0.17);
+  padding: 30px;
+}

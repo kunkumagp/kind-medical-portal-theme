@@ -1,0 +1,45 @@
+<div class="">
+  <div class="{{name}}-card flex justify-between grid-container">
+
+    {% for item in module.book_a_consultation_group %}
+
+    <div class="book-a-consultation-card">
+
+      <div class="profile-image">
+        {% if item.profile_image.src %}
+        {% set sizeAttrs = 'width="{{ item.profile_image.width }}" height="{{ item.profile_image.height }}"' %}
+        {% if item.profile_image.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.profile_image.width }}" height="{{ item.profile_image.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif item.profile_image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.profile_image.max_width }}" height="{{ item.profile_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.profile_image.loading != 'disabled' ? 'loading="{{ item.profile_image.loading }}"' : '' %}
+        <img src="{{ item.profile_image.src }}" alt="{{ item.profile_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+      </div>
+
+      <div class="title">{{ item.title }}</div>
+
+      <div class="designation">{{ item.designation}}</div>
+
+      <div class="description">{{ item.description}}</div>
+
+      <div class="button_group hs-button simple">
+{#         <div class="button_text">{{ item.button_group.button_text }}</div>
+        <div class="button_icon">
+          {% icon
+            name="{{ item.button_group.button_icon.name }}"
+            style="{{ item.button_group.button_icon.type }}"
+            unicode="{{ item.button_group.button_icon.unicode }}"
+            icon_set="{{ item.button_group.button_icon.icon_set }}"
+          %}
+        </div> #}
+
+      </div>
+
+    </div>
+
+    {% endfor %}
+
+  </div>
+</div>
