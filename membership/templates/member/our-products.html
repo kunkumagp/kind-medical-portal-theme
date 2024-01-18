@@ -17,13 +17,13 @@
   {% endif %}
 
 <div class="main-container">
-    <div class="our-product-heading mt-50">
+    <div class="our-product-heading pt-50 pb-20">
       <div class="padding-content">
-        <div class="content-wrapper">
+        <div class="content-wrapper mb-25">
           <div class="inner text-center">
            {% module "our_products_heading"
                  path="@hubspot/rich_text",
-                  html="<h3 style='font-weight: bold; color: #63666A;'>Our products</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>"
+                  html="<h3 style='font-weight: bold; color: #63666A;'>Our products</h3><p style='color: #63666A;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>"
               %}
             
            </div>
@@ -32,11 +32,12 @@
             <input type="search" name="search_products" class="search-products" placeholder="Search Products">
           </div>
         </div>
-        
-      
       </div>
-     
      </div>
+     <div class="filtering-section content-wrapper">
+       {% module "module_17053897886843" path="/kind-medical-portal-theme/membership/modules/member/our-products-filtering-system", label="our-products-filtering-system" %}
+     </div>
+  
 </div>
 
 {% endblock body %}

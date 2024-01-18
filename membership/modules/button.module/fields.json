@@ -61,9 +61,9 @@
     "icon_set" : "fontawesome-5.0.10",
     "type" : "icon",
     "default" : {
-      "name" : "arrow-alt-circle-up",
-      "type" : "SOLID",
-      "unicode" : "f35b"
+      "name" : "angle-right",
+      "unicode" : "f105",
+      "type" : "SOLID"
     }
   }, {
     "id" : "icon.position",
@@ -82,7 +82,15 @@
   } ],
   "tab" : "CONTENT",
   "expanded" : true,
-  "type" : "group"
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "name" : "angle-right",
+      "unicode" : "f105",
+      "type" : "SOLID"
+    },
+    "position" : "left"
+  }
 }, {
   "id" : "styles",
   "name" : "styles",
@@ -106,7 +114,7 @@
       "required" : true,
       "locked" : false,
       "display" : "select",
-      "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "simple", "Simple" ] ],
+      "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "tertiary", "Tertiary" ], [ "simple", "Simple" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
@@ -129,7 +137,11 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "button_style" : "primary",
+      "button_size" : "regular"
+    }
   }, {
     "id" : "styles.text",
     "name" : "text",
@@ -165,7 +177,12 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "font" : {
+        "size_unit" : "px"
+      }
+    }
   }, {
     "id" : "styles.background",
     "name" : "background",
@@ -191,7 +208,16 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : null,
+        "opacity" : null,
+        "rgba" : null,
+        "rgb" : null,
+        "hex" : null
+      }
+    }
   }, {
     "id" : "styles.border",
     "name" : "border",
@@ -212,7 +238,10 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "border" : { }
+    }
   }, {
     "id" : "styles.corner",
     "name" : "corner",
@@ -235,7 +264,8 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : { }
   }, {
     "id" : "styles.spacing",
     "name" : "spacing",
@@ -255,7 +285,10 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "spacing" : { }
+    }
   }, {
     "id" : "styles.hover",
     "name" : "hover",
@@ -304,7 +337,20 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
-      "type" : "group"
+      "type" : "group",
+      "default" : {
+        "font" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      }
     }, {
       "id" : "styles.hover.background",
       "name" : "background",
@@ -330,7 +376,16 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
-      "type" : "group"
+      "type" : "group",
+      "default" : {
+        "color" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      }
     }, {
       "id" : "styles.hover.border",
       "name" : "border",
@@ -351,11 +406,41 @@
       } ],
       "tab" : "STYLE",
       "expanded" : false,
-      "type" : "group"
+      "type" : "group",
+      "default" : {
+        "border" : { }
+      }
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "text" : {
+        "font" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      },
+      "background" : {
+        "color" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      },
+      "border" : {
+        "border" : { }
+      }
+    }
   }, {
     "id" : "styles.alignment",
     "name" : "alignment",
@@ -376,9 +461,69 @@
     } ],
     "tab" : "STYLE",
     "expanded" : false,
-    "type" : "group"
+    "type" : "group",
+    "default" : {
+      "alignment" : { }
+    }
   } ],
   "tab" : "STYLE",
   "expanded" : false,
-  "type" : "group"
+  "type" : "group",
+  "default" : {
+    "presets" : {
+      "button_style" : "primary",
+      "button_size" : "regular"
+    },
+    "text" : {
+      "font" : {
+        "size_unit" : "px"
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : null,
+        "opacity" : null,
+        "rgba" : null,
+        "rgb" : null,
+        "hex" : null
+      }
+    },
+    "border" : {
+      "border" : { }
+    },
+    "corner" : { },
+    "spacing" : {
+      "spacing" : { }
+    },
+    "hover" : {
+      "text" : {
+        "font" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      },
+      "background" : {
+        "color" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      },
+      "border" : {
+        "border" : { }
+      }
+    },
+    "alignment" : {
+      "alignment" : { }
+    }
+  }
 } ]

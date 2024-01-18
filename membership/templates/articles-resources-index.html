@@ -1,20 +1,15 @@
 <!--
   templateType: blog
   isAvailableForNewContent: true
-  label: Articles and resources - blog listing
-  screenshotPath: ../images/template-previews/blog-index.png
+  label: Articles and resources - listing
+  screenshotPath: ../images/template-previews/articles-listing.png
 -->
 {% extends './layouts/base-member.html' %}
 
 {% block body %}
 {% set my_tags = blog_tags('default', 250) %}
 
-<!-- {% set urlParams = request.query %}
-
-{{urlParams|split("&")|split("=")}} -->
-
-{% set urlTags = [] %}
-
+{#{% set urlTags = [] %}
 {% set tagsWithParams = [] %}
 {% if request.query_dict.tag1 %}
   {% do urlTags.append(request.query_dict.tag1) %}
@@ -35,42 +30,35 @@
 {% if request.query_dict.tag5 %}
   {% do urlTags.append(request.query_dict.tag5) %}
   {% do tagsWithParams.append({'tag': 'tag5', 'tagname':request.query_dict.tag5}) %}
-{% endif %}
-
-{# in case client wants sixth tag for articles and resources #}
-{% if request.query_dict.tag6 %}
-  {% do urlTags.append(request.query_dict.tag6) %}
-  {% do tagsWithPrams.append({'tag': 'tag6', 'tagname':request.query_dict.tag6}) %}
-{% endif %}
-
-
-{% set seq_to_string = urlTags|join('|') %}
-
-{#{% if seq_to_string is string_containing 'Articles' %}
-  {{tag}}
 {% endif %} #}
 
-{% set filterTagLowercase = [] %}
+{# in case client wants sixth tag for articles and resources #}
+{#{% if request.query_dict.tag6 %}
+  {% do urlTags.append(request.query_dict.tag6) %}
+  {% do tagsWithPrams.append({'tag': 'tag6', 'tagname':request.query_dict.tag6}) %}
+{% endif %} #}
+
+
+{#{% set seq_to_string = urlTags|join('|') %} #}
+
 {# get urltags in lower case #}
+{# {% set filterTagLowercase = [] %}
 {% for urlTag in urlTags%}
    {% do filterTagLowercase.append(urlTag|lower|replace(" ", "-")) %}
-{% endfor %}
+{% endfor %} #}
 
-aaa: {{urlTags}}
-
-bbb: {{filterTagLowercase}}
 {#{% set tagged_posts = blog_recent_tag_posts('default', ["Tools", "Research"]) %}
 {% for tag_post in tag_posts %}
     <div class="post-title">{{ tag_post.name }}</div>
 {% endfor %} #}
-{% set tag_posts = blog_recent_tag_posts("default", filterTagLowercase, "OR") %}
+
+
+
+{#{% set tag_posts = blog_recent_tag_posts("default", filterTagLowercase, "OR") %}
 {% for tag_post in tag_posts %}
     <div class="post-title">{{ tag_post.name }}</div>
-{% endfor %}
+{% endfor %} #}
 
-<p>
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-</p>
 <style>
   .article-tags li{
     cursor: pointer;
@@ -82,18 +70,9 @@ bbb: {{filterTagLowercase}}
 </style>
 <main class="body-container-wrapper"> 
   <div class="content-wrapper">
-     <h1>Binod articles</h1>
-   {# <p>$$$$$
-    </p>
-    {% for tag in my_tags %}
-     <a class="blog-listing__post-tag" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %}<span>, </span>{% endif %}
-    {% endfor %}
+     <h1>Binod articles listing goes here</h1>
     
-     <p>
-      $$$$$
-    </p> #}
-    
-    {% set articlesTags = [] %}
+   {# {% set articlesTags = [] %}
    
       {% for tag in my_tags %}
               {% set order = "" %}
@@ -111,43 +90,35 @@ bbb: {{filterTagLowercase}}
             {% if order != "" %}
               {% do articlesTags.append({"tagname" : tag.name, "order": order }) %}
             {% endif %}
-       {# <a class="blog-listing__post-tag" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %}<span>, </span>{% endif %}#}
       {% endfor %}
-    
-    {#{{articlesTags}} #}
+ 
     {% set articlesTagsInOrder = articlesTags|sort(False, False, 'order') %} 
     
-     <p>
-      ***************************************
-    </p>
+    <p> ***************************************</p>
       <ul class="no-list no-padding flex article-tags">
          {% for item in articlesTagsInOrder %}
             <li style="margin-right: 15px;" class="{% if seq_to_string is string_containing item.tagname %}active{% endif %}">{{item.tagname}}</li>
         {% endfor %}
         <button type="button" class="apply-filter hs-button primary">Apply filter</button>
       </ul>
-    <p>
-      ***************************************
-    </p>
+    <p> ***************************************</p>
     
   
     <form action="https://demo.ec7.co/articles-and-resources" id="articles-resources-tag-form" method="GET" class="override-style-form">
-            <!--<button class="hs-button primary">Search articles</button> -->
       {% if  tagsWithParams|length > 0 %}
         {% for item in tagsWithParams %}
           <input type="hidden" name="{{item.tag}}" value="{{item.tagname}}" >
         {% endfor %}
       {% endif %}
-    </form>
+    </form> #}
     
  
     
     
     <div class="articles-resources-listing" style="margin-top: 30px;">
-    
       {% for content in contents %}
         <div>
-          {{ content.name }}
+         <a href="{{content.absolute_url}}"> {{ content.name }}</a>
           Tag name:
               {% if content.tag_list %}
                 {% for tag in content.tag_list %}
@@ -156,8 +127,7 @@ bbb: {{filterTagLowercase}}
             {% endif %} 
         </div>
      {% endfor %}
-    </div>
-      
+    </div> 
   </div>
  
 </main>

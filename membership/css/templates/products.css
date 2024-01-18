@@ -8,3 +8,8 @@
 /*****************************************/
 /* Start your style declarations here    */
 /*****************************************/
+
+.our-product-heading{
+  background-image:url({{ get_asset_url('/kind-medical-portal-theme/membership/images/our-product-header-background.png') }});
+  background-size:cover;
+}

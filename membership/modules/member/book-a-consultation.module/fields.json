@@ -1,1 +1,729 @@
-[ ]
+[ {
+  "id" : "f19fdbdf-2f25-8f13-408d-96bed8e751da",
+  "name" : "book_a_consultation_group",
+  "display_width" : null,
+  "label" : "Book a consultation group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "a53af237-1d74-3960-9c5d-11aecab72b11",
+    "name" : "profile_image",
+    "display_width" : null,
+    "label" : "Profile Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://2660972.fs1.hubspotusercontent-na1.net/hubfs/2660972/profile.png",
+      "alt" : "profile",
+      "loading" : "lazy",
+      "width" : 286,
+      "height" : 286,
+      "max_width" : 286,
+      "max_height" : 286
+    }
+  }, {
+    "id" : "4dd5dd3e-1d96-c5f6-86ae-04b614fbe09e",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Profile Title"
+  }, {
+    "id" : "a8287d23-3841-2cde-1c09-1a28facfe8bf",
+    "name" : "designation",
+    "display_width" : null,
+    "label" : "Designation",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Designation"
+  }, {
+    "id" : "46206377-d7b3-3d6c-1bc6-e328a4c93105",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }, {
+    "id" : "2c5c793e-e678-8616-02f8-1b9cdb9e38c3",
+    "name" : "button_group",
+    "display_width" : null,
+    "label" : "Button group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "button_text",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button text",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Book Now"
+    }, {
+      "id" : "button_link",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "href" : "",
+          "type" : "EXTERNAL"
+        }
+      }
+    }, {
+      "id" : "add_icon",
+      "name" : "add_icon",
+      "display_width" : null,
+      "label" : "Add icon",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "icon",
+      "name" : "icon",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "add_icon",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "icon.icon",
+        "name" : "icon",
+        "display_width" : null,
+        "label" : "Icon",
+        "required" : true,
+        "locked" : false,
+        "icon_set" : "fontawesome-5.0.10",
+        "type" : "icon",
+        "default" : {
+          "name" : "arrow-alt-circle-up",
+          "type" : "SOLID",
+          "unicode" : "f35b"
+        }
+      }, {
+        "id" : "icon.position",
+        "name" : "position",
+        "display_width" : null,
+        "label" : "Position",
+        "required" : true,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "left", "Left" ], [ "right", "Right" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "left"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : true,
+      "type" : "group",
+      "default" : {
+        "icon" : {
+          "name" : "arrow-alt-circle-up",
+          "type" : "SOLID",
+          "unicode" : "f35b"
+        },
+        "position" : "left"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_text" : "Book Now",
+      "button_link" : {
+        "url" : {
+          "href" : "",
+          "type" : "EXTERNAL"
+        }
+      },
+      "add_icon" : false,
+      "icon" : {
+        "icon" : {
+          "name" : "arrow-alt-circle-up",
+          "type" : "SOLID",
+          "unicode" : "f35b"
+        },
+        "position" : "left"
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "profile_image" : {
+      "size_type" : "auto",
+      "src" : "https://2660972.fs1.hubspotusercontent-na1.net/hubfs/2660972/profile.png",
+      "alt" : "profile",
+      "loading" : "lazy",
+      "width" : 286,
+      "height" : 286,
+      "max_width" : 286,
+      "max_height" : 286
+    },
+    "title" : "Profile Title",
+    "designation" : "Designation",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "button_group" : {
+      "button_text" : "Book Now",
+      "button_link" : {
+        "url" : {
+          "href" : "",
+          "type" : "EXTERNAL"
+        }
+      },
+      "add_icon" : false,
+      "icon" : {
+        "icon" : {
+          "name" : "arrow-alt-circle-up",
+          "type" : "SOLID",
+          "unicode" : "f35b"
+        },
+        "position" : "left"
+      }
+    }
+  }, {
+    "profile_image" : {
+      "size_type" : "auto",
+      "src" : "https://2660972.fs1.hubspotusercontent-na1.net/hubfs/2660972/profile.png",
+      "alt" : "profile",
+      "loading" : "lazy",
+      "width" : 286,
+      "height" : 286,
+      "max_width" : 286,
+      "max_height" : 286
+    },
+    "title" : "Profile Title",
+    "designation" : "Designation",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "button_group" : {
+      "button_text" : "Book Now",
+      "button_link" : {
+        "url" : {
+          "href" : "",
+          "type" : "EXTERNAL"
+        }
+      },
+      "add_icon" : false,
+      "icon" : {
+        "icon" : {
+          "name" : "arrow-alt-circle-up",
+          "type" : "SOLID",
+          "unicode" : "f35b"
+        },
+        "position" : "left"
+      }
+    }
+  }, {
+    "profile_image" : {
+      "size_type" : "auto",
+      "src" : "https://2660972.fs1.hubspotusercontent-na1.net/hubfs/2660972/profile.png",
+      "alt" : "profile",
+      "loading" : "lazy",
+      "width" : 286,
+      "height" : 286,
+      "max_width" : 286,
+      "max_height" : 286
+    },
+    "title" : "Profile Title",
+    "designation" : "Designation",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "button_group" : {
+      "button_text" : "Book Now",
+      "button_link" : {
+        "url" : {
+          "href" : "",
+          "type" : "EXTERNAL"
+        }
+      },
+      "add_icon" : false,
+      "icon" : {
+        "icon" : {
+          "name" : "arrow-alt-circle-up",
+          "type" : "SOLID",
+          "unicode" : "f35b"
+        },
+        "position" : "left"
+      }
+    }
+  } ]
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "display_width" : null,
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.presets",
+    "name" : "presets",
+    "display_width" : null,
+    "label" : "Presets",
+    "help_text" : "Use presets to quickly adjust the appearance of the selected item to predefined values.",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.presets.button_style",
+      "name" : "button_style",
+      "display_width" : null,
+      "label" : "Button style",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "simple", "Simple" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "primary"
+    }, {
+      "id" : "styles.presets.button_size",
+      "name" : "button_size",
+      "display_width" : null,
+      "label" : "Button size",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "small", "Small" ], [ "regular", "Regular" ], [ "large", "Large" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "regular"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_style" : "primary",
+      "button_size" : "regular"
+    }
+  }, {
+    "id" : "styles.text",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.text.font",
+      "name" : "font",
+      "display_width" : null,
+      "label" : "Font",
+      "required" : false,
+      "locked" : false,
+      "load_external_fonts" : true,
+      "type" : "font",
+      "default" : {
+        "size_unit" : "px"
+      }
+    }, {
+      "id" : "styles.text.transform",
+      "name" : "transform",
+      "display_width" : null,
+      "label" : "Transform",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "font" : {
+        "size_unit" : "px"
+      }
+    }
+  }, {
+    "id" : "styles.background",
+    "name" : "background",
+    "display_width" : null,
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.background.color",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : null,
+        "opacity" : null,
+        "rgba" : null,
+        "rgb" : null,
+        "hex" : null
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : null,
+        "opacity" : null,
+        "rgba" : null,
+        "rgb" : null,
+        "hex" : null
+      }
+    }
+  }, {
+    "id" : "styles.border",
+    "name" : "border",
+    "display_width" : null,
+    "label" : "Border",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.border.border",
+      "name" : "border",
+      "display_width" : null,
+      "label" : "Border",
+      "required" : false,
+      "locked" : false,
+      "allow_custom_border_sides" : false,
+      "type" : "border",
+      "default" : { }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "border" : { }
+    }
+  }, {
+    "id" : "styles.corner",
+    "name" : "corner",
+    "display_width" : null,
+    "label" : "Corner",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.corner.radius",
+      "name" : "radius",
+      "display_width" : null,
+      "label" : "Radius",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "max" : 100,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : { }
+  }, {
+    "id" : "styles.spacing",
+    "name" : "spacing",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.spacing.spacing",
+      "name" : "spacing",
+      "display_width" : null,
+      "label" : "Spacing",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : { }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "spacing" : { }
+    }
+  }, {
+    "id" : "styles.hover",
+    "name" : "hover",
+    "display_width" : null,
+    "label" : "Hover",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.hover.text",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.hover.text.font",
+        "name" : "font",
+        "display_width" : null,
+        "label" : "Font",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : null,
+          "controlling_value_regex" : null,
+          "property" : null,
+          "operator" : null,
+          "access" : null,
+          "hidden_subfields" : {
+            "size" : true
+          }
+        },
+        "load_external_fonts" : true,
+        "type" : "font",
+        "default" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "font" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      }
+    }, {
+      "id" : "styles.hover.background",
+      "name" : "background",
+      "display_width" : null,
+      "label" : "Background",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.hover.background.color",
+        "name" : "color",
+        "display_width" : null,
+        "label" : "Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "color" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      }
+    }, {
+      "id" : "styles.hover.border",
+      "name" : "border",
+      "display_width" : null,
+      "label" : "Border",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "styles.hover.border.border",
+        "name" : "border",
+        "display_width" : null,
+        "label" : "Border",
+        "required" : false,
+        "locked" : false,
+        "allow_custom_border_sides" : false,
+        "type" : "border",
+        "default" : { }
+      } ],
+      "tab" : "STYLE",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "border" : { }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "text" : {
+        "font" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      },
+      "background" : {
+        "color" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      },
+      "border" : {
+        "border" : { }
+      }
+    }
+  }, {
+    "id" : "styles.alignment",
+    "name" : "alignment",
+    "display_width" : null,
+    "label" : "Alignment",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.alignment.alignment",
+      "name" : "alignment",
+      "display_width" : null,
+      "label" : "Alignment",
+      "required" : false,
+      "locked" : false,
+      "alignment_direction" : "HORIZONTAL",
+      "type" : "alignment",
+      "default" : { }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "alignment" : { }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "presets" : {
+      "button_style" : "primary",
+      "button_size" : "regular"
+    },
+    "text" : {
+      "font" : {
+        "size_unit" : "px"
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : null,
+        "opacity" : null,
+        "rgba" : null,
+        "rgb" : null,
+        "hex" : null
+      }
+    },
+    "border" : {
+      "border" : { }
+    },
+    "corner" : { },
+    "spacing" : {
+      "spacing" : { }
+    },
+    "hover" : {
+      "text" : {
+        "font" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : null,
+          "size" : null,
+          "size_unit" : null,
+          "color" : null,
+          "variant" : null,
+          "fallback" : null,
+          "style" : null
+        }
+      },
+      "background" : {
+        "color" : {
+          "color" : null,
+          "opacity" : null,
+          "rgba" : null,
+          "rgb" : null,
+          "hex" : null
+        }
+      },
+      "border" : {
+        "border" : { }
+      }
+    },
+    "alignment" : {
+      "alignment" : { }
+    }
+  }
+} ]

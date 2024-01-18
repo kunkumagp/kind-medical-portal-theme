@@ -5,34 +5,99 @@
    screenshotPath: ../images/template-previews/contact.png
 -->
 {% extends '../layouts/base-member.html' %}
+{{ require_css(get_asset_url("../../css/templates/contact.css")) }} 
 
 {% block body %}
 
+<style>
+
+
+
+</style>
+
 {% if request_contact.is_logged_in %}
-  {% set membership_contact = crm_object(	'contact', request.contact.contact_vid,
+{% set membership_contact = crm_object(	'contact', request.contact.contact_vid,
     'firstname,
     lastname,
     hcp_type
   ') %}
-  {% endif %}
+{% endif %}
 
 <div class="main-container contact-us" >
-  
-  <div class="book-a-consultation">
-    
-    
+
+  <div class="content-wrapper flex justify-between">
+
+    <div class="book-a-consultation flex justify-between">
+      {#       {% module "module_17054007735632" path="/kind-medical-portal-theme/membership/modules/member/book-a-consultation", label="book-a-consultation" %} #}
+
+      {% dnd_area "dnd_area"
+        label="Book a consultation section"
+      %}
+      {% dnd_section %}
+           
+        {% dnd_column
+          offset=0,
+          width=6
+        %}
+          {% dnd_row %}
+            {% dnd_module
+              path="/kind-medical-portal-theme/membership/modules/member/book-a-consultation",
+              styles={
+                "presets" : {
+                  "button_style" : "simple"
+                },
+                "text" : {
+                  "font" : {
+                    "color" : "#758067",
+                    "size" : 12,
+                    "size_unit" : "px"
+                  }
+                }
+              },
+              offset=0,
+              width=12
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+        {% dnd_column
+          offset=6,
+          width=6
+        %}
+
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {% end_dnd_area %}
+    </div>
+
+    <div class="get-in-touch">
+
+      <div>
+        <div class="get_in_touch" >Get in touch</div>
+        <div class="contact-number">
+          <div class="phone-icon"></div>
+          <div>1 800 KIND HI  (1800 546 344)</div>
+        </div>
+      </div>
+
+      <div class="get-in-touch-form">
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            css: "",
+            region: "na1",
+            portalId: "2660972",
+            formId: "71cff79a-a85c-4dce-8262-ecf4fe313101"
+          });
+        </script>
+      </div>
+
+    </div>
+
   </div>
-  <div class="get-in-touch">
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-      <script>
-        hbspt.forms.create({
-          css: "",
-          region: "na1",
-          portalId: "2660972",
-          formId: "71cff79a-a85c-4dce-8262-ecf4fe313101"
-        });
-      </script>
-   </div>
+
+
 </div>
 
 {#

@@ -21,6 +21,7 @@
   9. Blog
   10. System pages
   11. Modules
+  12. Icons
 
 ##}
 
@@ -56,11 +57,54 @@
 
 /* 1d. Buttons */
 
-{% set button_bg_color = color(theme.buttons.background_color) %}
-{% set button_font_color = theme.buttons.text_color.color %}
-{% set button_border = theme.buttons.border_width ~ 'px solid ' ~ theme.buttons.border_color.color %}
-{% set button_corner_radius = theme.buttons.border_radius ~ 'px' %}
-{% set button_spacing = theme.buttons.vertical_padding ~ 'px' ~ ' ' ~ theme.buttons.horizontal_padding ~ 'px' %}
+{% set button_small_font_size = theme.global.buttons.size.small.font_size ~ "px" %}
+{% set button_small_spacing = theme.global.buttons.size.small.spacing.css %}
+
+{% set button_regular_font_size = theme.global.buttons.size.regular.font_size ~ "px" %}
+{% set button_regular_spacing = theme.global.buttons.size.regular.spacing.css %}
+
+{% set button_large_font_size = theme.global.buttons.size.large.font_size ~ "px" %}
+{% set button_large_spacing = theme.global.buttons.size.large.spacing.css %}
+
+{% set button_primary_font = theme.global.buttons.primary.text.font %}
+{% set button_primary_text_transform = theme.global.buttons.primary.text.transform %}
+{% set button_primary_bg_color = color(theme.global.buttons.primary.background.color) %}
+{% set button_primary_border = theme.global.buttons.primary.border.border.css %}
+{% set button_primary_corner_radius = theme.global.buttons.primary.corner.radius ~ "px" %}
+
+{% set button_primary_hover_font = theme.global.buttons.primary.hover.text.font %}
+{% set button_primary_hover_bg_color = color(theme.global.buttons.primary.hover.background.color) %}
+{% set button_primary_hover_border = theme.global.buttons.primary.hover.border.border.css %}
+
+{% set button_secondary_font = theme.global.buttons.secondary.text.font %}
+{% set button_secondary_text_transform = theme.global.buttons.secondary.text.transform %}
+{% set button_secondary_bg_color = color(theme.global.buttons.secondary.background.color) %}
+{% set button_secondary_border = theme.global.buttons.secondary.border.border.css %}
+{% set button_secondary_corner_radius = theme.global.buttons.secondary.corner.radius ~ "px" %}
+
+{% set button_secondary_hover_font = theme.global.buttons.secondary.hover.text.font %}
+{% set button_secondary_hover_bg_color = color(theme.global.buttons.secondary.hover.background.color) %}
+{% set button_secondary_hover_border = theme.global.buttons.secondary.hover.border.border.css %}
+
+{% set button_tertiary_font = theme.global.buttons.tertiary.text.font %}
+{% set button_tertiary_text_transform = theme.global.buttons.tertiary.text.transform %}
+{% set button_tertiary_bg_color = color(theme.global.buttons.tertiary.background.color) %}
+{% set button_tertiary_border = theme.global.buttons.tertiary.border.border.css %}
+{% set button_tertiary_corner_radius = theme.global.buttons.tertiary.corner.radius ~ "px" %}
+
+{% set button_tertiary_hover_font = theme.global.buttons.tertiary.hover.text.font %}
+{% set button_tertiary_hover_bg_color = color(theme.global.buttons.tertiary.hover.background.color) %}
+{% set button_tertiary_hover_border = theme.global.buttons.tertiary.hover.border.border.css %}
+
+{% set button_simple_font = theme.global.buttons.simple.text.font %}
+{% set button_simple_text_transform = theme.global.buttons.simple.text.transform %}
+{% set button_simple_bg_color = color(theme.global.buttons.simple.background.color) %}
+{% set button_simple_border = theme.global.buttons.simple.border.border.css %}
+{% set button_simple_corner_radius = theme.global.buttons.simple.corner.radius ~ "px" %}
+
+{% set button_simple_hover_font = theme.global.buttons.simple.hover.text.font %}
+{% set button_simple_hover_bg_color = color(theme.global.buttons.simple.hover.background.color) %}
+{% set button_simple_hover_border = theme.global.buttons.simple.hover.border.border.css %}
 
 /* 1e. Forms */
 
@@ -194,29 +238,196 @@ blockquote {
 {############################   4. Buttons   ###############################}
 {###########################################################################}
 
+/* Primary button */
+
 button,
 .button {
-  background-color: {{ button_bg_color }};
-  border: {{ button_border }};
-  border-radius: {{ button_corner_radius }};
-  color: {{ button_font_color }};
-  padding: {{ button_spacing }};
+  {{ button_primary_border }}
+  {{ button_regular_spacing }}
+  {{ button_primary_font.style }};
+  background-color: {{ button_primary_bg_color }};
+  border-radius: {{ button_primary_corner_radius }};
+  color: {{ button_primary_font.color }};
+  fill: {{ button_primary_font.color }};
+  font-size: {{ button_regular_font_size }};
+  text-transform: {{ button_primary_text_transform }};
+
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  text-align: center;
+  transition: color .15s linear;
+  white-space: normal;
 }
 
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  background-color: rgba({{ color_variant(theme.buttons.background_color.color, -40)|convert_rgb }}, {{ theme.buttons.background_color.opacity / 100 }});
-  border-color: {{ color_variant(theme.buttons.border_color.color, -40) }};
-  color: {{ button_font_color }};
+  {{ button_primary_hover_font.style }};
+  background-color: {{ button_primary_hover_bg_color }};
+  color: {{ button_primary_hover_font.color }};
+  fill: {{ button_primary_hover_font.color }};
+  {{ button_primary_hover_border }};
+  font-size: {{ button_regular_font_size }};
 }
 
 button:active,
 .button:active {
-  background-color: rgba({{ color_variant(theme.buttons.background_color.color, 40)|convert_rgb }}, {{ theme.buttons.background_color.opacity / 100 }});
-  border-color: {{ color_variant(theme.buttons.border_color.color, 40) }};
-  color: {{ button_font_color }};
+  {{ button_primary_hover_font.style }};
+  background-color: {{ button_primary_hover_bg_color }};
+  color: {{ button_primary_hover_font.color }};
+  fill: {{ button_primary_hover_font.color }};
+  {{ button_primary_hover_border }};
+  font-size: {{ button_regular_font_size }};
+}
+
+/* Secondary button */
+
+.button.button--secondary {
+  {{ button_secondary_border }}
+  {{ button_regular_spacing }}
+  {{ button_secondary_font.style }};
+  background-color: {{ button_secondary_bg_color }};
+  border-radius: {{ button_secondary_corner_radius }};
+  color: {{ button_secondary_font.color }};
+  fill: {{ button_secondary_font.color }};
+}
+
+.button.button--secondary:hover,
+.button.button--secondary:focus,
+.button.button--secondary:active {
+  {{ button_secondary_hover_font.style }};
+  background-color: {{ button_secondary_hover_bg_color }};
+  color: {{ button_secondary_hover_font.color }};
+  fill: {{ button_secondary_hover_font.color }};
+  {{ button_secondary_hover_border }};
+}
+
+.button.button--secondary:active {
+  {{ button_secondary_hover_font.style }};
+  background-color: {{ button_secondary_hover_bg_color }};
+  color: {{ button_secondary_hover_font.color }};
+  fill: {{ button_secondary_hover_font.color }};
+  {{ button_secondary_hover_border }};
+}
+
+/* Tertiary button */
+
+.button.button--tertiary {
+  {{ button_tertiary_border }}
+  {{ button_regular_spacing }}
+  {{ button_tertiary_font.style }};
+  background-color: {{ button_tertiary_bg_color }};
+  border-radius: {{ button_tertiary_corner_radius }};
+  color: {{ button_tertiary_font.color }};
+  fill: {{ button_tertiary_font.color }};
+}
+
+.button.button--tertiary:hover,
+.button.button--tertiary:focus,
+.button.button--tertiary:active {
+  {{ button_tertiary_hover_font.style }};
+  background-color: {{ button_tertiary_hover_bg_color }};
+  color: {{ button_tertiary_hover_font.color }};
+  fill: {{ button_tertiary_hover_font.color }};
+  {{ button_tertiary_hover_border }};
+}
+
+.button.button--tertiary:active {
+  {{ button_tertiary_hover_font.style }};
+  background-color: {{ button_tertiary_hover_bg_color }};
+  color: {{ button_tertiary_hover_font.color }};
+  fill: {{ button_tertiary_hover_font.color }};
+  {{ button_tertiary_hover_border }};
+}
+
+
+/* Simple button */
+
+
+.button.button--simple {
+  {{ button_simple_border }}
+  {{ button_regular_spacing }}
+  {{ button_simple_font.style }};
+  background-color: {{ button_simple_bg_color }};
+  border-radius: {{ button_simple_corner_radius }};
+  color: {{ button_simple_font.color }};
+  fill: {{ button_simple_font.color }};
+}
+
+.button.button--simple:hover,
+.button.button--simple:focus,
+.button.button--simple:active {
+  {{ button_simple_hover_font.style }};
+  background-color: {{ button_simple_hover_bg_color }};
+  color: {{ button_simple_hover_font.color }};
+  fill: {{ button_simple_hover_font.color }};
+  {{ button_simple_hover_border }};
+}
+
+.button.button--simple:active {
+  {{ button_simple_hover_font.style }};
+  background-color: {{ button_simple_hover_bg_color }};
+  color: {{ button_simple_hover_font.color }};
+  fill: {{ button_simple_hover_font.color }};
+  {{ button_simple_hover_border }};
+}
+
+.button span {
+  position: relative;
+  top: 2px;
+}
+
+.button span svg {
+  width: 14px;
+  height: 14px;
+  margin: 0px 10px;
+}
+
+.button.button--simple.button--small span {
+  position: relative;
+  top: 2px;
+}
+
+.button.button--small span {
+  position: relative;
+  top: 1px;
+}
+
+.button.button--small span svg {
+  width: 14px;
+  height: 14px;
+  margin: 0px 10px;
+}
+
+.button.button--large span {
+  position: relative;
+  top: 2px;
+}
+
+.button.button--large span svg {
+  width: 16px;
+  height: 16px;
+  margin: 0px 10px;
+}
+
+
+.carousel-box__button-wrapper .button.button--simple {
+  color: #0043BF !important;
+}
+
+
+/* Button sizing */
+
+.button.button--small {
+  {{ button_small_spacing }}
+  font-size: {{ button_small_font_size }};
+}
+
+.button.button--large {
+  {{ button_large_spacing }}
+  font-size: {{ button_large_font_size }};
 }
 
 {###########################################################################}
@@ -558,4 +769,72 @@ body .tns-nav button:focus {
 
 body .team-member__description {
   background-color: {{ secondary_color }};
+}
+
+
+{# ######################################################################### #}
+{# #############################   12. Icons   ############################## #}
+{# ######################################################################### #}
+
+/* Default icon (regular/Light) */
+
+.icon {
+  {{ icon_regular_spacing }}
+}
+
+.icon svg {
+  fill: {{ icon_dark_color }};
+  height: {{ icon_regular_size }};
+  width: {{ icon_regular_size }};
+}
+
+.icon {
+  background-color: #0043BF;
+}
+
+/* Light icon */
+
+.icon--light .icon {
+  background-color: #F0F4FB;
+}
+
+
+.icon--light svg {
+  fill: {{ icon_light_color }};
+}
+
+/* Size */
+
+.icon--small svg {
+  height: {{ icon_small_size }};
+  width: {{ icon_small_size }};
+}
+
+.icon--small .icon {
+  {{ icon_small_spacing }}
+}
+
+.icon--large svg {
+  height: {{ icon_large_size }};
+  width: {{ icon_large_size }};
+}
+
+.icon--large .icon {
+  {{ icon_large_spacing }}
+}
+
+.icon--small.icon--square .icon{
+  border-radius: 4px;
+}
+
+.icon--square .icon{
+  border-radius: 6px;
+}
+
+.icon--large.icon--square .icon{
+  border-radius: 10px;
+}
+
+.button.button--icon-right .button__icon{
+  order: 1;
 }

@@ -5,73 +5,64 @@ jQuery(document).ready(function ($) {
     let currentPage = 1;
     const limit = 4;
     let filterValues;
-    let hcpType;
-    const deactivationMessage = localStorage.getItem('deactivationMessage');
+    let hcpType = [];
 
-    function fetchPropertyAndSaveLS() {
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    $('#search_member').keyup(debounce(function () {
+        handleSearchFunc(this.value);
+    }, 500));
+
+    async function fetchProperty() {
         var propertyOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ propertyName: 'hcp_type' })
         };
 
-        toggleLoading(true);
-
-        return fetch("/_hcms/api/getProperty", propertyOptions)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.Response.statusCode === 200) {
-                    const originalData = data.Response.data.options;
-                    const transformedData = originalData.reduce((acc, item) => {
-                        acc[item.value] = item.label;
-                        return acc;
-                    }, {});
-
-                    hcpType = transformedData;
-
-                    localStorage.setItem('hcpType', JSON.stringify(hcpType));
-
-                    return hcpType;
-
-                } else {
-                    const msg = { "msg_type": "error-msg", "message": "Contact Rejected Failed!" };
-                    showMessage(msg);
-                }
-
-            })
-            .catch(error => {
-                throw error;
-            });
-    }
-
-    async function getHcpTypeFromLocalStorage() {
-        let storedHcpType = localStorage.getItem('hcpType');
-
-        if (storedHcpType) {
-            hcpType = JSON.parse(storedHcpType);
-        } else {
-            try {
-                hcpType = await fetchPropertyAndSaveLS();
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-    }
-
-    async function fetchData() {
         try {
-            await getHcpTypeFromLocalStorage();
+            const response = await fetch("/_hcms/api/getProperty", propertyOptions);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (data.Response.statusCode === 200) {
+                const originalData = data.Response.data.options;
+                const transformedData = originalData.reduce((acc, item) => {
+                    acc[item.value] = item.label;
+                    return acc;
+                }, {});
+
+                hcpType = transformedData;
+
+            } else {
+                const msg = { "msg_type": "error-msg", "message": "Contact Rejected Failed!" };
+                showMessage(msg);
+            }
+
         } catch (error) {
-            console.error('Error fetching data:', error);
+            // Handle the error here
+            throw error;
         }
     }
 
-    function fetchAndUpdateData() {
+    function fetchDataAndUpdate() {
         let after = (currentPage - 1) * limit;
         const requestOptions = {
             method: 'POST',
@@ -119,8 +110,8 @@ jQuery(document).ready(function ($) {
         const totalPages = Math.ceil(totalItems / limit);
 
         const prevButton = `<a class="page page-prev"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.5 11L1.5 6L6.5 1" stroke="#7F7F7F" stroke-width="2"/>
-              </svg></a>`;
+              <path d="M6.5 11L1.5 6L6.5 1" stroke="#7F7F7F" stroke-width="2"/>
+            </svg></a>`;
         $pagination.append(prevButton);
 
         for (let i = 1; i <= totalPages; i++) {
@@ -129,8 +120,8 @@ jQuery(document).ready(function ($) {
         }
 
         const nextButton = `<a class="page page-next"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.5 1L6.5 6L1.5 11" stroke="#7F7F7F" stroke-width="2"/>
-                </svg></a>`;
+              <path d="M1.5 1L6.5 6L1.5 11" stroke="#7F7F7F" stroke-width="2"/>
+              </svg></a>`;
         $pagination.append(nextButton);
 
         updatePaginationVisibility();
@@ -161,16 +152,20 @@ jQuery(document).ready(function ($) {
     function updateDetailsContainer(data) {
         $memDetailsContainer.empty();
 
+        if (data.length === 0) {
+            $memDetailsContainer.append('<p style="text-align: center;">No Found Data</p>');
+            return;
+        }
+
         data.forEach(item => {
             const detailsContent = `<a href="/active/member-details?id=${item.id}" class="d-block">
-                    <div class="details">
-                        <span class="name">
-                            <h5 class="text-primary mb-4">${item.properties.firstname} ${item.properties.lastname}</h5>
-                        </span>
-                        <span class="hcp-type font-small">${item.properties.hcp_type}</span>
-                    </div>
-                </a>`;
-//           <span class="hcp-type font-small">${getHcpType(item.properties.hcp_type)}</span>
+                  <div class="details">
+                      <span class="name">
+                          <h5 class="text-primary mb-4">${item.properties.firstname} ${item.properties.lastname}</h5>
+                      </span>
+                      <span class="hcp-type font-small">${getHcpType(item.properties.hcp_type)}</span>
+                  </div>
+              </a>`;
 
             $memDetailsContainer.append(detailsContent);
         });
@@ -179,6 +174,90 @@ jQuery(document).ready(function ($) {
     function getHcpType(hcpTypeKey) {
         const displayValue = hcpType[hcpTypeKey] !== undefined ? hcpType[hcpTypeKey] : '';
         return displayValue;
+    }
+  
+    console.log("04");
+
+    function handleSearchFunc(value) {
+
+        let searchable = "*" + value + "*";
+        let activeFilters = [];
+      
+      // const activeFiltersArray = Array.from({ length: $memberTypeListItems.length })
+      //   .map((_, i) => {
+      //     const hcpType = $memberTypeListItems.get(i).getAttribute('data-hcp-type');
+      //     return {
+      //       values: hcpType ? [hcpType] : [],
+      //       propertyName: 'hcp_type',
+      //       operator: 'IN',
+      //     };
+      //   });
+
+      // console.log(activeFiltersArray);
+
+        if (value) {
+
+            activeFilters = [
+                {
+                    filters: [
+                        {
+                            value: searchable,
+                            propertyName: 'firstname',
+                            operator: 'CONTAINS_TOKEN',
+                        },
+                        {
+                            values: ["manually_verified", "aphra_verified"],
+                            propertyName: 'membership_status',
+                            operator: 'IN',
+                        }
+                    ]
+                },
+                {
+                    filters: [
+                        {
+                            value: searchable,
+                            propertyName: 'lastname',
+                            operator: 'CONTAINS_TOKEN',
+                        },
+                        {
+                            values: ["manually_verified", "aphra_verified"],
+                            propertyName: 'membership_status',
+                            operator: 'IN',
+                        }
+                    ]
+                },
+                {
+                    filters: [
+                        {
+                            value: searchable,
+                            propertyName: 'email',
+                            operator: 'CONTAINS_TOKEN',
+                        },
+                        {
+                            values: ["manually_verified", "aphra_verified"],
+                            propertyName: 'membership_status',
+                            operator: 'IN',
+                        }
+                    ]
+                },
+            ];
+        }
+
+        const combinedFilters = [].concat.apply([], activeFilters);
+
+        currentPage = 1;
+        filterValues = combinedFilters.length > 0 ? combinedFilters : [
+            {
+                filters: [
+                    {
+                        values: ["manually_verified", "aphra_verified"],
+                        propertyName: 'membership_status',
+                        operator: 'IN',
+                    }
+                ]
+            }
+        ];
+        fetchDataAndUpdate();
     }
 
     function handleFilterItemClick() {
@@ -196,23 +275,9 @@ jQuery(document).ready(function ($) {
                                 operator: 'EQ',
                             },
                             {
-                                value: 'manually_verified',
+                                values: ["manually_verified", "aphra_verified"],
                                 propertyName: 'membership_status',
-                                operator: 'EQ',
-                            }
-                        ]
-                    },
-                    {
-                        filters: [
-                            {
-                                value: this.id,
-                                propertyName: 'hcp_type',
-                                operator: 'EQ',
-                            },
-                            {
-                                value: 'aphra_verified',
-                                propertyName: 'membership_status',
-                                operator: 'EQ',
+                                operator: 'IN',
                             }
                         ]
                     }
@@ -227,52 +292,22 @@ jQuery(document).ready(function ($) {
             {
                 filters: [
                     {
-                        value: 'manually_verified',
+                        values: ["manually_verified", "aphra_verified"],
                         propertyName: 'membership_status',
-                        operator: 'EQ',
-                    }
-                ]
-            },
-            {
-                filters: [
-                    {
-                        value: 'aphra_verified',
-                        propertyName: 'membership_status',
-                        operator: 'EQ',
+                        operator: 'IN',
                     }
                 ]
             }
         ];
         fetchDataAndUpdate();
     }
-  
-    function showMessage(msg) {
-        if (msg.msg_type == "success-msg") {
-            $(".submission-message").html("");
-            $(".submission-message").html("<span class='success-msg'>" + msg.message + "</span>");
-            $("html, body").animate({ scrollTop: 0 }, 600);
-            setTimeout(() => {
-                $(".submission-message .success-msg").fadeOut('slow', function () {
-                    $(this).remove();
-                });
-            }, 3000);
-        } else if (msg.msg_type == "error-msg") {
-            $("html, body").animate({ scrollTop: 0 }, 600);
-            $(".submission-message").html("<span class='error-msg'>" + msg.message + "</span>");
-        }
+
+    function main() {
+        fetchProperty().then(() => {
+            handleFilterItemClick();
+        })
     }
 
-    function fetchDataAndUpdate() {
-        fetchAndUpdateData();
-    }
-  
-    if (deactivationMessage) {
-      const msg = { "msg_type": "success-msg", "message": deactivationMessage };
-      showMessage(msg);
-      localStorage.removeItem('deactivationMessage');
-    }
-
-    fetchData();
-    handleFilterItemClick();
+    main();
     $memberTypeListItems.click(handleFilterItemClick);
 });

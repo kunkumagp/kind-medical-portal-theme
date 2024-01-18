@@ -14,7 +14,8 @@
 
   {# Button #}
 
-  .button {
+  {% if module.styles.presets.button_style_overwrite %}
+	  .button {
     {% if module.styles.background.color.color %}
       background-color: rgba({{ module.styles.background.color.color|convert_rgb }}, {{ module.styles.background.color.opacity / 100 }});
     {% endif %}
@@ -37,29 +38,56 @@
     {% endif %}
   }
 
+    .button:hover,
+    .button:focus {
+      {% if module.styles.hover.background.color.color %}
+        background-color: rgba({{ module.styles.hover.background.color.color|convert_rgb }}, {{ module.styles.hover.background.color.opacity / 100 }});
+      {% endif %}
+      {{ module.styles.hover.border.border.css }}
+      {% if module.styles.hover.text.font.color %}
+        color: {{ module.styles.hover.text.font.color }};
+      {% endif %}
+      {% if module.styles.hover.text.font.size %}
+        font-size: {{ module.styles.hover.text.font.size ~ module.styles.hover.text.font.size_unit }};
+      {% endif %}
+      {% if module.styles.hover.text.font.style %}
+        {{ module.styles.hover.text.font.style }};
+      {% endif %}
+    }
+
+    .button:active {
+      {% if module.styles.hover.background.color.color %}
+        background-color: rgba({{ color_variant(module.styles.hover.background.color.color, 80)|convert_rgb }}, {{ module.styles.hover.background.color.opacity / 100 }});
+      {% endif %}
+      {{ module.styles.hover.border.border.css }}
+      {% if module.styles.hover.border.border %}
+        border-color: {{ color_variant(module.styles.hover.border.border.top.color, 80) }};
+      {% endif %}
+      {% if module.styles.hover.text.font.color %}
+        color: {{ module.styles.hover.text.font.color }};
+      {% endif %}
+      {% if module.styles.hover.text.font.size %}
+        font-size: {{ module.styles.hover.text.font.size ~ module.styles.hover.text.font.size_unit }};
+      {% endif %}
+      {% if module.styles.hover.text.font.style %}
+        {{ module.styles.hover.text.font.style }};
+      {% endif %}
+    }
+  
+  {% endif %}
+  
+  
+ 
+  
+
   {% if module.add_icon && module.icon.icon && module.styles.text.font.color %}
     .button svg {
       fill: {{ module.styles.text.font.color }};
+      width="15px" 
+      height="12px"
     }
   {% endif %}
-
-  .button:hover,
-  .button:focus {
-    {% if module.styles.hover.background.color.color %}
-      background-color: rgba({{ module.styles.hover.background.color.color|convert_rgb }}, {{ module.styles.hover.background.color.opacity / 100 }});
-    {% endif %}
-    {{ module.styles.hover.border.border.css }}
-    {% if module.styles.hover.text.font.color %}
-      color: {{ module.styles.hover.text.font.color }};
-    {% endif %}
-    {% if module.styles.hover.text.font.size %}
-      font-size: {{ module.styles.hover.text.font.size ~ module.styles.hover.text.font.size_unit }};
-    {% endif %}
-    {% if module.styles.hover.text.font.style %}
-      {{ module.styles.hover.text.font.style }};
-    {% endif %}
-  }
-
+  
   {% if module.add_icon && module.icon.icon && module.styles.text.font.color %}
     .button:hover svg,
     .button:focus svg {
@@ -67,30 +95,27 @@
     }
   {% endif %}
 
-  .button:active {
-    {% if module.styles.hover.background.color.color %}
-      background-color: rgba({{ color_variant(module.styles.hover.background.color.color, 80)|convert_rgb }}, {{ module.styles.hover.background.color.opacity / 100 }});
-    {% endif %}
-    {{ module.styles.hover.border.border.css }}
-    {% if module.styles.hover.border.border %}
-      border-color: {{ color_variant(module.styles.hover.border.border.top.color, 80) }};
-    {% endif %}
-    {% if module.styles.hover.text.font.color %}
-      color: {{ module.styles.hover.text.font.color }};
-    {% endif %}
-    {% if module.styles.hover.text.font.size %}
-      font-size: {{ module.styles.hover.text.font.size ~ module.styles.hover.text.font.size_unit }};
-    {% endif %}
-    {% if module.styles.hover.text.font.style %}
-      {{ module.styles.hover.text.font.style }};
-    {% endif %}
-  }
 
   {% if module.add_icon && module.icon.icon && module.styles.text.font.color %}
     .button:active svg {
       fill: {{ module.styles.hover.text.font.color }};
     }
   {% endif %}
+  
+  {% if module.icon.position == "right" %}
+      .button__icon{
+/*           padding-left:11px; */
+       }
+  
+  {% endif %}
+  
+  {% if module.icon.position == "left" %}
+      .button__icon{
+/*           padding-right:11px; */
+       }
+  
+  {% endif %}
+    
 
 {% end_scope_css %}
 </style>
@@ -100,6 +125,8 @@
 
 {% if module.styles.presets.button_style == "secondary" %}
   {% set button_style = "button--secondary" %}
+{% elif module.styles.presets.button_style == "tertiary" %}
+  {% set button_style = "button--tertiary" %}
 {% elif module.styles.presets.button_style == "simple" %}
   {% set button_style = "button--simple" %}
 {% endif %}
@@ -116,12 +143,6 @@
 
 {# Sets attributes used for the link field #}
 
-{% if module.button_link.url.type is equalto "PAYMENT" %}
-  {% set query_param = "?referrer=CMS_MODULE_NEWTAB" %}
-{% else %}
-  {% set query_param = "" %}
-{% endif %}
-
 {% set href = module.button_link.url.href %}
 {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
   {% set href = "mailto:" + href %}
@@ -137,7 +158,7 @@
 {# Button #}
 
 <div class="button-wrapper">
-  <a href="{{ href ~ query_param }}" class="button {{ button_style }} {{ button_size }} {{ icon_position }}"
+  <a style="position:relative" href="{{ href }}" class="button {{ button_style }} {{ button_size }} {{ icon_position }}"
     {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
     {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
   >

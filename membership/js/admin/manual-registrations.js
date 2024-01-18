@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     const limit = 4;
     let filterValues;
     let totalPages;
-    let hcpType;
+    let hcpType = [];
 
     function fetchAndUpdateData() {
         const after = (currentPage - 1) * limit;
@@ -21,66 +21,39 @@ jQuery(document).ready(function ($) {
             .finally(() => toggleLoading(false));
     }
 
-    function fetchPropertyAndSaveLS() {
+    async function fetchProperty() {
         var propertyOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ propertyName: 'hcp_type' })
         };
 
-        toggleLoading(true);
-
-        return fetch("/_hcms/api/getProperty", propertyOptions)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.Response.statusCode === 200) {
-                    const originalData = data.Response.data.options;
-                    const transformedData = originalData.reduce((acc, item) => {
-                        acc[item.value] = item.label;
-                        return acc;
-                    }, {});
-
-                    hcpType = transformedData;
-
-                    localStorage.setItem('hcpType', JSON.stringify(hcpType));
-
-                    return hcpType;
-
-                } else {
-                    const msg = { "msg_type": "error-msg", "message": "Contact Rejected Failed!" };
-                    showMessage(msg);
-                }
-
-            })
-            .catch(error => {
-                throw error;
-            });
-    }
-
-    async function getHcpTypeFromLocalStorage() {
-        let storedHcpType = localStorage.getItem('hcpType');
-
-        if (storedHcpType) {
-            hcpType = JSON.parse(storedHcpType);
-        } else {
-            try {
-                hcpType = await fetchPropertyAndSaveLS();
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        }
-    }
-
-    async function fetchData() {
         try {
-            await getHcpTypeFromLocalStorage();
+            const response = await fetch("/_hcms/api/getProperty", propertyOptions);
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            let data = await response.json();
+
+            if (data.Response.statusCode === 200) {
+                const originalData = data.Response.data.options;
+                const transformedData = originalData.reduce((acc, item) => {
+                    acc[item.value] = item.label;
+                    return acc;
+                }, {});
+
+                hcpType = transformedData;
+
+            } else {
+                const msg = { "msg_type": "error-msg", "message": "Contact Rejected Failed!" };
+                showMessage(msg);
+            }
+
         } catch (error) {
-            console.error('Error fetching data:', error);
+            // Handle the error here
+            throw error;
         }
     }
 
@@ -198,7 +171,12 @@ jQuery(document).ready(function ($) {
             { filters: [{ value: 'Pending', propertyName: 'membership_status', operator: 'EQ' }] }
         ];
     }
-
-    fetchData();
-    handleFilterItemClick();
+  
+    function main(){
+      fetchProperty().then(()=>{
+        handleFilterItemClick();                          
+      })
+    }
+  
+    main();
 });

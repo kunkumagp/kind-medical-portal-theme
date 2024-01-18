@@ -1,7 +1,7 @@
 {
-  "label" : "my-website-kind-medical",
+  "label" : "Kind medical portal theme",
   "preview_path" : "./templates/home.html",
-  "screenshot_path" : "./images/template-previews/home.png",
+  "screenshot_path" : "./images/template-previews/kind-medical-dashboard.png",
   "enable_domain_stylesheets" : false,
   "is_available_for_new_content" : true
 }

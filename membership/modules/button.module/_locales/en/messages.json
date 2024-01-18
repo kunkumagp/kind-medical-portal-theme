@@ -19,9 +19,39 @@
     "description" : "",
     "placeholders" : null
   },
+  "icon.icon.default.name" : {
+    "message" : "angle-right",
+    "description" : null,
+    "placeholders" : null
+  },
+  "icon.icon.default.type" : {
+    "message" : "SOLID",
+    "description" : null,
+    "placeholders" : null
+  },
+  "icon.icon.default.unicode" : {
+    "message" : "f105",
+    "description" : null,
+    "placeholders" : null
+  },
+  "icon.icon.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "icon.icon.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "icon.icon.label" : {
-    "message" : "Icon",
+    "message" : "",
     "description" : "",
+    "placeholders" : null
+  },
+  "icon.icon.placeholder" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   },
   "icon.label" : {
@@ -164,9 +194,29 @@
     "description" : "",
     "placeholders" : null
   },
+  "styles.presets.button_style.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "styles.presets.button_style.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "styles.presets.button_style.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "styles.presets.button_style.label" : {
-    "message" : "Button style",
+    "message" : "",
     "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.placeholder" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   },
   "styles.presets.help_text" : {

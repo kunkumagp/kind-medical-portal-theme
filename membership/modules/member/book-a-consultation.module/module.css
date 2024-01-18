@@ -1,0 +1,37 @@
+.profile-image{
+  margin-bottom: 16px;
+}
+
+.title{
+    color: #666E5A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+.designation,
+.description{
+    color: #63666A;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+.description{
+    margin-top: 16px;
+  }
+
+
+.button_group{
+  margin-top: 16px;
+}
+
+.button_group a span svg{
+  width: 7px;
+}
+
+.grid-container {
+  gap: 40px;
+}

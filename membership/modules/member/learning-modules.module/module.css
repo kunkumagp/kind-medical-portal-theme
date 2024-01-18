@@ -1,6 +1,9 @@
 .learning-modules {
   background: #EBEFE7;
 }
+.learning-modules .button-wrap {
+  margin-top: 60px;
+}
 .bg-learning-modules{
   padding: 40px 0px 60px 0px;
 }
@@ -12,13 +15,15 @@
 .learning-module-lists ol,
 .learning-module-lists ul{
   padding-left: 11px;
+  margin-bottom: 12px;
 }
 .learning-module-lists .left{
   max-width: 207px;
+  width: 100%;
 }
 .learning-module-lists .left img {
   object-fit: cover;
-  height: 100%; 
+  height: 100% !important; 
   width: 100%;
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
@@ -31,13 +36,36 @@
 }
 .single-module{
   display: flex;
+  max-width: 500px; 
 }
+.learning-module-lists .left {
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 42%;
+}
+.learning-module-lists .left img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: none;
+  object-fit: cover;
+}
+.learning-module-lists .right h4{
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
 .learning-module-lists .right{
   background: #fff;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 32px;
   padding: 20px;
-  width: 293px;
+  flex: 1 0 48%;
+  display: flex;
+  flex-direction: column;
 }
 .learning-module-lists .right p,
 .learning-module-lists .right p a {
@@ -49,17 +77,20 @@
   font-size: 12px;
   color: #63666A;
 }
+.learning-module-lists .right .content-info {
+}
 .learning-module-lists .right .time{
   position: relative;
+  margin-left: 22px;
 }
 .learning-module-lists .right .time:before{
-  content: "";
-  position: absolute;
-  height: 10px;
-  width: 11px;
-  background: url({{ get_asset_url('../../../images/time.svg') }}) no-repeat center center/contain;
-  top: 0;
   bottom: 0;
+  content: "";
+  height: 13px;
+  left: -17px;
+  position: absolute;
+  top: 2px;
+  width: 13px;
 }
 
   

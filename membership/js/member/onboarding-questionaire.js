@@ -100,16 +100,13 @@ jQuery(document).ready(function ($) {
       }
     });
 
-    const contactId = '210401';
-
     var requestOptions = {
       'method': 'POST',
       'headers': {
         'Content-Type': 'application/json',
       },
       'body': JSON.stringify({
-        data: formDataObject,
-        id: contactId
+        data: formDataObject
       }),
     };
 

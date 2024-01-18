@@ -1,47 +1,81 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+    .learning-module-lists .right .time:before{
+        background: url({{ get_asset_url('../../../images/time.svg') }});
+    }
+   {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+
+{% set tableID = module.hubdbtable_field %}
+
+
+{% set queryparams = "" %} 
+{% if request.query_dict.query %} 
+    {# {% set queryparams = "name__contains="~request.query_dict.query~"&description__contains="~request.query_dict.query %} #} 
+    {% set queryparams = "name__contains="~request.query_dict.query %}
+   <p> {{queryparams}}</p>
+    {% for row in hubdb_table_rows("11587680" , queryparams )%}
+       <p>{{row.name}}</p>
+      {% endfor %} 
+{% endif %} 
+
+
+
 <div class="learning-modules">
-  <div class="bg-learning-modules bg-cover bg-no-repeat w-full bg-position-center" style="background-image:url('{{ get_asset_url('../../../images/bg-learning-modules.svg') }}');">
+  <div class="bg-learning-modules bg-contain bg-no-repeat w-full bg-position-center" style="background-image:url('{{ get_asset_url('../../../images/bg-learning-modules.svg') }}');">
     <div class="padding-content">
       <div class="content-wrapper">
         <div class="heading text-center">
          {{ module.heading }}
         </div>
         <div class="search-learning-products mt-30">
+          <form id="learning-module-form" method="GET" action="" class="override-style-form">
             <i class="icon-search"></i>
-            <input type="search" name="search_learning_modules" class="learning-modules" placeholder="Search learning modules">
+            <input type="search" name="query" class="learning-modules override-style-form" placeholder="Search learning modules" value="{% if query %}{{query}}{% endif %}">
+           </form>
          </div>
+    
         <div class="learning-module-lists">
-          {% for item in module.content_group %}
-            <div class="single-module flex">
-              <div class="left">
-                 {% if item.image.src %}
-                    {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
-                    {% if item.image.size_type == 'auto' %}
-                      {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
-                    {% elif item.image.size_type == 'auto_custom_max' %}
-                      {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
-                    {% endif %}
-                     {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
-                    <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-                  {% endif %}
-              </div>
-              <div class="right">
-                  {{ item.content }}
-                 <div class="inner-info flex">
-                   <div class="content-info">
-                     {{ item.content_info }}
-                   </div>
-                   <div class="time">
-                     {{ item.time }}
-                   </div> 
-                 </div>
-              </div>
-            </div>
+          {% for row in hubdb_table_rows(tableID) %}
+              <div class="single-module flex">
+                <div class="left">
+                  <img src="{{row.feature_image.url}}" alt="{{row.name}}" />
+                </div>
+                <div class="right">
+                    {{ row.description }}
+                       <div class="inner-info flex">
+                         <div class="content-info">
+                           {{ row.description_info }}
+                         </div>
+                         <div class="time">
+                           {{ row.time_to_read }}
+                         </div> 
+                       </div>
+                </div>
+              </div> 
           {% endfor %}
         </div>
+        
+        {# show all learning resources button #}
+        {% if module.button_group.button_text %}
+          <div class="button-wrap text-center">
+            {% set href = module.button_group.button_link.url.href %}
+            {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}" class="hs-button secondary small"
+              {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+              >
+              {{ module.button_group.button_text }}
+            </a>
+
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
 </div>
-<h1>
-  Learning modules
-</h1>

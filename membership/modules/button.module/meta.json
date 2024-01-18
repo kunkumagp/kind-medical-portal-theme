@@ -5,6 +5,6 @@
   "icon" : "../../../../mV0_d-cms-growth-theme_hubspot/growth/images/module-icons/cta.svg",
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
   "module_id" : 152800718670,
-  "label" : "Button",
+  "label" : "Kind Medical Button",
   "is_available_for_new_content" : true
 }

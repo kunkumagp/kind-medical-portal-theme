@@ -103,7 +103,7 @@ form .inputs-list {
 
 .inputs-list input,
 .inputs-list span {
-  font-size: 0.875rem;
+/*   font-size: 0.875rem; */
   vertical-align: middle;
 }
 
@@ -211,8 +211,8 @@ form .hs-button {
   color: #FFF;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.92rem;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: bold;
   height: auto;
   line-height: 1.1;
   margin: 0;

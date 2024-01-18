@@ -21454,10 +21454,13 @@ const { constant } = __webpack_require__(47);
 const hubspotService = __webpack_require__(49);
 
 exports.main = async (context, sendResponse) => {
+    // console.log(context);
     try {
         const properties = context.body.data;
-        const id = context.body.id;
+        const id = context.contact.vid;
+        console.log(context.contact.vid);
         const result = await hubspotService.updateObject('contacts', id, properties);
+        console.log(result);
         sendResponse({ body: { Response: result } });
     } catch (error) {
         sendResponse({ body: { Response: error } });
