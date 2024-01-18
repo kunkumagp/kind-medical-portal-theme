@@ -21367,11 +21367,20 @@ exports.updateObject = async (objectType, objectId, properties = {}) => {
 exports.searchObjects = async (objectType, filterValues, properties = {}, limit = 10, after = '0') => {
   const accessToken = process.env.HUBSPOT_API_KEY;
   const endpoint = `https://api.hubapi.com/crm/v3/objects/${objectType}/search`;
+
+  let sorts = [
+    {
+      propertyName: "lastmodifieddate",
+      direction: "DESCENDING"
+    }
+  ];
+
   let payload = JSON.stringify({
-    "limit": limit,
-    "after": after,
-    "properties": properties,
-    "filterGroups": filterValues
+    limit: limit,
+    after: after,
+    properties: properties,
+    filterGroups: filterValues,
+    sorts: sorts
   });
 
   const config = {
@@ -21454,13 +21463,10 @@ const { constant } = __webpack_require__(47);
 const hubspotService = __webpack_require__(49);
 
 exports.main = async (context, sendResponse) => {
-    // console.log(context);
     try {
         const properties = context.body.data;
         const id = context.contact.vid;
-        console.log(context.contact.vid);
         const result = await hubspotService.updateObject('contacts', id, properties);
-        console.log(result);
         sendResponse({ body: { Response: result } });
     } catch (error) {
         sendResponse({ body: { Response: error } });

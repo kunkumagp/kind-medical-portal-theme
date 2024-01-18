@@ -21367,11 +21367,20 @@ exports.updateObject = async (objectType, objectId, properties = {}) => {
 exports.searchObjects = async (objectType, filterValues, properties = {}, limit = 10, after = '0') => {
   const accessToken = process.env.HUBSPOT_API_KEY;
   const endpoint = `https://api.hubapi.com/crm/v3/objects/${objectType}/search`;
+
+  let sorts = [
+    {
+      propertyName: "lastmodifieddate",
+      direction: "DESCENDING"
+    }
+  ];
+
   let payload = JSON.stringify({
-    "limit": limit,
-    "after": after,
-    "properties": properties,
-    "filterGroups": filterValues
+    limit: limit,
+    after: after,
+    properties: properties,
+    filterGroups: filterValues,
+    sorts: sorts
   });
 
   const config = {
@@ -21443,11 +21452,11 @@ const hubspotService = __webpack_require__(49);
 
 function extractProperties(context) {
   const fields = [
-    'firstname', 'lastname', 'hcp_type', 'ahpra_number', 'practice_name', 
-    'practice_address', 'phone', 'email', 
-    'what_is_your_level_of_medicinal_cannabis_education', 
-    'how_many_medicinal_cannabis_scripts_do_you_write_or_dispense_on_average_each_month', 
-    'what_information_do_you_want_from_the_portal_other', 
+    'firstname', 'lastname', 'hcp_type', 'ahpra_number', 'practice_name',
+    'practice_address', 'phone', 'email',
+    'what_is_your_level_of_medicinal_cannabis_education',
+    'how_many_medicinal_cannabis_scripts_do_you_write_or_dispense_on_average_each_month',
+    'what_information_do_you_want_from_the_portal_other',
     'what_is_your_area_of_interest_relating_to_medical_cannabis_other'
   ];
 
@@ -21458,17 +21467,19 @@ function extractProperties(context) {
     return acc;
   }, {});
 
-  const checkBoxHandling = (fields) => fields.map(field => 
+  const checkBoxHandling = (fields) => fields.map(field =>
     context.body.data[field] === 'on' && field).filter(Boolean).join(';');
 
   properties['what_information_do_you_want_from_the_portal'] = checkBoxHandling([
-    'general_education_about_medicinal_cannabis', 
-    'information_about_kind_products', 
-    'patient_support_tools'
+    'general_education_about_medicinal_cannabis',
+    'kind_product_stock_status',
+    'information_about_kind_products',
+    'prescriber_guidance',
+    'patient_support_tools',
   ]);
 
   properties['what_is_your_area_of_interest_relating_to_medical_cannabis'] = checkBoxHandling([
-    'mood_disorder', 'sleep', 'pain'
+    'mood_disorders', 'sleep', 'pain'
   ]);
 
   properties['membership_status'] = 'manually_verified';

@@ -55,7 +55,12 @@
         {% endfor %}
       </div>
       <div class="text-center flex button-wrap flex-col">
-        <input type="submit" value="Next" class="hs-button primary large next-btn hide" >
+        <div class="button-wrap flex justify-center">
+            <button type="submit" class="hs-button primary large next-btn hide">
+                <span class="button-text">Next</span>
+                <img class="submit-spin" width="14" style="display: none;" src="{{ get_asset_url('../../../membership/images/loading.gif') }}">
+            </button>
+        </div>
         <button type="button" class="previous-ques" aria-label="Previous Question">
           <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 7L3 4L6 1" stroke="#666E5A" />

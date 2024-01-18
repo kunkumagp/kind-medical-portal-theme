@@ -120,6 +120,14 @@
                   </label>
                 </li>
                 <li>
+                  <label class="checkbox-label">Kind product stock status
+                    <input type="checkbox" name="kind_product_stock_status" {%
+                      if 'kind_product_stock_status' in
+                      contact.what_information_do_you_want_from_the_portal %}checked{% endif %}>
+                    <span class="checkbox"></span>
+                  </label>
+                </li>
+                <li>
                   <label class="checkbox-label">Information about Kind products
                     <input type="checkbox" name="information_about_kind_products" {%
                       if 'information_about_kind_products' in contact.what_information_do_you_want_from_the_portal
@@ -127,7 +135,14 @@
                     <span class="checkbox"></span>
                   </label>
                 </li>
-
+                <li>
+                  <label class="checkbox-label">Prescriber guidance
+                    <input type="checkbox" name="prescriber_guidance" {%
+                      if 'prescriber_guidance' in contact.what_information_do_you_want_from_the_portal
+                      %}checked{% endif %}>
+                    <span class="checkbox"></span>
+                  </label>
+                </li>
                 <li>
                   <label class="checkbox-label">Patient support tools
                     <input type="checkbox" name="patient_support_tools" {% if 'patient_support_tools' in
@@ -150,7 +165,7 @@
               <ul class="checkbox-lists">
                 <li>
                   <label class="checkbox-label">Mood Disorder
-                    <input type="checkbox" name="mood_disorder" {% if 'mood_disorder' in
+                    <input type="checkbox" name="mood_disorders" {% if 'mood_disorders' in
                       contact.what_is_your_area_of_interest_relating_to_medical_cannabis %}checked{% endif %}>
                     <span class="checkbox"></span>
                   </label>

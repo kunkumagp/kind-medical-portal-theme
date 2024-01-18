@@ -39,7 +39,7 @@
   {% if module.tags and post.tag_list %}
     <div class="blog-listing__post-tags">
       {% for tag in post.tag_list %}
-          {{tag.name}}
+          {{tag.name}}{% if !loop.last %}<span class="dot">. </span>{% endif %} 
        {# <a class="blog-listing__post-tag" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if !loop.last %}<span>, </span>{% endif %} #}
       {% endfor %}
     </div>
@@ -48,9 +48,9 @@
 
 {% macro post_title() %}
   {% if module.title %}
-    <h2 class="blog-listing__post-title">
-      <a class="blog-listing__post-title-link" href="{{ post.absolute_url }}">{{ post.name }}</a>
-    </h2>
+    <div class="blog-listing__post-title">
+      {{ post.name }}
+    </div>
   {% endif %}
 {% endmacro %}
 
@@ -141,7 +141,8 @@
 {% if post_listing|length > 0 %}
 
 <section class="blog-listing">
-  
+  <div class="padding-content">
+
     <div class="blog-listing__wrap">
     <div class="heading">
       {{ module.heading }}
@@ -149,7 +150,8 @@
     
     <div class="blog-listing__container flex {% if module.number_of_posts == '4' %}four-col{% elif module.number_of_posts == '3' %}three-col{% elif module.number_of_posts == '2' %}two-col {% else %} one-col{% endif %}">
        {% for post in post_listing %}
-          <article class="blog-listing__post">
+          <a class="blog-listing__post" href="{{ post.absolute_url }}">
+    
               {{ post_tags() }}
               {{post_image () }}
               {{post_title () }}
@@ -160,57 +162,17 @@
               </div>
               {#{% if content.post_body|wordcount > 0 %}{{content.post_body|wordcount|float|divide(300)|round(0, 'ceil')}}{% else %}1{% endif %} #}
               <div class="read-time pos-relative">
-                  {#{{post.post_list_content|striptags|wordcount }} #}
                  {{mins_to_read(post)}}
               </div>
             </div>
-          </article> 
+         
+          </a>
       {% endfor %}
      </div>
     </div>
+        
+  </div>
 </section>
-  {#<section class="blog-listing blog-listing--{{ layout }} {{ "blog-listing--{{ columns }}-col" if layout == "card" }}">
-
-    <div class{{ module.heading }}" %}
-    {% for post in post_listing %}
-
-   
-      <article
-        class="blog-listing__post card {{ card_style }} blog-post-listing__post--{{ layout }} {{ "blog-post-listing__post--{{ columns }}" if layout == "card" }}"
-        {% if has_full_image and post.featured_image %}
-          style="background-image:url({{ post.featured_image }});"
-        {% endif %}
-        aria-label="{{ module.default_text.blog_post_summary_text }}"
-      >
-
-       
-
-        {% if has_full_image and post.featured_image %}
-          <div class="blog-listing__post-inner-wrapper">
-        {% endif %}
-
-          
-
-          {% if not has_alternate_image or loop.index is not divisibleby 2 %}
-            {{ post_image("left") }}
-          {% elif has_alternate_image and loop.index is divisibleby 2 %}
-            {{ post_image("right") }}
-          {% endif %}
-
-      
-
-          {{ post_content() }}
-
-   
-
-        {% if has_full_image and post.featured_image %}
-          </div>
-        {% endif %}
-
-      </article>
-
-    {% endfor %}
-  </section> #}
 {% else %}
 
   {% if is_in_editor %}

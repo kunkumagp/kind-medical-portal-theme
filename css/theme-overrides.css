@@ -354,6 +354,7 @@ button:active,
   border-radius: {{ button_simple_corner_radius }};
   color: {{ button_simple_font.color }};
   fill: {{ button_simple_font.color }};
+  padding: 0px !important;
 }
 
 .button.button--simple:hover,

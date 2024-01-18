@@ -21367,11 +21367,20 @@ exports.updateObject = async (objectType, objectId, properties = {}) => {
 exports.searchObjects = async (objectType, filterValues, properties = {}, limit = 10, after = '0') => {
   const accessToken = process.env.HUBSPOT_API_KEY;
   const endpoint = `https://api.hubapi.com/crm/v3/objects/${objectType}/search`;
+
+  let sorts = [
+    {
+      propertyName: "lastmodifieddate",
+      direction: "DESCENDING"
+    }
+  ];
+
   let payload = JSON.stringify({
-    "limit": limit,
-    "after": after,
-    "properties": properties,
-    "filterGroups": filterValues
+    limit: limit,
+    after: after,
+    properties: properties,
+    filterGroups: filterValues,
+    sorts: sorts
   });
 
   const config = {
@@ -21467,12 +21476,14 @@ function extractProperties(context) {
 
   properties['what_information_do_you_want_from_the_portal'] = checkBoxHandling([
     'general_education_about_medicinal_cannabis', 
-    'information_about_kind_products', 
-    'patient_support_tools'
+    'kind_product_stock_status',
+    'information_about_kind_products',
+    'prescriber_guidance',
+    'patient_support_tools',
   ]);
 
   properties['what_is_your_area_of_interest_relating_to_medical_cannabis'] = checkBoxHandling([
-    'mood_disorder', 'sleep', 'pain'
+    'mood_disorders', 'sleep', 'pain'
   ]);
 
   return properties;

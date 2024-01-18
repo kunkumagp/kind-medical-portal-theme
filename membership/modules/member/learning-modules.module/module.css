@@ -78,7 +78,16 @@
   color: #63666A;
 }
 .learning-module-lists .right .content-info {
+  position: relative;
 }
+.learning-module-lists .right .content-info::after {
+  content: '|';
+  margin-left: 7px;
+  margin-right: 6px;
+}
+
+
+
 .learning-module-lists .right .time{
   position: relative;
   margin-left: 22px;
@@ -89,7 +98,7 @@
   height: 13px;
   left: -17px;
   position: absolute;
-  top: 2px;
+  top: 1px;
   width: 13px;
 }
 

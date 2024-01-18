@@ -69,6 +69,25 @@
     "type" : "text",
     "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   }, {
+    "id" : "c1a18dbd-7688-654c-2eb6-20179f202836",
+    "name" : "meeting_link",
+    "display_width" : null,
+    "label" : "Meeting Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
     "id" : "2c5c793e-e678-8616-02f8-1b9cdb9e38c3",
     "name" : "button_group",
     "display_width" : null,
@@ -138,9 +157,9 @@
         "icon_set" : "fontawesome-5.0.10",
         "type" : "icon",
         "default" : {
-          "name" : "arrow-alt-circle-up",
-          "type" : "SOLID",
-          "unicode" : "f35b"
+          "name" : "angle-right",
+          "unicode" : "f105",
+          "type" : "SOLID"
         }
       }, {
         "id" : "icon.position",
@@ -162,9 +181,9 @@
       "type" : "group",
       "default" : {
         "icon" : {
-          "name" : "arrow-alt-circle-up",
-          "type" : "SOLID",
-          "unicode" : "f35b"
+          "name" : "angle-right",
+          "unicode" : "f105",
+          "type" : "SOLID"
         },
         "position" : "left"
       }
@@ -183,9 +202,9 @@
       "add_icon" : false,
       "icon" : {
         "icon" : {
-          "name" : "arrow-alt-circle-up",
-          "type" : "SOLID",
-          "unicode" : "f35b"
+          "name" : "angle-right",
+          "unicode" : "f105",
+          "type" : "SOLID"
         },
         "position" : "left"
       }
@@ -208,6 +227,15 @@
     "title" : "Profile Title",
     "designation" : "Designation",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "meeting_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "button_group" : {
       "button_text" : "Book Now",
       "button_link" : {
@@ -219,9 +247,9 @@
       "add_icon" : false,
       "icon" : {
         "icon" : {
-          "name" : "arrow-alt-circle-up",
-          "type" : "SOLID",
-          "unicode" : "f35b"
+          "name" : "angle-right",
+          "unicode" : "f105",
+          "type" : "SOLID"
         },
         "position" : "left"
       }
@@ -240,6 +268,15 @@
     "title" : "Profile Title",
     "designation" : "Designation",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "meeting_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "button_group" : {
       "button_text" : "Book Now",
       "button_link" : {
@@ -251,9 +288,9 @@
       "add_icon" : false,
       "icon" : {
         "icon" : {
-          "name" : "arrow-alt-circle-up",
-          "type" : "SOLID",
-          "unicode" : "f35b"
+          "name" : "angle-right",
+          "unicode" : "f105",
+          "type" : "SOLID"
         },
         "position" : "left"
       }
@@ -272,6 +309,15 @@
     "title" : "Profile Title",
     "designation" : "Designation",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "meeting_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
     "button_group" : {
       "button_text" : "Book Now",
       "button_link" : {
@@ -283,9 +329,9 @@
       "add_icon" : false,
       "icon" : {
         "icon" : {
-          "name" : "arrow-alt-circle-up",
-          "type" : "SOLID",
-          "unicode" : "f35b"
+          "name" : "angle-right",
+          "unicode" : "f105",
+          "type" : "SOLID"
         },
         "position" : "left"
       }

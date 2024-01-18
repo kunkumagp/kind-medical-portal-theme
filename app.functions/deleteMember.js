@@ -21367,11 +21367,20 @@ exports.updateObject = async (objectType, objectId, properties = {}) => {
 exports.searchObjects = async (objectType, filterValues, properties = {}, limit = 10, after = '0') => {
   const accessToken = process.env.HUBSPOT_API_KEY;
   const endpoint = `https://api.hubapi.com/crm/v3/objects/${objectType}/search`;
+
+  let sorts = [
+    {
+      propertyName: "lastmodifieddate",
+      direction: "DESCENDING"
+    }
+  ];
+
   let payload = JSON.stringify({
-    "limit": limit,
-    "after": after,
-    "properties": properties,
-    "filterGroups": filterValues
+    limit: limit,
+    after: after,
+    properties: properties,
+    filterGroups: filterValues,
+    sorts: sorts
   });
 
   const config = {

@@ -15,7 +15,8 @@
 {% set queryparams = "" %} 
 {% if request.query_dict.query %} 
     {# {% set queryparams = "name__contains="~request.query_dict.query~"&description__contains="~request.query_dict.query %} #} 
-    {% set queryparams = "name__contains="~request.query_dict.query %}
+  
+{% set queryparams = "description__contains="~request.query_dict.query  %}
    <p> {{queryparams}}</p>
     {% for row in hubdb_table_rows("11587680" , queryparams )%}
        <p>{{row.name}}</p>
@@ -23,6 +24,19 @@
 {% endif %} 
 
 
+
+
+{% macro mins_to_read(content) %}
+  {% set initialPostWords = content|striptags|wordcount %}
+  {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+  {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+  {% set number = finishedPostWords|round %}
+  {% if number < 1 %}
+    1 min
+  {% else %}
+    {{ finishedPostWords|round }} mins
+  {% endif %}
+{% endmacro %}
 
 <div class="learning-modules">
   <div class="bg-learning-modules bg-contain bg-no-repeat w-full bg-position-center" style="background-image:url('{{ get_asset_url('../../../images/bg-learning-modules.svg') }}');">
@@ -34,7 +48,7 @@
         <div class="search-learning-products mt-30">
           <form id="learning-module-form" method="GET" action="" class="override-style-form">
             <i class="icon-search"></i>
-            <input type="search" name="query" class="learning-modules override-style-form" placeholder="Search learning modules" value="{% if query %}{{query}}{% endif %}">
+            <input type="search" name="query" class="learning-modules override-style-form" placeholder="Search learning modules" value="{% if request.query_dict.query %}{{request.query_dict.query}}{% endif %}">
            </form>
          </div>
     
@@ -51,7 +65,7 @@
                            {{ row.description_info }}
                          </div>
                          <div class="time">
-                           {{ row.time_to_read }}
+                          {% if  row.time_to_read %} {{ row.time_to_read }} {% else %} {{mins_to_read(row.description )}} {% endif %}
                          </div> 
                        </div>
                 </div>

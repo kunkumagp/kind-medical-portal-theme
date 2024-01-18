@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
       $currentQues.removeClass('show');
 
       if ($(".ques-wrap.show").next().length > 0) {
-        $("#questionaire-form input[type='submit']").val("Next");
+        $("#questionaire-form button[type='submit'] .button-text").text("Next");
       }
     }
   })
@@ -99,6 +99,8 @@ jQuery(document).ready(function ($) {
         formDataObject[item.name] = item.value;
       }
     });
+    
+    formDataObject['is_onboarding_completed'] = 'Yes';
 
     var requestOptions = {
       'method': 'POST',
@@ -149,15 +151,17 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  $("#questionaire-form input[type='submit']").click(function (e) {
+  $("#questionaire-form button[type='submit']").click(function (e) {
     e.preventDefault();
     var form = $("#questionaire-form");
     if (form.valid()) {
       var $activeQues = $(".ques-wrap.show");
       if ($(".ques-wrap.show").next().length == 0) {
-        $("#questionaire-form input[type='submit']").val("Done");
+        $("#questionaire-form button[type='submit'] .button-text").text("Next");
       }
       if ($activeQues.next().length == 0) {
+        $("#questionaire-form button[type='submit'] .button-text").text("Done");
+        $("#questionaire-form button[type='submit'] .submit-spin").show();
         form.submit();
       }
       if ($activeQues.next().length > 0) {
@@ -169,8 +173,9 @@ jQuery(document).ready(function ($) {
         addValidationToNextQuestion();
 
         if ($(".ques-wrap.show").next().length == 0) {
-          $("#questionaire-form input[type='submit']").val("Done");
+            $("#questionaire-form button[type='submit'] .button-text").text("Done");
         }
+
       }
     }
   })

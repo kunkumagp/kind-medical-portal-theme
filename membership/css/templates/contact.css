@@ -10,11 +10,11 @@
 /*****************************************/
 
 #main-content{
-/*   background: #EBEFE7; */
+  background: #EBEFE7;
 }
 
 .contact-us{
-  padding-top: 68px;
+/*   padding-top: 68px; */
 }
 
 .book-a-consultation{
@@ -44,4 +44,12 @@
 
 .get-in-touch-form{
   margin-top: 35px;
+}
+
+.form .hs-button, form input[type=submit]{
+  border-radius: 38px !important;
+}
+
+.form .hs-button, form textarea{
+  height: 108px !important;
 }

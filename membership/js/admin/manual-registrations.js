@@ -88,24 +88,32 @@ jQuery(document).ready(function ($) {
     }
 
     function updatePagination(totalItems) {
+      
+        const $pagination = $('#pagination');
+        $pagination.empty();
+      
         if (totalItems <= limit) return;
 
         totalPages = Math.ceil(totalItems / limit);
-        $pagination.empty().append(createPaginationButtons(totalPages));
+        
+        const prevButton = `<a class="page page-prev"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.5 11L1.5 6L6.5 1" stroke="#7F7F7F" stroke-width="2"/>
+            </svg></a>`;
+        $pagination.append(prevButton);
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = `<a class="page${currentPage === i ? ' active' : ''}">${i}</a>`;
+            $pagination.append(button);
+        }
+
+        const nextButton = `<a class="page page-next"><svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 1L6.5 6L1.5 11" stroke="#7F7F7F" stroke-width="2"/>
+              </svg></a>`;
+        $pagination.append(nextButton);
+      
         updatePaginationVisibility();
 
         $pagination.off('click', '.page').on('click', '.page', handlePageClick);
-    }
-
-    function createPaginationButtons(totalPages) {
-        let buttons = `<a class="page page-prev">Previous</a>`;
-
-        for (let i = 1; i <= totalPages; i++) {
-            buttons += `<a class="page${currentPage === i ? ' active' : ''}">${i}</a>`;
-        }
-
-        buttons += `<a class="page page-next">Next</a>`;
-        return buttons;
     }
 
     function handlePageClick() {
