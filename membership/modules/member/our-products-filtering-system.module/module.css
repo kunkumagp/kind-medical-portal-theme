@@ -16,6 +16,10 @@
   font-family: FS Me;
   margin-bottom:12px !important;
 }
+
+.filter-box p{
+  z-index:5;
+}
 .filter-block span{
   color: #666E5A;
   font-family: FS Me;
@@ -41,15 +45,18 @@
   gap:16px;
   justify-content:center;
   flex-wrap:wrap;
+  padding: 0px 50px;
 }
 .drop-checkbox-container{
   border-radius: 16px;
   box-shadow: 0px 4px 38px 0px rgba(102, 110, 90, 0.17);
   padding: 15px 30px 15px 30px;
   width: 274.469px;
-  border: 1.5px solid #DBE0D3;
+  border: 2px solid #DBE0D3;
   top:112%;
   left:-21%;
+  z-index:10;
+  background-color:white;
 }
 .up-arrow{
   pointer-events: none;
@@ -62,11 +69,12 @@
   border-left-color: transparent !important;
   width:35px;
   height:35px;
-  border: 1.5px solid #DBE0D3;
+  border: 2px solid #DBE0D3;
   border-radius:5px;
   background-color:white;
   left:40%;
-  top:92%;
+  top:93%;
+  z-index:15;
 }
 .checkbox-row{
   justify-content:space-between;
@@ -122,7 +130,10 @@
   display:none;
 }
 #format-dropbox-container .checkbox-row:last-child,
-#time-of-use-dropbox-container .checkbox-row:last-child
+#time-of-use-dropbox-container .checkbox-row:last-child,
+#potency-dropbox-container .checkbox-row:last-child,
+#Reported-effects-dropbox-container .checkbox-row:last-child,
+#TGA-Category-dropbox-container .checkbox-row:last-child
 {
   border:none;
 }

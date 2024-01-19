@@ -1,0 +1,10 @@
+[ {
+  "id" : "650858e5-9b25-c605-c0f8-4f56cbfb6fe8",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3><span style=\"color: #666e5a;\">Compare products</span></h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>"
+} ]

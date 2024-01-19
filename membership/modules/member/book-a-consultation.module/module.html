@@ -206,11 +206,12 @@
     </div>
 
     <div id="modal-{{loop.index}}" class="modal book-a-consultation-modal">
-      <div class="modal-content">
+      <div class="modal-content large" style="height: 904px;">
         <div class="btn-close" onclick='close_book_now({{loop.index}});'>&#x2715;</div>
         
         {% if item.meeting_link  %}
-        <iframe class="iframe w-full" id="iframe-{{loop.index}}" srcdoc="<!DOCTYPE html><h4>Meeting Link</h4><a style='text-align: center;' href='{{ item.meeting_link }}'>{{ item.meeting_link }}</a>"></iframe> 
+           {#<iframe class="iframe w-full" id="iframe-{{loop.index}}" srcdoc="<!DOCTYPE html><h4>Meeting Link</h4><a style='text-align: center;' href='{{ item.meeting_link }}'>{{ item.meeting_link }}</a>"></iframe> #}
+          <iframe src="{{ item.meeting_link }}" style="border:0px #ffffff none;" class="meeting-iframe"  name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
         {% else %}
          <h4>No meeting link.</h4>
         {% endif %}
@@ -222,7 +223,7 @@
 
       function open_book_now(index){
         var modalElement = document.getElementById("modal-"+index);
-        modalElement.classList.add("open");
+        modalElement.classList.add("open");       
       }
 
       function close_book_now(index){

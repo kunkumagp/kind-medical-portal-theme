@@ -12,20 +12,6 @@
 {% set tableID = module.hubdbtable_field %}
 
 
-{% set queryparams = "" %} 
-{% if request.query_dict.query %} 
-    {# {% set queryparams = "name__contains="~request.query_dict.query~"&description__contains="~request.query_dict.query %} #} 
-  
-{% set queryparams = "description__contains="~request.query_dict.query  %}
-   <p> {{queryparams}}</p>
-    {% for row in hubdb_table_rows("11587680" , queryparams )%}
-       <p>{{row.name}}</p>
-      {% endfor %} 
-{% endif %} 
-
-
-
-
 {% macro mins_to_read(content) %}
   {% set initialPostWords = content|striptags|wordcount %}
   {% set calculatedPostWords = (initialPostWords/100) * 100 %}
@@ -51,26 +37,57 @@
             <input type="search" name="query" class="learning-modules override-style-form" placeholder="Search learning modules" value="{% if request.query_dict.query %}{{request.query_dict.query}}{% endif %}">
            </form>
          </div>
-    
+ 
         <div class="learning-module-lists">
-          {% for row in hubdb_table_rows(tableID) %}
-              <div class="single-module flex">
-                <div class="left">
-                  <img src="{{row.feature_image.url}}" alt="{{row.name}}" />
+        {% if request.query_dict.query %}
+          {% set query = request.query_dict.query %}
+          {% set queryparams = "description__contains=" ~ query %}
+          {% for row in hubdb_table_rows(tableID, queryparams) %}
+            <div class="single-module flex">
+              <div class="left">
+                <img src="{{row.feature_image.url}}" alt="{{row.name}}" />
+              </div>
+              <div class="right">
+                {{ row.description }}
+                <div class="inner-info flex">
+                  <div class="content-info">
+                    {{ row.description_info }}
+                  </div>
+                  <div class="time">
+                    {% if row.time_to_read %}
+                      {{ row.time_to_read }}
+                    {% else %}
+                      {{ mins_to_read(row.description) }}
+                    {% endif %}
+                  </div>
                 </div>
-                <div class="right">
-                    {{ row.description }}
-                       <div class="inner-info flex">
-                         <div class="content-info">
-                           {{ row.description_info }}
-                         </div>
-                         <div class="time">
-                          {% if  row.time_to_read %} {{ row.time_to_read }} {% else %} {{mins_to_read(row.description )}} {% endif %}
-                         </div> 
-                       </div>
-                </div>
-              </div> 
+              </div>
+            </div>
           {% endfor %}
+        {% else %}
+          {% for row in hubdb_table_rows(tableID) %}
+            <div class="single-module flex">
+              <div class="left">
+                <img src="{{row.feature_image.url}}" alt="{{row.name}}" />
+              </div>
+              <div class="right">
+                {{ row.description }}
+                <div class="inner-info flex">
+                  <div class="content-info">
+                    {{ row.description_info }}
+                  </div>
+                  <div class="time">
+                    {% if row.time_to_read %}
+                      {{ row.time_to_read }}
+                    {% else %}
+                      {{ mins_to_read(row.description) }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
         </div>
         
         {# show all learning resources button #}

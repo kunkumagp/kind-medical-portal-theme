@@ -69,24 +69,16 @@
     "type" : "text",
     "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   }, {
-    "id" : "c1a18dbd-7688-654c-2eb6-20179f202836",
+    "id" : "e93f07b0-a8f3-b42c-4a5c-524259ef8bcf",
     "name" : "meeting_link",
     "display_width" : null,
-    "label" : "Meeting Link",
+    "label" : "Meeting link",
     "required" : false,
     "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
   }, {
     "id" : "2c5c793e-e678-8616-02f8-1b9cdb9e38c3",
     "name" : "button_group",
@@ -227,15 +219,6 @@
     "title" : "Profile Title",
     "designation" : "Designation",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "meeting_link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
     "button_group" : {
       "button_text" : "Book Now",
       "button_link" : {
@@ -268,15 +251,6 @@
     "title" : "Profile Title",
     "designation" : "Designation",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "meeting_link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
     "button_group" : {
       "button_text" : "Book Now",
       "button_link" : {
@@ -309,15 +283,6 @@
     "title" : "Profile Title",
     "designation" : "Designation",
     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "meeting_link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    },
     "button_group" : {
       "button_text" : "Book Now",
       "button_link" : {
