@@ -1,3 +1,12 @@
+
+{% set all_formats = hubdb_table_column(7946284, 7)  %} 
+{% set times_of_use = hubdb_table_column(7946284, 25)  %} 
+{% set potencies = hubdb_table_column(7946284, 23)  %} 
+{% set reported_effects = hubdb_table_column(7946284, 27)  %}
+{% set tga_categories = hubdb_table_column(7946284, 22)  %}
+
+
+
 <div class="filter-container">
   <div class="head-topic">
     <p>Select one or more filters:</p>
@@ -14,42 +23,20 @@
         </svg>
       </div>
       <div id="format-dropbox-container" class="drop-checkbox-container position-absolute d-none">
-        <div class="checkbox-row flex">
-          <div class="flex align-center checkbox-label-wrapper">
-            <span class="check-box-icon-wrapper">
-              <img src="{{ get_asset_url('../../images/Icons/flower.png') }}">
-            </span>
-            <span><label>Flower</label></span>
+        {% for format in all_formats.options  %}
+          <div class="checkbox-row flex">
+            <div class="flex align-center checkbox-label-wrapper">
+              <span class="check-box-icon-wrapper">
+                <img src="{{ get_asset_url('../../images/Icons/product_icons/'~format.name~'.svg') }}">
+              </span>
+              <span><label>{{format.name}}</label></span>
+            </div>
+            <div class="round-checkbox">
+              <input type="checkbox" id="{{format.name}}" value="{{format.name}}">
+              <label for="{{format.name}}"></label>
+            </div>
           </div>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Flower" value="Flower">
-            <label for="Flower"></label>
-          </div>
-        </div>
-        <div class="checkbox-row flex">
-          <div class="flex align-center checkbox-label-wrapper">
-            <span class="check-box-icon-wrapper">
-              <img src="{{ get_asset_url('../../images/Icons/Oil.png') }}">
-            </span>
-            <span><label>Oil</label></span>
-          </div>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Oil" value="Oil">
-            <label for="Oil"></label>
-          </div>
-        </div>
-        <div class="checkbox-row flex">
-          <div class="flex align-center checkbox-label-wrapper">
-            <span class="check-box-icon-wrapper">
-              <img src="{{ get_asset_url('../../images/Icons/Vape.png') }}">
-            </span>
-            <span><label>Vape</label></span>
-          </div>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Vape" value="Vape">
-            <label for="Vape"></label>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div id="format-dropbox-container-tag" class="up-arrow position-absolute d-none"></div>
     </div>
@@ -64,45 +51,20 @@
         </svg>
       </div>
       <div id="time-of-use-dropbox-container" class="drop-checkbox-container position-absolute d-none">
-        <div class="checkbox-row flex">
-          <div class="flex align-center checkbox-label-wrapper">
-            <span class="check-box-icon-wrapper">
-              <img src="{{ get_asset_url('../../images/Icons/flower.png') }}">
-            </span>
-            <span><label>Day</label></span>
+        {% for time_of_use in times_of_use.options  %}
+          <div class="checkbox-row flex">
+            <div class="flex align-center checkbox-label-wrapper">
+              <span class="check-box-icon-wrapper">
+                <img src="{{ get_asset_url('../../images/Icons/product_icons/'~time_of_use.name~'.svg') }}">
+              </span>
+              <span><label>{{time_of_use.name}}</label></span>
+            </div>
+            <div class="round-checkbox">
+              <input type="checkbox" id="{{time_of_use.name}}" value="{{time_of_use.name}}">
+              <label for="{{time_of_use.name}}"></label>
+            </div>
           </div>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Day" value="Day">
-            <label for="Day"></label>
-          </div>
-        </div>
-        <div class="checkbox-row flex">
-          <div class="flex align-center checkbox-label-wrapper">
-            <span class="check-box-icon-wrapper">
-              <img src="{{ get_asset_url('../../images/Icons/flower.png') }}">
-            </span>
-            <span><label>Day or Night</label></span>
-          </div>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Day-or-Night" value="Day or Night">
-            <label for="Day-or-Night"></label>
-          </div>
-        </div>
-        <div class="checkbox-row flex">
-          <div class="flex align-center checkbox-label-wrapper">
-            <span class="check-box-icon-wrapper">
-              <img src="{{ get_asset_url('../../images/Icons/flower.png') }}">
-            </span>
-            <span><label>Night</label></span>
-          </div>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Night" value="Night">
-            <label for="Night"></label>
-          </div>
-        </div>
-        
-        
-        
+        {% endfor %}
       </div>
       <div id="time-of-use-dropbox-container-tag" class="up-arrow position-absolute d-none"></div>
     </div>
@@ -117,20 +79,20 @@
         </svg>
       </div>
       <div id="potency-dropbox-container" class="drop-checkbox-container position-absolute d-none">
-        <div class="checkbox-row flex">
-          <span><label>Option4</label></span>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Option4" value="Bike">
-            <label for="Option4"></label>
+        {% for potency in potencies.options  %}
+          <div class="checkbox-row flex">
+            <div class="flex align-center checkbox-label-wrapper">
+              <span class="check-box-icon-wrapper">
+                <img src="{{ get_asset_url('../../images/Icons/product_icons/'~potency.name~'.svg') }}">
+              </span>
+              <span><label>{{potency.name}}</label></span>
+            </div>
+            <div class="round-checkbox">
+              <input type="checkbox" id="{{potency.name}}" value="{{potency.name}}">
+              <label for="{{potency.name}}"></label>
+            </div>
           </div>
-        </div>
-        <div class="checkbox-row flex">
-          <span><label>Option5</label></span>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Option5" value="Bike">
-            <label for="Option5"></label>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div id="potency-dropbox-container-tag" class="up-arrow position-absolute d-none"></div>
     </div>
@@ -145,20 +107,20 @@
         </svg>
       </div>
       <div id="Reported-effects-dropbox-container" class="drop-checkbox-container position-absolute d-none">
-        <div class="checkbox-row flex">
-          <span><label>Option6</label></span>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Option6" value="Bike">
-            <label for="Option6"></label>
+       {% for reported_effect in reported_effects.options  %}
+          <div class="checkbox-row flex">
+            <div class="flex align-center checkbox-label-wrapper">
+              <span class="check-box-icon-wrapper">
+                <img src="{{ get_asset_url('../../images/Icons/product_icons/'~reported_effect.name~'.svg') }}">
+              </span>
+              <span><label>{{reported_effect.name}}</label></span>
+            </div>
+            <div class="round-checkbox">
+              <input type="checkbox" id="{{reported_effect.name}}" value="{{reported_effect.name}}">
+              <label for="{{reported_effect.name}}"></label>
+            </div>
           </div>
-        </div>
-        <div class="checkbox-row flex">
-          <span><label>Option7</label></span>
-          <div class="round-checkbox">
-            <input type="checkbox" id="Option7" value="Bike">
-            <label for="Option7"></label>
-          </div>
-        </div>
+        {% endfor %}
       </div>
       <div id="Reported-effects-dropbox-container-tag" class="up-arrow position-absolute d-none"></div>
     </div>

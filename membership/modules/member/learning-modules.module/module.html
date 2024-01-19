@@ -8,9 +8,7 @@
 </style>
 {% end_require_css %}
 
-
 {% set tableID = module.hubdbtable_field %}
-
 
 {% macro mins_to_read(content) %}
   {% set initialPostWords = content|striptags|wordcount %}
@@ -41,7 +39,7 @@
         <div class="learning-module-lists">
         {% if request.query_dict.query %}
           {% set query = request.query_dict.query %}
-          {% set queryparams = "description__contains=" ~ query %}
+          {% set queryparams = "description__icontains=" ~ query %}
           {% for row in hubdb_table_rows(tableID, queryparams) %}
             <div class="single-module flex">
               <div class="left">

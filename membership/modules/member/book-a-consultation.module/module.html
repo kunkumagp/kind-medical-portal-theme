@@ -206,7 +206,7 @@
     </div>
 
     <div id="modal-{{loop.index}}" class="modal book-a-consultation-modal">
-      <div class="modal-content large" style="height: 904px;">
+      <div class="modal-content large">
         <div class="btn-close" onclick='close_book_now({{loop.index}});'>&#x2715;</div>
         
         {% if item.meeting_link  %}
@@ -223,7 +223,12 @@
 
       function open_book_now(index){
         var modalElement = document.getElementById("modal-"+index);
-        modalElement.classList.add("open");       
+        modalElement.classList.add("open");  
+        
+        setTimeout(function() {
+          console.log("#modal-"+index);
+          console.log($(".book-a-consultation-modal").find(".meetings-lib").height());
+        },1000);
       }
 
       function close_book_now(index){

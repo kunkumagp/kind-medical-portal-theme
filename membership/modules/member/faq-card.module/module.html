@@ -1,0 +1,65 @@
+
+
+<div class="faq-card">
+
+  {#   {% for item in module.category_group %}
+    {% inline_text field="category" value="{{ item.category }}" %}
+    {% for item2 in item.faq_group %}
+      {% inline_text field="faq_title" value="{{ item2.faq_title }}" %}
+      {% inline_text field="question_description" value="{{ item2.question_description }}" %}
+    {% endfor %}
+  {% endfor %} #}
+
+
+  <div class="category-list">
+    {% for item in module.category_group %}
+    <div onclick="setActiveTab({{loop.index - 1}})" class="category">{{ item.category }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="faqs-data">
+    {% for item in module.category_group %}
+    <div class="active-category-title">{{ item.category }}</div>
+    <div class="faqs-list">
+      
+      {% for faq in item.faq_group %}
+
+      <div class="faq flex">
+        <div>
+          <div class="faq-title active">{{ faq.faq_title }}</div>
+          <div class="faq-description">{{ faq.question_description }}</div>
+        </div>
+        <div class="faq-icon">
+          <img src="{{ get_asset_url('/kind-medical-portal-theme/membership/images/Icons/minus.png') }}">
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+    
+    {% endfor %}
+  </div>
+
+</div>
+
+<script>
+  setActiveTab(0);
+
+  function setActiveTab(index){
+    const elements = document.querySelectorAll('.category-list .category');
+    //   Remove Active Class
+    elements.forEach(element => {
+      // ✅ Remove class from each element
+      element.classList.remove('active');
+
+      // ✅ Add class to each element
+      //   element.classList.add('small');
+    });
+
+    elements[index].classList.add('active');
+  }
+</script>
+
+
+
