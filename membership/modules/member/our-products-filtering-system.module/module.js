@@ -1,85 +1,69 @@
+function controlFilterBoxShowHideStatus(leaveDropBoxClass,dropContainerId,dropContainerTagId){
+  var dropBoxClass = dropBoxClass;
+  var dropContainerId = dropContainerId;
+  var dropContainerTagId = dropContainerTagId;
+
+  $('.drop-checkbox-container').not(leaveDropBoxClass).hide();
+  $('.up-arrow').not(leaveDropBoxClass).hide();
+
+  $(dropContainerId).toggle();
+  $(dropContainerTagId ).toggle();
+
+}
 
 $('#format').click(function() {
-  $('#time-of-use-dropbox-container').hide();
-  $('#time-of-use-dropbox-container-tag').hide();
-  $('#potency-dropbox-container').hide();
-  $('#potency-dropbox-container-tag').hide();
-  $('#Reported-effects-dropbox-container').hide();
-  $('#Reported-effects-dropbox-container-tag').hide();
-  $('#TGA-Category-dropbox-container').hide();
-  $('#TGA-Category-dropbox-container-tag').hide();
-
-
-  $('#format-dropbox-container').toggle();
-  $('#format-dropbox-container-tag').toggle();
+  controlFilterBoxShowHideStatus(".format-drop","#format-dropbox-container","#format-dropbox-container-tag");
 });
 
 $('#time-of-use').click(function() {
-  $('#format-dropbox-container').hide();
-  $('#format-dropbox-container-tag').hide();
-  $('#potency-dropbox-container').hide();
-  $('#potency-dropbox-container-tag').hide();
-  $('#Reported-effects-dropbox-container').hide();
-  $('#Reported-effects-dropbox-container-tag').hide();
-  $('#TGA-Category-dropbox-container').hide();
-  $('#TGA-Category-dropbox-container-tag').hide();
-
-  $('#time-of-use-dropbox-container').toggle();
-  $('#time-of-use-dropbox-container-tag').toggle();
+  controlFilterBoxShowHideStatus(".time-of-use-drop","#time-of-use-dropbox-container","#time-of-use-dropbox-container-tag");
 });
 
 $('#potency').click(function() {
-  $('#format-dropbox-container').hide();
-  $('#format-dropbox-container-tag').hide();
-  $('#time-of-use-dropbox-container').hide();
-  $('#time-of-use-dropbox-container-tag').hide();
-  $('#Reported-effects-dropbox-container').hide();
-  $('#Reported-effects-dropbox-container-tag').hide();
-  $('#TGA-Category-dropbox-container').hide();
-  $('#TGA-Category-dropbox-container-tag').hide();
-
-  $('#potency-dropbox-container').toggle();
-  $('#potency-dropbox-container-tag').toggle();
+  controlFilterBoxShowHideStatus(".potency-drop","#potency-dropbox-container","#potency-dropbox-container-tag");
 });
 
 $('#Reported-effects').click(function() {
-  $('#format-dropbox-container').hide();
-  $('#format-dropbox-container-tag').hide();
-  $('#time-of-use-dropbox-container').hide();
-  $('#time-of-use-dropbox-container-tag').hide();
-  $('#potency-dropbox-container').hide();
-  $('#potency-dropbox-container-tag').hide();
-  $('#TGA-Category-dropbox-container').hide();
-  $('#TGA-Category-dropbox-container-tag').hide();
-
-  $('#Reported-effects-dropbox-container').toggle();
-  $('#Reported-effects-dropbox-container-tag').toggle();
-
+  controlFilterBoxShowHideStatus(".Reported-effects-drop","#Reported-effects-dropbox-container","#Reported-effects-dropbox-container-tag");
 });
 
 $('#TGA-Category').click(function() {
-  $('#format-dropbox-container').hide();
-  $('#format-dropbox-container-tag').hide();
-  $('#time-of-use-dropbox-container').hide();
-  $('#time-of-use-dropbox-container-tag').hide();
-  $('#potency-dropbox-container').hide();
-  $('#potency-dropbox-container-tag').hide();
-  $('#Reported-effects-dropbox-container').hide();
-  $('#Reported-effects-dropbox-container-tag').hide();
-  
-  $('#TGA-Category-dropbox-container').toggle();
-  $('#TGA-Category-dropbox-container-tag').toggle();
-
+  controlFilterBoxShowHideStatus(".TGA-Category-drop","#TGA-Category-dropbox-container","#TGA-Category-dropbox-container-tag");
 });
 
-function getcheckedCheckboxCount(){
-   var numberNotChecked = $('#format input:checkbox:checked').length;
-   console.log(numberNotChecked);
+
+function getCheckedCheckboxCountAndControlSelectedValue(mainFilterBoxId,filterBoxSpanId){
+  var mainFilterBoxId = mainFilterBoxId;
+  var filterBoxSpanId = filterBoxSpanId;
+  var numberChecked = $(mainFilterBoxId +' input:checkbox:checked').length;
+
+  if(numberChecked > 0){
+    $(filterBoxSpanId).text(numberChecked+" Selected");
+    $(mainFilterBoxId + " .filter-block").css({'background-color':'#EBEFE7'});
+
+  }else{
+    $(filterBoxSpanId).text("All formats");
+    $(mainFilterBoxId + " .filter-block").css({'background-color':'#FFFFFF'});
+  }
+
 }
 
-getcheckedCheckboxCount();
-
 $("#format input:checkbox").change(function() {
-    getcheckedCheckboxCount();
+  getCheckedCheckboxCountAndControlSelectedValue("#format" , "#format-checked-checkbox-count-port");
 });
 
+$("#time-of-use input:checkbox").change(function() {
+  getCheckedCheckboxCountAndControlSelectedValue("#time-of-use" , "#time-of-use-checked-checkbox-count-port");
+});
+
+$("#potency input:checkbox").change(function() {
+  getCheckedCheckboxCountAndControlSelectedValue("#potency" , "#potency-checked-checkbox-count-port");
+});
+
+$("#Reported-effects input:checkbox").change(function() {
+  getCheckedCheckboxCountAndControlSelectedValue("#Reported-effects" , "#Reported-effects-checked-checkbox-count-port");
+});
+
+$("#TGA-Category input:checkbox").change(function() {
+  getCheckedCheckboxCountAndControlSelectedValue("#TGA-Category" , "#TGA-Category-checked-checkbox-count-port");
+});

@@ -66,6 +66,15 @@
 }
 
 
+.modal .modal-content {
+  height: 100%;
+}
+@media screen and (max-width: 1040px){
+  .modal .modal-content.large {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 480px){
   .flex{
     display: block;

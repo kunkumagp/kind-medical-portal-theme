@@ -1842,6 +1842,27 @@ form .section .button-wrap {
   margin-bottom: 30px;
 }
 
+/***Notification Bar Message****/
+.notification-bar-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: var(--Blue-Dark, #4C6580);
+}
+
+.notification-bar-message > p {
+  color: var(--White, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  padding: 14px;
+  margin: auto;
+}
 
 /***Media queries****/
 @media(max-width:1160px) {
