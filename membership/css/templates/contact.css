@@ -14,7 +14,11 @@
 }
 
 .contact-us{
-/*   padding-top: 68px; */
+  /*   padding-top: 68px; */
+  background-image: url(https://2660972.fs1.hubspotusercontent-na1.net/hubfs/2660972/contact-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: right;
 }
 
 .book-a-consultation{
@@ -52,4 +56,11 @@
 
 .form .hs-button, form textarea{
   height: 108px !important;
+}
+
+
+@media screen and (max-width: 860px){
+  .contact-area .row-fluid .span6{
+    width: 100%;
+  }
 }

@@ -10,7 +10,7 @@
       "value" : 477,
       "units" : "px"
     },
-    "mediaQuery" : "@media (max-width: 767px)",
+    "mediaQuery" : "@media (max-width: 860px)",
     "messages" : { }
   } ]
 }

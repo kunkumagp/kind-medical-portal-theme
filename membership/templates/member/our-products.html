@@ -18,10 +18,7 @@
 
 <!-- Get all products -->
 
-{% set all_products = hubdb_table_rows(7946284, 'thc_' ) %}
-
-
-
+{% set all_products = hubdb_table_rows(7946284) %}
 
 <div class="main-container">
     <div class="our-product-heading pt-50 pb-20">
@@ -41,10 +38,10 @@
       </div>
      </div>
      <div class="filtering-section filter-content-wrapper">
-       {% module "module_17053897886843" path="/kind-medical-portal-theme/membership/modules/member/our-products-filtering-system", label="our-products-filtering-system" %}
+       {% module "module_17053897886843" path="../../modules/member/our-products-filtering-system", label="our-products-filtering-system" %}
      </div>
      <div class="our-product-list content-wrapper">
-       {% module "module_170566302028412" path="/kind-medical-portal-theme/membership/modules/member/our-products-list", label="our-products-list" %}
+       {% module "module_170566302028412" path="../../modules/member/our-products-list", label="our-products-list" %}
      </div>
   
 </div>

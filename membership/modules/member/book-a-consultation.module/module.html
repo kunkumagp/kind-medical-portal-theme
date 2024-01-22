@@ -211,7 +211,7 @@
         
         {% if item.meeting_link  %}
            {#<iframe class="iframe w-full" id="iframe-{{loop.index}}" srcdoc="<!DOCTYPE html><h4>Meeting Link</h4><a style='text-align: center;' href='{{ item.meeting_link }}'>{{ item.meeting_link }}</a>"></iframe> #}
-          <iframe src="{{ item.meeting_link }}" style="border:0px #ffffff none;" class="meeting-iframe"  name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+          <iframe src="{{ item.meeting_link }}" style="border:0px #ffffff none;" class="meeting-iframe"  name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
         {% else %}
          <h4>No meeting link.</h4>
         {% endif %}

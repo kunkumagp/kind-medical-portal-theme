@@ -179,6 +179,20 @@ jQuery(document).ready(function ($) {
             $(".submission-message").html("<span class='error-msg'>" + msg.message + "</span>");
         }
     }
+  
+    function showNotificationMessage(msg) {
+         if (msg.msg_type == "success-msg") {
+           $('.notification-bar-message > p').text(msg.message);
+           $("html, body").animate({ scrollTop: 0 }, 600);
+           $('.notification-bar-message').fadeIn('slow');
+           setTimeout(function() {
+             $('.notification-bar-message').fadeOut('slow');
+           }, 10000);
+        } else if (msg.msg_type == "error-msg") {
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            $(".submission-message").html("<span class='error-msg'>" + msg.message + "</span>");
+        }
+    }
 
     function scrollToErrorPosition() {
         if ($("#active_member-details-form .form-section").find(".form-group .input-field.error").length > 0) {
@@ -226,11 +240,11 @@ jQuery(document).ready(function ($) {
             .then(data => {
                 if (data.Response.statusCode === 200) {
                     removeLoadingIcon();
-                    const msg = { "msg_type": "success-msg", "message": "Contact Details Update Successfully!" };
-                    showMessage(msg);
+                    const msg = { "msg_type": "success-msg", "message": "Account details where updated!" };
+                    showNotificationMessage(msg);
                 } else {
                     removeLoadingIcon();
-                    const msg = { "msg_type": "error-msg", "message": "Contact Details Update Failed!" };
+                    const msg = { "msg_type": "error-msg", "message": "Account Details Update Failed!" };
                     showMessage(msg);
                 }
                 return data.Response.statusCode;

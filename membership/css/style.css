@@ -148,6 +148,9 @@ img {
 .d-block {
   display:block;
 }
+.text-line-through {
+  text-decoration: line-through;
+}
 .flex {
    display: -webkit-box;
   display: -moz-box;
@@ -172,6 +175,12 @@ img {
 }
 .pos-absolute {
   position: absolute;
+}
+.position-relative{
+  position:relative;
+}
+.position-absolute{
+  position:absolute;
 }
 .text-center {
   text-align: center;
@@ -708,6 +717,12 @@ form.override-style-form {
    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m11 1.82-5 5-5-5'/%3E%3C/svg%3E)!important;
 }
 
+
+.custom-select.md.grey select {
+   background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%2363666A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m11 1.82-5 5-5-5'/%3E%3C/svg%3E)!important;
+}
+
+
 .form-group label {
   font-size: 12px;
   color: #666E5A;
@@ -1126,7 +1141,6 @@ form .light-secondary-label input {
   margin-right: 2.27%;
 }
 /**modal ****/
-
 .modal {
   position: fixed;
   display: none;
@@ -1137,6 +1151,7 @@ form .light-secondary-label input {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  z-index: 100;
 }
 .modal.distinct{
    background: rgba(0, 0, 0, 0.7);
@@ -1910,14 +1925,112 @@ form .section .button-wrap {
      padding: 0 0px; 
 }
 
-/* positions */
 
-.position-relative{
-  position:relative;
+
+/*** color code based on potency *****/
+/** HIGH THC **/
+.high-thc .text-light-high-thc {
+  color: #A76389;
+}
+.high-thc .text-dark-high-thc {
+  color: #805574;
 }
 
-.position-absolute{
-  position:absolute;
+.high-thc .bg-high-thc{
+  background: #805574;
+}
+.high-thc svg path{
+  stroke: #805574;
+}
+.high-thc.favourite .pd-tag svg path{
+  fill:#805574;
+}
+.high-thc svg rect{
+  fill: #EBDBE8;
+}
+
+/** MODERATE THC **/
+.moderate-thc .text-light-moderate-thc {
+  color: #F2A900;
+}
+.moderate-thc .text-dark-moderate-thc {
+  color: #B87E47;
+}
+.moderate-thc .bg-moderate-thc {
+  background:#B87E47;
+}
+.moderate-thc svg path{
+  stroke: #B87E47;
+}
+.moderate-thc.favourite .pd-tag svg path{
+  fill: #B87E47;
+}
+.moderate-thc svg rect{
+  fill: #F9E2AB;
+}
+
+/** BALANCED THC **/
+.balanced .text-light-balanced {
+  color: #9CAF88;
+}
+.balanced .text-dark-balanced {
+  color: #758067;
+}
+
+.balanced .bg-balanced {
+  background: #758067;
+}
+.balanced svg path{
+  stroke: #758067;
+}
+.balanced.favourite .pd-tag svg path{
+  fill: #758067;
+}
+.balanced svg rect{
+  fill: #d6decfd9;
+}
+
+
+/** MODERATE CBD **/
+.moderate-cbd .text-light-moderate-cbd {
+  color: #7D9CC0;
+}
+.moderate-cbd .text-dark-moderate-cbd {
+  color: #4C6580;
+}
+
+.moderate-cbd .bg-moderate-cbd{
+  background: #7D9CC0;
+}
+.moderate-cbd svg path{
+  stroke: #758067;
+}
+.moderate-cbd.favourite .pd-tag svg path{
+  fill: #7D9CC0;
+}
+.moderate-cbd svg rect{
+  fill: #9FAD8C;
+}
+
+/** HIGH CBD **/
+.high-cbd .text-light-high-cbd {
+  color: #8B84D7;
+}
+.high-cbd .text-dark-high-cbd {
+  color: #5E5A80;
+}
+
+.high-cbd .bg-high-cbd {
+  background: #5E5A80;
+}
+.high-cbd svg path{
+  stroke: #5E5A80;
+}
+.high-cbd.favourite .pd-tag svg path{
+  fill: #5E5A80;
+}
+.high-cbd svg rect{
+  fill: #D9D7E9;
 }
 
 

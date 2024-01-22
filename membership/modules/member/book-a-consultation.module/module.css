@@ -39,8 +39,8 @@
 
 .btn-close{
   position: absolute;
-  right: 30px;
-  top: 23px;
+  right: 15px;
+  top: 15px;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 38px;
@@ -68,6 +68,7 @@
 
 .modal .modal-content {
   height: 100%;
+  overflow-y: unset;
 }
 @media screen and (max-width: 1040px){
   .modal .modal-content.large {

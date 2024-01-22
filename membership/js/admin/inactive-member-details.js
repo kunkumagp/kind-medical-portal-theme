@@ -114,6 +114,20 @@ jQuery(document).ready(function ($) {
           console.log("Error : " + err.message)
         }
     })
+  
+    function showNotificationMessage(msg) {
+      if (msg.msg_type == "success-msg") {
+        $('.notification-bar-message > p').text(msg.message);
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        $('.notification-bar-message').fadeIn('slow');
+        setTimeout(function() {
+          $('.notification-bar-message').fadeOut('slow');
+        }, 10000);
+      } else if (msg.msg_type == "error-msg") {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        $(".submission-message").html("<span class='error-msg'>" + msg.message + "</span>");
+      }
+    }
 
     function startLoadingIconOnReject() {
         $('form#inactive_member-details-form').find(".reject").addClass("show");
@@ -197,8 +211,8 @@ jQuery(document).ready(function ($) {
             .then(data => {
                 if (data.Response.statusCode === 200) {
                     removeLoadingIconOnAccept();
-                    const msg = { "msg_type": "success-msg", "message": "Contact Details Update Successfully!" };
-                    showMessage(msg);
+                    const msg = { "msg_type": "success-msg", "message": "Manual registration account details where accepted!" };
+                    showNotificationMessage(msg);
                 } else {
                     removeLoadingIconOnAccept();
                     const msg = { "msg_type": "error-msg", "message": "Contact Details Update Failed!" };
@@ -235,8 +249,8 @@ jQuery(document).ready(function ($) {
             .then(data => {
                 if (data.Response.statusCode === 200) {
                     removeLoadingIconOnReject();
-                    const msg = { "msg_type": "success-msg", "message": "Contact Rejected Successfully!" };
-                    showMessage(msg);
+                    const msg = { "msg_type": "success-msg", "message": "Manual registration account details where rejected!" };
+                    showNotificationMessage(msg);
                 } else {
                     removeLoadingIconOnReject();
                     const msg = { "msg_type": "error-msg", "message": "Contact Rejected Failed!" };
