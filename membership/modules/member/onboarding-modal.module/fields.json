@@ -1,0 +1,10 @@
+[ {
+  "id" : "eacbded8-8a9f-6671-c549-d48d03863973",
+  "name" : "welcome_text",
+  "display_width" : null,
+  "label" : "Welcome text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3>Welcome to the Kind Healthcare Professionals Portal!</h3>\n<p>So that we can personalise your portal experience, please tell us a little more about your medicinal cannabis experience.</p>"
+} ]

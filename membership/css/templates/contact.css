@@ -1,0 +1,55 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+#main-content{
+  background: #EBEFE7;
+}
+
+.contact-us{
+/*   padding-top: 68px; */
+}
+
+.book-a-consultation{
+  gap: 42px;
+}
+
+.content-wrapper{
+  gap: 104px;
+}
+
+.get_in_touch{
+  color: #758067;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 25px;
+}
+
+.contact-number{
+  color: #63666A;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.get-in-touch-form{
+  margin-top: 35px;
+}
+
+.form .hs-button, form input[type=submit]{
+  border-radius: 38px !important;
+}
+
+.form .hs-button, form textarea{
+  height: 108px !important;
+}

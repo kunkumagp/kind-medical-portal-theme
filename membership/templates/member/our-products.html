@@ -1,0 +1,52 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: Our products
+   screenshotPath: ../images/template-previews/our-products.png
+-->
+
+{% set template_css = "../../css/templates/products.css" %}
+{% extends '../layouts/base-member.html' %}
+
+{% block body %}
+{% if request_contact.is_logged_in %}
+  {% set membership_contact = crm_object('contact', request.contact.contact_vid,
+    'firstname,
+    lastname
+    ') %}
+  {% endif %}
+
+<!-- Get all products -->
+
+{% set all_products = hubdb_table_rows(7946284, 'thc_' ) %}
+
+
+
+
+<div class="main-container">
+    <div class="our-product-heading pt-50 pb-20">
+      <div class="padding-content">
+        <div class="content-wrapper mb-25">
+          <div class="inner text-center">
+           {% module "our_products_heading"
+               path="@hubspot/rich_text",
+               html="<h3 style='font-weight: bold; color: #63666A;'>Our products</h3><p style='color: #63666A;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>"
+           %}
+           </div>
+          <div class="search-products">
+            <i class="icon-search"></i>
+            <input type="search" name="search_products" class="search-products" placeholder="Search Products">
+          </div>
+        </div>
+      </div>
+     </div>
+     <div class="filtering-section filter-content-wrapper">
+       {% module "module_17053897886843" path="/kind-medical-portal-theme/membership/modules/member/our-products-filtering-system", label="our-products-filtering-system" %}
+     </div>
+     <div class="our-product-list content-wrapper">
+       {% module "module_170566302028412" path="/kind-medical-portal-theme/membership/modules/member/our-products-list", label="our-products-list" %}
+     </div>
+  
+</div>
+
+{% endblock body %}

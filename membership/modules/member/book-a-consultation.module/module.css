@@ -1,0 +1,86 @@
+.profile-image{
+  margin-bottom: 16px;
+}
+
+.title{
+  color: #666E5A;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.designation,
+.description{
+  color: #63666A;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.description{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+.button_group{
+  margin-top: 16px;
+}
+
+.button_group a span svg{
+  width: 7px;
+}
+
+.grid-container {
+  gap: 40px;
+}
+
+.btn-close{
+  position: absolute;
+  right: 30px;
+  top: 23px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 38px;
+  transition: all 0.5s ease;
+}
+
+.btn-close:hover{
+  font-weight: 700;
+  background: #e6eddb;
+}
+
+.book-a-consultation-modal{
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.iframe{
+  border: none;
+}
+
+.link{
+  text-align: center;
+}
+
+
+.modal .modal-content {
+  height: 100%;
+}
+@media screen and (max-width: 1040px){
+  .modal .modal-content.large {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .flex{
+    display: block;
+  }
+  
+  .book-a-consultation-card{
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,33 @@
+<!--
+    templateType: membership_reset_page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+        <meta name="description" content="{{ content.meta_description }}">
+        {% if brand_settings.primaryFavicon.src %}
+          <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
+        {% endif %}
+        {{ standard_header_includes }}
+    </head>
+    <body>
+        <div>
+            {% module "membership_rich_text" path="@hubspot/rich_text" label="Rich Text" html="<h1>Reset your password</h1><p>Enter a new password.</p>" %}
+            {% password_reset "password_reset" %}
+        </div>
+        <div>
+          {% module_block module 'membership_admin_content'
+            label='Contact admin',
+            path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <p>Having trouble? <a href="{{'mailto:' ~ site_settings.membershipWebsiteAdmin}}">Contact the admin</a>.</p>
+            {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+        {{ standard_footer_includes }}
+    </body>
+</html>

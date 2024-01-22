@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 153034839707,
+  "label" : "contact with multi buttons",
+  "is_available_for_new_content" : false
+}
