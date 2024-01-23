@@ -1,8 +1,0 @@
-{
-  "global" : true,
-  "smart_type" : "NOT_SMART",
-  "host_template_types" : [ "PAGE" ],
-  "module_id" : 152399198730,
-  "label" : "Header logo",
-  "is_available_for_new_content" : true
-}

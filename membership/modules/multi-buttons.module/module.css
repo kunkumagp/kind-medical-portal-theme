@@ -1,7 +1,0 @@
-.multi-buttons a.white-btn-primary {
-  min-width: 232px;
-  font-size: 19px;
-}
-.multi-buttons a:not(:last-child) {
-  margin-right: 20px;
-}
