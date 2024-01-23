@@ -1,0 +1,16 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+.faqs{
+  background-image: url(https://2660972.fs1.hubspotusercontent-na1.net/hub/2660972/hubfs/faqs-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

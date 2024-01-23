@@ -1,0 +1,22 @@
+[ {
+  "id" : "bdec6f56-702a-d33b-dcff-c3c2eaddab3c",
+  "name" : "text",
+  "display_width" : null,
+  "label" : "text",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "Already have an account?"
+}, {
+  "id" : "fc5ce3e9-d01d-d916-f04a-717fee8ac5cb",
+  "name" : "link_text",
+  "display_width" : null,
+  "label" : "Link text",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Sign in"
+} ]

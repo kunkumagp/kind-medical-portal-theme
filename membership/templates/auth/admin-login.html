@@ -1,0 +1,44 @@
+<!--
+  templateType: membership_login_page
+  isAvailableForNewContent: true
+  label: Kind Medical - Admin login
+  screenshotPath: ../../images/template-previews/admin-login-new.png
+-->
+
+{% extends  "../layouts/base-admin-auth.html"  %}
+
+
+{% block body %}
+<section class="login-container admin-login">
+    <div class="container-wrap">
+        {# Membership login form #}
+        <div class="form-container login-form">
+          <div class="form-title text-center">
+            <h4>
+              Admin Sign in
+            </h4>
+          </div>
+            {% member_login 'my_login'
+            email_label= 'Email address',
+            password_label= 'Password',
+            remember_me_label= 'Remember Me',
+            reset_password_text= 'Forgot your password?',
+            submit_button_text= 'Sign in'
+            %}
+        </div>
+
+        {# Membership contact admin message #}
+
+        {#<div>
+            {% module_block module 'membership_admin_content'
+            label='Contact admin',
+            path='@hubspot/rich_text'
+            %}
+            {% module_attribute 'html' %}
+            <p>Having trouble? <a href="{{'mailto:' ~ site_settings.membershipWebsiteAdmin}}">Contact the admin</a>.</p>
+            {% end_module_attribute %}
+            {% end_module_block %}
+        </div> #}
+    </div>
+</section>
+{% endblock %}

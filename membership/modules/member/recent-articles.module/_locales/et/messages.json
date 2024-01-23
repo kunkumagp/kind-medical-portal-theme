@@ -1,0 +1,797 @@
+{
+  "alternate_image.label" : {
+    "message" : "Alternatiivne pilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "author.label" : {
+    "message" : "Autor",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button.label" : {
+    "message" : "Nupp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Lugege lisaks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Nupu tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.help_text" : {
+    "message" : "Avaldamise kuupäeva vormingut saab muut blogi sätetest. <a href='https://knowledge.hubspot.com/blog/manage-your-blog-template-and-settings#set-your-blog-s-date-formats' target='_blank' rel='noopener'>Vaadake lisaks</a>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.label" : {
+    "message" : "Avaldamise kuupäev",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.default" : {
+    "message" : "Blogipostituse kokkuvõte: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.label" : {
+    "message" : "Blogipostituse kokkuvõttev tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.default" : {
+    "message" : "Esiletoodud pilt: {{ post.featured_image_alt_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.label" : {
+    "message" : "Esiletoodud pildi tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Vaiketekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.default" : {
+    "message" : "Autori {{ post.blog_author.display_name }} pilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.label" : {
+    "message" : "Teksti pilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.default" : {
+    "message" : "Lugege tervet postitust: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.label" : {
+    "message" : "Terve postituse lugemise tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "description.label" : {
+    "message" : "Kirjeldus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_image.label" : {
+    "message" : "Pilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "full_image.label" : {
+    "message" : "Täispilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Rich text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "layout_style.choices.card" : {
+    "message" : "Põhiline ruudustik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.list" : {
+    "message" : "Külg-külje kõrval",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.single_column" : {
+    "message" : "Üks veerg",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.label" : {
+    "message" : "Paigutus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "recent-articles",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.label" : {
+    "message" : "Postituste arv",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.default" : {
+    "message" : "Valige küljeribalt blogi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.label" : {
+    "message" : "Kirjeldus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "Kohatäitja",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.default" : {
+    "message" : "Valitud blogis puuduvad postitused",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.label" : {
+    "message" : "Pealkiri",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog.label" : {
+    "message" : "Valige blogi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts" : {
+    "message" : "Värsked postitused",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts_by_tag" : {
+    "message" : "Värsked postitused märgiste järgi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.label" : {
+    "message" : "Valige blogi tüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_tag.label" : {
+    "message" : "Valige märgis",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.label" : {
+    "message" : "Peal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.label" : {
+    "message" : "Nurk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.radius.label" : {
+    "message" : "Raadius",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.label" : {
+    "message" : "Pilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.label" : {
+    "message" : "Autor",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.alignment.label" : {
+    "message" : "Joondus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.label" : {
+    "message" : "Joondus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.color.label" : {
+    "message" : "Värv",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.label" : {
+    "message" : "Taust",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.border.label" : {
+    "message" : "Ääris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.label" : {
+    "message" : "Ääris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.label" : {
+    "message" : "Nurk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.radius.label" : {
+    "message" : "Raadius",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.color.label" : {
+    "message" : "Värv",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.label" : {
+    "message" : "Taust",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.border.label" : {
+    "message" : "Ääris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.label" : {
+    "message" : "Ääris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.label" : {
+    "message" : "Peal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.label" : {
+    "message" : "Nupp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.large" : {
+    "message" : "Suur",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.regular" : {
+    "message" : "Tavaline",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.small" : {
+    "message" : "Väike",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.label" : {
+    "message" : "Nupu suurus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.primary" : {
+    "message" : "Primaarne",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.secondary" : {
+    "message" : "Sekundaarne",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.simple" : {
+    "message" : "Lihtne",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.label" : {
+    "message" : "Nupu stiil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.help_text" : {
+    "message" : "Kasutage eelseadistusi, et kohandada kiirelt eelmääratud väärtuste valitud üksuse väljanägemist.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.label" : {
+    "message" : "Eelseadistused",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.capitalize" : {
+    "message" : "Muuda suurtäheks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.lowercase" : {
+    "message" : "Väiketäht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.none" : {
+    "message" : "Puudub",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.uppercase" : {
+    "message" : "Suurtäht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.label" : {
+    "message" : "Kujunda ümber",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.label" : {
+    "message" : "Avaldamise kuupäev",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.label" : {
+    "message" : "Kirjeldus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.label" : {
+    "message" : "Nurk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.radius.label" : {
+    "message" : "Raadius",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.label" : {
+    "message" : "Pilt",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.color.label" : {
+    "message" : "Värv",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.label" : {
+    "message" : "Ülekate",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.1/1" : {
+    "message" : "1:1",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.16/9" : {
+    "message" : "16:9",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.2/3" : {
+    "message" : "2:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/2" : {
+    "message" : "3:2",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/4" : {
+    "message" : "3:4",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.4/3" : {
+    "message" : "4:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.label" : {
+    "message" : "Kuvasuhe",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.label" : {
+    "message" : "Suurus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.width.label" : {
+    "message" : "Laius",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.between_image_and_content.label" : {
+    "message" : "Pildi ja sisu vahel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Stiilid",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.color.label" : {
+    "message" : "Värv",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.label" : {
+    "message" : "Taust",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.border.label" : {
+    "message" : "Ääris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.label" : {
+    "message" : "Ääris",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.label" : {
+    "message" : "Nurk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.radius.label" : {
+    "message" : "Raadius",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.label" : {
+    "message" : "Postitus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.dark" : {
+    "message" : "Tume",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.light" : {
+    "message" : "Hele",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.plain" : {
+    "message" : "Lihtne",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.label" : {
+    "message" : "Kaardi stiil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.help_text" : {
+    "message" : "Kasutage eelseadistusi, et kohandada kiirelt eelmääratud väärtuste valitud üksuse väljanägemist.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.label" : {
+    "message" : "Eelseadistused",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.post_content.label" : {
+    "message" : "Postituse sisu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.space_between_posts.label" : {
+    "message" : "Kaugus postituste vahel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.label" : {
+    "message" : "Peal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.label" : {
+    "message" : "Sildid",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.capitalize" : {
+    "message" : "Muuda suurtäheks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.lowercase" : {
+    "message" : "Väiketäht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.none" : {
+    "message" : "Puudub",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.uppercase" : {
+    "message" : "Suurtäht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.label" : {
+    "message" : "Kujunda ümber",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.label" : {
+    "message" : "Peal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.label" : {
+    "message" : "Pealkiri",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.spacing.label" : {
+    "message" : "Reasamm",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.font.label" : {
+    "message" : "Kirjatüüp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.label" : {
+    "message" : "Tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.capitalize" : {
+    "message" : "Muuda suurtäheks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.lowercase" : {
+    "message" : "Väiketäht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.none" : {
+    "message" : "Puudub",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.uppercase" : {
+    "message" : "Suurtäht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.label" : {
+    "message" : "Kujunda ümber",
+    "description" : "",
+    "placeholders" : null
+  },
+  "tags.label" : {
+    "message" : "Sildid",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "Pealkiri",
+    "description" : "",
+    "placeholders" : null
+  }
+}

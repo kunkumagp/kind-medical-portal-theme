@@ -1,0 +1,227 @@
+{
+  "add_icon.label" : {
+    "message" : "Ikon hozzáadása",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_link.label" : {
+    "message" : "Gombhivatkozás",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "További tudnivalók",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Gombfelirat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.icon.label" : {
+    "message" : "Ikon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.label" : {
+    "message" : "Ikon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.left" : {
+    "message" : "Bal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.right" : {
+    "message" : "Jobb",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.label" : {
+    "message" : "Pozíció",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Gomb",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.alignment.label" : {
+    "message" : "Igazítás",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.label" : {
+    "message" : "Igazítás",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.color.label" : {
+    "message" : "Szín",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.label" : {
+    "message" : "Háttér",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.border.label" : {
+    "message" : "Szegély",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.label" : {
+    "message" : "Szegély",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.label" : {
+    "message" : "Sarok",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.radius.label" : {
+    "message" : "Sugár",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.color.label" : {
+    "message" : "Szín",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.label" : {
+    "message" : "Háttér",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.border.label" : {
+    "message" : "Szegély",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.label" : {
+    "message" : "Szegély",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.label" : {
+    "message" : "Rámutatás",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.font.label" : {
+    "message" : "Betűtípus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.label" : {
+    "message" : "Szöveg",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Stílusok",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.large" : {
+    "message" : "Nagy",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.regular" : {
+    "message" : "Normál",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.small" : {
+    "message" : "Kicsi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.label" : {
+    "message" : "Gombméret",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.primary" : {
+    "message" : "Elsődleges",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.secondary" : {
+    "message" : "Másodlagos",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.simple" : {
+    "message" : "Egyszerű",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.label" : {
+    "message" : "Gombstílus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.help_text" : {
+    "message" : "Használjon előre megadott beállításokat, hogy a kiválasztott tétel megjelenését gyorsan az előre meghatározott értékekhez igazíthassa.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.label" : {
+    "message" : "Előre megadott beállítások",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.label" : {
+    "message" : "Térköz",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.spacing.label" : {
+    "message" : "Térköz",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.font.label" : {
+    "message" : "Betűtípus",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.label" : {
+    "message" : "Szöveg",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.capitalize" : {
+    "message" : "Nagy kezdőbetű használata",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.lowercase" : {
+    "message" : "Kisbetűs",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.none" : {
+    "message" : "Nincs",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.uppercase" : {
+    "message" : "Nagybetűs",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.label" : {
+    "message" : "Átalakítás",
+    "description" : "",
+    "placeholders" : null
+  }
+}

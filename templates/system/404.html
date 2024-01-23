@@ -1,0 +1,18 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Boilerplate - 404 error
+  screenshotPath: ../../images/template-previews/404.png
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="error-page" data-error="404">
+      <h1 class="error-page__heading">Page not found.</h1>
+      <a class="button" href="/">Go Home</a>
+    </div>
+  </section>
+</main>
+{% endblock body %}
