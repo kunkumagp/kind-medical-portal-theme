@@ -21431,6 +21431,23 @@ exports.getProperty = async (objectType, propertyName) => {
   return { data: response.data, statusCode: response.status };
 };
 
+exports.updateHubDbTableRows = async (tableId, limit = 10, after = '0') => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&after=${after}`;
+
+  const config = {
+    method: 'GET',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
 
 /***/ }),
 /* 50 */,

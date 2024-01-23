@@ -10,10 +10,14 @@
 .four-col:not(:last-child){
   margin-right: 2.5%;
 }
+.reported-effects,
+.compare-product-lists .inner {
+  margin-bottom: 70px;
+}
 .compare-product-lists .col .product-with-tag{
   margin-bottom: 30px;
 }
-.compare-product-lists .row {
+.compare-product-lists .product-wrap {
   margin-bottom: 40px;
 }
 .compare-product-lists .col .product-name {
@@ -116,15 +120,20 @@
 .stock-wrap .product-info .per-gram-amount .img-svg{
   margin: 0px 20px 0px 5px;
 }
-.stock-wrap .product-info .product-size,
-.stock-wrap .product-info .cultivar,
-.stock-wrap .product-info .species,
-.stock-wrap .product-info .total-cannabinoid,
-.stock-wrap .product-info .per-gram-amount{
+.stock-wrap .product-info .row{
 /*   margin-bottom: 50px; */
   min-height: 84px;
 }
-
+ .stock-level-icon {
+  max-width: 46px;
+}
+.reported-effects .heading h4{
+  margin-bottom: 6px;
+}
+.reported-effects .heading {
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #DBE0D3;
+}
 
 
 /*** color code based on potency *****/

@@ -58,26 +58,29 @@
                 <b>CBD:</b>&nbsp; 1% w/w
               </div>
               <div class="product-info">
-                  <div class="product-size flex items-center">
-                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/10g-dried-flower.svg') }}">
+                  <div class="row product-size ps-css flex items-center">
+                     {# <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/1ml-full-spectrum-cartridge.svg') }}">  #}
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/10g-dried-flower.svg') }}"> 
                     <span class="value font-bold">10g Dried Flower</span>
                   </div>
-                  <div class="cultivar flex items-center">
+                
+                  {# if value is not applicable add css next to cultivar as not-applicable #}
+                  <div class="row cultivar cult-css flex items-center">
                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/cultivar.svg') }}">
                     <span class="value font-bold">Electric Grapefruit</span>
                   </div>
                   {# Sativa : empty, Indica: full, Hybrid: half #}
-                   <div class="species half flex items-center">
+                   <div class="row species spec-css half flex items-center">
                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/hybrid.svg') }}">
                     <span class="value font-bold">Hybrid</span>
                   </div>
 
-                   <div class="total-cannabinoid flex items-center">
+                   <div class="row total-cannabinoid tc-css flex items-center">
                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/total-cannabinoid.svg') }}">
                     <span class="value font-bold">7800mg <span class="helper-text">Total cannabinoid</span></span>
                   </div>
                 
-                  <div class="per-gram-amount flex items-center">
+                  <div class="row per-gram-amount pga-css flex items-center">
                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/dollar.svg') }}">
                     <span class="value font-bold">$10 <span class="helper-text">per gram</span></span>
                   </div>
@@ -85,7 +88,7 @@
                   {# class= coming-soon, high-stock, moderate-stock, low-stock #}
                   <div class="stock-level flex items-center">
                      <div class="stock-level-icon high-stock">
-                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/high-stock.svg') }}">
+                       <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/high-stock.svg') }}">
                      </div>
                      <div class="stock-info text-dark-high-thc">
                        <div class="type font-bold">High Stock</div>
@@ -93,14 +96,7 @@
                     </div>
                   </div>
               </div>
-            </div>
-            
-            
-          
-            
-             
-             
-              
+            </div>  
           </div>
           
            {# Second column #}
@@ -151,28 +147,28 @@
                   <b>CBD:</b>&nbsp; 1% w/w
                 </div>
                  <div class="product-info">
-                      <div class="product-size flex items-center">
-                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/30g-dried-flower.svg') }}">
+                      <div class="row product-size ps-css flex items-center">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/1ml-full-spectrum-cartridge.svg') }}">
                         <span class="value font-bold">30g Dried Flower</span>
                       </div>
                       {# if value is not applicable add css next to cultivar as not-applicable #}
-                      <div class="cultivar flex items-center">
+                      <div class="row cultivar cult-css flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/cultivar.svg') }}">
                         <span class="value font-bold">Electric Grapefruit</span>
                       </div>
                    
                        {# Sativa : empty, Indica: full, Hybrid: half #}
-                       <div class="species half flex items-center">
+                       <div class="row species spec-css half flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/hybrid.svg') }}">
                         <span class="value font-bold">Hybrid</span>
                       </div>
 
-                       <div class="total-cannabinoid flex items-center">
+                       <div class="row total-cannabinoid tc-css flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/total-cannabinoid.svg') }}">
                         <span class="value font-bold">7800mg <span class="helper-text">Total cannabinoid</span></span>
                       </div>
 
-                      <div class="per-gram-amount flex items-center">
+                      <div class="row per-gram-amount pga-css flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/dollar.svg') }}">
                         <span class="value font-bold">$10 <span class="helper-text">per gram</span></span>
                       </div>
@@ -239,28 +235,28 @@
                 <b>CBD:</b>&nbsp; 1% w/w
               </div>
                 <div class="product-info">
-                      <div class="product-size flex items-center">
+                      <div class="row product-size ps-css flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/1ml-full-spectrum-cartridge.svg') }}">
                         <span class="value font-bold">1ml Full Spectrum Cartridge</span>
                       </div>
                       {# if value is not applicable add css next to cultivar as not-applicable #}
-                      <div class="cultivar not-applicable flex items-center">
+                      <div class="row cultivar cult-css not-applicable flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/cultivar.svg') }}">
                         <span class="value font-bold">Not applicable</span>
                       </div>
                    
                        {# Sativa : empty, Indica: full, Hybrid: half, Not applicable: not-applicable #}
-                       <div class="species half flex items-center">
+                       <div class="row species spec-css half flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/hybrid.svg') }}">
                         <span class="value font-bold">Hybrid</span>
                       </div>
 
-                       <div class="total-cannabinoid flex items-center">
+                       <div class="row total-cannabinoid tc-css flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/total-cannabinoid.svg') }}">
                         <span class="value font-bold">7800mg <span class="helper-text">Total cannabinoid</span></span>
                       </div>
 
-                      <div class="per-gram-amount flex items-center">
+                      <div class="row per-gram-amount pga-css flex items-center">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/dollar.svg') }}">
                         <span class="value font-bold">$10 <span class="helper-text">per gram</span></span>
                       </div>
@@ -279,7 +275,7 @@
           </div>
           
            {# fourth column #}
-           <div class="col four-col high-cbd ">
+           <div class="col four-col high-cbd">
               <div class="row product-wrap">
               <div class="product-with-tag flex items-center">
                 <div class="product-name flex items-center">
@@ -318,12 +314,73 @@
               </div>
              </div>
               <div class="row stock-wrap">
-              <div class="thc-percent bg-high-cbd">
-                <b>THC:</b>&nbsp;20% w/w
-              </div>
-              <div class="thc-percent bg-high-cbd">
-                <b>CBD:</b>&nbsp; 1% w/w
-              </div>
+                  <div class="thc-percent bg-high-cbd">
+                    <b>THC:</b>&nbsp;20% w/w
+                  </div>
+                  <div class="thc-percent bg-high-cbd">
+                    <b>CBD:</b>&nbsp; 1% w/w
+                  </div>
+                  <div class="product-info">
+                      <div class="row product-size ps-css flex items-center">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/1ml-full-spectrum-cartridge.svg') }}">
+                        <span class="value font-bold">1ml Full Spectrum Cartridge</span>
+                      </div>
+                      {# if value is not applicable add css next to cultivar as not-applicable #}
+                      <div class="row cultivar cult-css not-applicable flex items-center">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/cultivar.svg') }}">
+                        <span class="value font-bold">Not applicable</span>
+                      </div>
+                   
+                       {# Sativa : empty, Indica: full, Hybrid: half, Not applicable: not-applicable #}
+                       <div class="row species spec-css half flex items-center">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/hybrid.svg') }}">
+                        <span class="value font-bold">Hybrid</span>
+                      </div>
+
+                       <div class="row total-cannabinoid tc-css flex items-center">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/total-cannabinoid.svg') }}">
+                        <span class="value font-bold">7800mg <span class="helper-text">Total cannabinoid</span></span>
+                      </div>
+
+                      <div class="row per-gram-amount pga-css flex items-center">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/dollar.svg') }}">
+                        <span class="value font-bold">$10 <span class="helper-text">per gram</span></span>
+                      </div>
+                       {# class= coming-soon, high-stock, moderate-stock, low-stock #}
+                      <div class="stock-level flex items-center">
+                         <div class="stock-level-icon coming-soon">
+                            <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/coming-soon.svg') }}">
+                         </div>
+                         <div class="stock-info text-dark-high-cbd">
+                           <div class="type font-bold">Coming Soon</div>
+                           <div class="stock-helper">Restock mid Apr</div>
+                        </div>
+                      </div>
+                  </div>
+             </div>
+          </div>
+        </div>
+        
+        {# Reported Effects & Use #}
+        <div class="reported-effects">
+           <div class="heading">
+             {{ module.heading_2 }}
+          </div>
+           <div class="inner flex">
+             <div class="col four-col">
+               <div class="row calming cal-css flex items-center">
+                   <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/calming.svg') }}"> 
+                    <span class="value font-bold">Calming</span>
+               </div>
+                <div class="row body body-css flex items-center">
+                  <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/body.svg') }}"> 
+                  <span class="value font-bold">Body</span>
+               </div>
+                <div class="row day-or-night cal-css flex items-center">
+                   <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/day-or-night.svg') }}"> 
+                  <span class="value font-bold">Day or Night</span>
+                 
+               </div>
              </div>
           </div>
         </div>

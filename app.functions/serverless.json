@@ -41,6 +41,10 @@
     "updateContact": {
       "method": "POST",
       "file": "updateContact.js"
+    },
+    "updateHubDbTableRows": {
+      "method": "POST",
+      "file": "updateHubDbTableRows.js"
     }
   }
 }

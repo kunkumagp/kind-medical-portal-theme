@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 56);
+/******/ 	return __webpack_require__(__webpack_require__.s = 68);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21456,24 +21456,36 @@ exports.updateHubDbTableRows = async (tableId, limit = 10, after = '0') => {
 /* 53 */,
 /* 54 */,
 /* 55 */,
-/* 56 */
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(57);
+module.exports = __webpack_require__(69);
 
 
 /***/ }),
-/* 57 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 const { constant } = __webpack_require__(47);
 const hubspotService = __webpack_require__(49);
 
 exports.main = async (context, sendResponse) => {
+  console.log(context.body);
   try {
-    const properties = { membership_status: "manually_rejected" };
-    const id = new URL(context.headers.Referer).searchParams.get('id');
-    const result = await hubspotService.updateObject('contacts', id, properties);
+    const tableId = 7946284; 
+    const result = await hubspotService.updateHubDbTableRows(tableId);
     sendResponse({ body: { Response: result } });
   } catch (error) {
     sendResponse({ body: { Response: error } });

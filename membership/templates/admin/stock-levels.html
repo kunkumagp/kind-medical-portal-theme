@@ -7,6 +7,7 @@
 {% extends '../layouts/base-admin.html' %}
 
 {% block body %}
+
 <div class="padding-content">
   <div class="admin-container stock-level-container">
     <div class="body-content">
@@ -14,112 +15,62 @@
           update stock levels
        </h3>
       <form id="stock-lists" action="" class="override-style-form stock-lists light-secondary-label">
-        <div class="single-stock flex">
-           <div class="product-name text-blue-dark font-bold">
-                Kind Coco<sup>TM</sup>
-            </div>
-            <div class="stock-info custom-select md grey">
-                <select name="stock-level">
-                  <option value="">Please Select...</option>
-                  <option value="low_stock">Low Stock</option>
-                  <option value="moderate_stock" selected>Moderate Stock</option>
-                  <option value="low_stock">Low Stock</option>
-                   <option value="coming_soon">Coming soon</option>
+        {% for row in hubdb_table_rows('7946284') %}
+        <div class="single-stock flex" data-row-id="{{ row['hs_id'] }}">
+          <div class="product-name text-blue-dark font-bold">
+            {{ row[2] }} <sup>TM</sup>
+          </div>
+          <div class="stock-info custom-select md grey">
+            <select name="stock-level">
+              <option value="">Please Select...</option>
+              <option value="High Stock" {% if row[21].name == 'High Stock' %}selected{% endif %}>High Stock</option>
+              <option value="Moderate Stock" {% if row[21].name == 'Moderate Stock' %}selected{% endif %}>Moderate Stock</option>
+              <option value="Low Stock" {% if row[21].name == 'Low Stock' %}selected{% endif %}>Low Stock</option>
+              <option value="Coming soon" {% if row[21].name == 'Coming soon' %}selected{% endif %}>Coming soon</option>
+            </select>
+            <div class="shipment-info flex">
+              <div class="col shipment-col">
+                <label for="next_shipment">Next shipment</label>
+                <select name="next-shipment">
+                  <option value="">Please Select</option>
+                  <option value="Discontinued" {% if row[45].name == 'Discontinued' %}selected{% endif %}>Discontinued</option>
+                  <option value="Restock" {% if row[45].name == 'Restock' %}selected{% endif %}>Restock</option>
                 </select>
-               <div class="shipment-info flex">
-                <div class="col shipment-col">
-                   <label for="next_shipment">Next shipment</label>
-                    <select name="next-shipment">
-                        <option value="">Please Select</option>
-                        <option value="discontinued">Discontinued</option>
-                        <option value="restock" selected>Restock</option>
-                    </select>
-                </div>
-                <div class="col time-col">
-                  <label for="time">Time</label>
-                    <select name="next-shipment">
-                        <option value="">Please Select</option>
-                        <option value="early">Early</option>
-                        <option value="Mid">Mid</option>
-                       <option value="late">Late</option>
-                    </select>
-                 </div>
-                 <div class="col month-col">
-                  <label for="time">Month</label>
-                    <select name="next-shipment">
-                      <option value="">Please Select</option>
-                      <option value="jan">Jan</option>
-                      <option value="feb">Feb</option>
-                      <option value="mar">Mar</option>
-                      <option value="apr">Apr</option>
-                      <option value="may">May</option>
-                      <option value="june">June</option>
-                      <option value="july">July</option>
-                      <option value="aug">Aug</option>
-                      <option value="sep">Sep</option> 
-                      <option value="Oct">Oct</option>
-                      <option value="nov">Nov</option>
-                      <option value="dec">Dec</option>
-                    </select>
-                 </div>
-                </div>
-            </div>
-        </div>
-        <div class="single-stock flex">
-           <div class="product-name text-blue-dark font-bold">
-                Kind Rufus<sup>TM</sup>
-            </div>
-            <div class="stock-info custom-select md grey">
-                <select name="stock-level">
-                  <option value="">Please Select...</option>
-                  <option value="low_stock">Low Stock</option>
-                  <option value="moderate_stock">Moderate Stock</option>
-                  <option value="low_stock" selected>Low Stock</option>
-                   <option value="coming_soon">Coming soon</option>
+              </div>
+              <div class="col time-col">
+                <label for="time">Time</label>
+                <select name="next-shipment">
+                  <option value="">Please Select</option>
+                  <option value="Early" {% if row[46].name == 'Early' %}selected{% endif %}>Early</option>
+                  <option value="Mid" {% if row[46].name == 'Mid' %}selected{% endif %}>Mid</option>
+                  <option value="Late" {% if row[46].name == 'Late' %}selected{% endif %}>Late</option>
                 </select>
-               <div class="shipment-info flex">
-                <div class="col shipment-col">
-                   <label for="next_shipment">Next shipment</label>
-                    <select name="next-shipment">
-                        <option value="">Please Select</option>
-                        <option value="discontinued" selected>Discontinued</option>
-                        <option value="restock">Restock</option>
-                    </select>
-                </div>
-                <div class="col time-col">
-                  <label for="time">Time</label>
-                    <select name="next-shipment">
-                        <option value="">Please Select</option>
-                        <option value="early">Early</option>
-                        <option value="Mid">Mid</option>
-                       <option value="late">Late</option>
-                    </select>
-                 </div>
-                 <div class="col month-col">
-                  <label for="time">Month</label>
-                    <select name="next-shipment">
-                      <option value="">Please Select</option>
-                      <option value="jan">Jan</option>
-                      <option value="feb">Feb</option>
-                      <option value="mar">Mar</option>
-                      <option value="apr">Apr</option>
-                      <option value="may">May</option>
-                      <option value="june">June</option>
-                      <option value="july">July</option>
-                      <option value="aug">Aug</option>
-                      <option value="sep">Sep</option> 
-                      <option value="Oct">Oct</option>
-                      <option value="nov">Nov</option>
-                      <option value="dec">Dec</option>
-                    </select>
-                 </div>
-                </div>
+              </div>
+              <div class="col month-col">
+                <label for="time">Month</label>
+                <select name="next-shipment">
+                  <option value="">Please Select</option>
+                  <option value="Jan" {% if row[47].name == 'Jan' %}selected{% endif %}>Jan</option>
+                  <option value="Feb" {% if row[47].name == 'Feb' %}selected{% endif %}>Feb</option>
+                  <option value="Mar" {% if row[47].name == 'Mar' %}selected{% endif %}>Mar</option>
+                  <option value="Apr" {% if row[47].name == 'Apr' %}selected{% endif %}>Apr</option>
+                  <option value="May" {% if row[47].name == 'May' %}selected{% endif %}>May</option>
+                  <option value="June" {% if row[47].name == 'June' %}selected{% endif %}>June</option>
+                  <option value="July" {% if row[47].name == 'July' %}selected{% endif %}>July</option>
+                  <option value="Aug" {% if row[47].name == 'Aug' %}selected{% endif %}>Aug</option>
+                  <option value="Sep" {% if row[47].name == 'Sep' %}selected{% endif %}>Sep</option> 
+                  <option value="Oct" {% if row[47].name == 'Oct' %}selected{% endif %}>Oct</option>
+                  <option value="Nov" {% if row[47].name == 'Nov' %}selected{% endif %}>Nov</option>
+                  <option value="Dec" {% if row[47].name == 'Dec' %}selected{% endif %}>Dec</option>
+                </select>
+              </div>
             </div>
+          </div>
         </div>
-        
+        {% endfor %}
       </form>
     </div>
   </div>
 </div>
+<script type="module" src="{{ get_asset_url('../../js/admin/stock-levels.js') }}"></script>
 {% endblock body %}
-

@@ -97,6 +97,12 @@
 .mt-10{
   margin-top: 10px;
 }
+.mt-80{
+  margin-top: 80px;
+}
+.mtb-80{
+  margin-top: 80px;
+}
 .mt-20{
   margin-top: 20px;
 }
@@ -1088,14 +1094,11 @@ form .light-secondary-label input {
   color: #666E5A;
   font-weight: bold;
 }
-/* .member-navigation nav > ul > li:hover{
-  background: #EFF1EB;
-  border-radius: 38px;
-} */
+.admin-header .member-navigation nav ul li a.active{
+  color: #4C6580;
+  font-weight: bold;
+}
 
-/* .member-navigation nav ul li:not(:last-child) {
-  margin-right:30px;
-} */
 
 .intro-content .inner{
   max-width: 688px;
@@ -1306,11 +1309,29 @@ form .light-secondary-label input {
   border: 1px solid #e5ebf2;
 }
 
+.hs-button.ad-primary{
+  background: #7D9CC0;
+  border: 1px solid #7D9CC0;
+  color: #fff;
+}
+.hs-button.ad-primary:hover{
+  background: #4C6580;
+  border: 1px solid #4C6580;
+}
+
+.hs-button.ad-secondary{
+  background:transparent;
+  border: 2px solid #4C6580;
+  color:#4C6580;
+}
+.hs-button.ad-territory{
+  background:#ffffff;
+  border: 1px solid #fff;
+  color:#4C6580;
+}
+
 /***Manual registrations ****/
-.active-member-container .body-content,
-.inactive-member-container .body-content,
-.stock-level-container .body-content, 
-.manual-registration-container .body-content {
+.stock-level-container .body-content{
   margin: 84px 0px;
 }
 .mem-details-container {
@@ -1923,6 +1944,7 @@ form .section .button-wrap {
 
 /*** color code based on potency *****/
 /** HIGH THC **/
+
 .text-light-high-thc {
   color: #A76389;
 }
@@ -1959,8 +1981,11 @@ form .section .button-wrap {
 .moderate-thc.favourite .pd-tag svg path{
   fill: #B87E47;
 }
-.moderate-thc svg rect{
+.moderate-thc .pd-tag svg rect{
   fill: #F9E2AB;
+}
+.moderate-thc .pd-tag svg path{
+  stroke: #B87E47;
 }
 
 /** BALANCED THC **/
@@ -1980,9 +2005,14 @@ form .section .button-wrap {
 .balanced.favourite .pd-tag svg path{
   fill: #758067;
 }
-.balanced svg rect{
+.balanced .pd-tag svg rect{
   fill: #d6decfd9;
 }
+.balanced .pd-tag svg path{
+  stroke: #758067;
+}
+
+
 
 
 /** MODERATE CBD **/
@@ -2002,8 +2032,12 @@ form .section .button-wrap {
 .moderate-cbd.favourite .pd-tag svg path{
   fill: #7D9CC0;
 }
-.moderate-cbd svg rect{
+.moderate-cbd .pd-tag svg rect{
   fill: #9FAD8C;
+}
+
+.moderate-cbd .pd-tag svg path{
+  fill: #758067;
 }
 
 /** HIGH CBD **/
@@ -2022,92 +2056,127 @@ form .section .button-wrap {
 .high-cbd.favourite .pd-tag svg path{
   fill: #5E5A80;
 }
-.high-cbd svg rect{
+.high-cbd .pd-tag svg rect{
   fill: #D9D7E9;
+}
+.high-cbd .pd-tag svg path{
+  stroke: #5E5A80;
 }
 
 /**PRODUCT SVG COLOR ***/
+
+/**product size ***/
+.high-thc .ps-css svg ellipse,
+.high-thc .ps-css svg path {
+   stroke: #805574;
+}
+.moderate-thc .ps-css svg ellipse,
+.moderate-thc .ps-css svg path {
+  stroke: #b87e47;
+}
+.balanced .ps-css svg ellipse,
+.balanced .ps-css svg path {
+  stroke: #758067;
+}
+.moderate-cbd .ps-css svg ellipse,
+.moderate-cbd .ps-css svg path {
+  stroke: #4C6580;
+}
+.high-cbd .ps-css svg ellipse,
+.high-cbd .ps-css svg path {
+  stroke: #5E5A80;
+}
+
+
+
 /** Total cannabinoid **/
-.high-thc .total-cannabinoid svg rect{
+.high-thc .tc-css svg rect{
   stroke: #805574;
   fill: transparent;
 }
-.high-thc .total-cannabinoid svg path{
+.high-thc .tc-css svg path{
   stroke: #805574;
 }
 
-.balanced .total-cannabinoid svg rect{
+.balanced .tc-css svg rect{
   stroke: #758067;
   fill: transparent;
 }
-.balanced .total-cannabinoid svg path{
+.balanced .tc-css svg path{
   stroke: #758067;
 }
-.moderate-thc .total-cannabinoid svg rect {
+.moderate-thc .tc-css svg rect {
   stroke: #b87e47;
   fill: transparent;
 }
-.moderate-thc .total-cannabinoid svg path{
+.moderate-thc .tc-css svg path{
    stroke: #b87e47;
 }
-.moderate-cbd .total-cannabinoid svg rect {
+.moderate-cbd .tc-css svg rect {
   stroke: #4C6580;
   fill: transparent;
 }
-.moderate-cbd .total-cannabinoid svg path {
+.moderate-cbd .tc-css svg path {
   stroke: #4C6580;
 }
 
-.high-cbd .total-cannabinoid svg rect {
+.high-cbd .tc-css svg rect {
   stroke: #5E5A80;
   fill: transparent;
 }
-.high-cbd .total-cannabinoid svg path {
+.high-cbd .tc-css svg path {
   stroke: #5E5A80;
 }
 
 
 /** Species **/
-.high-thc .species.full svg path,
-.high-thc .species.half svg path:nth-child(3){
+.high-thc .spec-css.full svg path,
+.high-thc .spec-css.half svg path:nth-child(3){
   fill: #805574;
 }
-
-.moderate-thc .species.half svg path{
-  stroke: #b87e47;
-}
-.moderate-thc .species.full svg path{
-  fill: #b87e47;
-}
-.moderate-thc .species.full svg path{
-  stroke: #b87e47;
-}
-.moderate-thc .species.half svg path:nth-child(3) {
-  fill: #b87e47;
+.high-thc .spec-css.half svg path{
+  stroke:#805574;
 }
 
-.balanced .species.half svg path {
+.moderate-thc .spec-css.half svg path{
+  stroke: #b87e47;
+}
+.moderate-thc .spec-css.full svg path{
+  fill: #b87e47;
+}
+.moderate-thc .spec-css.full svg path{
+  stroke: #b87e47;
+}
+.moderate-thc .spec-css.half svg path:nth-child(3) {
+  fill: #b87e47;
+}
+
+.balanced .spec-css.half svg path {
   stroke:#758067;
 }
-.balanced .species.half svg path:nth-child(3) {
+.balanced .spec-css.half svg path:nth-child(3) {
   fill:#758067;
 }
 
 
-.moderate-cbd .species.half svg path{
+.moderate-cbd .spec-css.half svg path{
   stroke:#4C6580;
 }
-.moderate-cbd .species.half svg path:nth-child(3) {
+.moderate-cbd .spec-css.half svg path:nth-child(3) {
   fill:#4C6580;
 }
-.high-cbd .species.full svg path,
-.high-cbd .species.half svg path:nth-child(3) {
+.high-cbd .spec-css.full svg path,
+.high-cbd .spec-css.half svg path:nth-child(3) {
   fill:#5E5A80;
 }
 
 
 /**  cultivar **/
-.cultivar.not-applicable svg path{
+.high-thc .cult-css.not-applicable svg path,
+.moderate-thc .cult-css.not-applicable svg path,
+.balanced .cult-css.not-applicable svg path,
+.moderate-cbd .cult-css.not-applicable svg path,
+.high-cbd .cult-css.not-applicable svg path,{
   stroke: #A1A3A6;
 }
 .cultivar.not-applicable .value {
@@ -2134,6 +2203,7 @@ form .section .button-wrap {
 .high-thc .stock-level-icon svg circle {
   stroke: #805574;
 }
+
 .high-thc .stock-level-icon.coming-soon svg circle {
   stroke: #805574;
 }
@@ -2202,25 +2272,50 @@ form .section .button-wrap {
 
 
 /** per gram amount dollar **/
-.high-thc .per-gram-amount svg path {
+.high-thc .pga-css svg path {
   fill:#805574;
   stroke: none;
 }
-.moderate-thc .per-gram-amount svg path {
+.moderate-thc .pga-css svg path {
   fill:#b87e47;
    stroke: none;
 }
-.balanced .per-gram-amount svg path  {
+.balanced .pga-css svg path  {
   fill:#758067;
    stroke: none;
 }
-.moderate-cbd .per-gram-amount svg path {
+.moderate-cbd .pga-css svg path {
   fill:#4C6580;
    stroke: none;
 }
-.high-cbd .per-gram-amount svg path {
+.high-cbd .pga-css svg path {
   fill:#5E5A80;
    stroke: none;
 }
 
 
+/**************************** Background color code based on potency ******************************************/
+/** HIGH THC **/
+.bg-high-thc {
+  color: #A76389;
+}
+
+/** MODERATE THC **/
+.bg-moderate-thc {
+  color: #F2A900;
+}
+
+/** BALANCED THC **/
+.bg-balanced {
+  color: #9CAF88;
+}
+
+/** MODERATE CBD **/
+.bg-moderate-cbd {
+  color: #7D9CC0;
+}
+
+/** HIGH CBD **/
+.bg-high-cbd {
+  color: #8B84D7;
+}

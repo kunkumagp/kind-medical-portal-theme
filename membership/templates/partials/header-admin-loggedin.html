@@ -4,7 +4,7 @@
     label: Membership portal header
 -->
 
-{% set baseURL = "https://demo.ec7.co" %} 
+{% set baseURL = "https://admindemo.ec7.co" %} 
 
 <header class="header admin-header flex padding-content">
   <div class="header-inner flex items-center">
@@ -20,6 +20,7 @@
             <li class="nav-menu"><a href="/search-member" class="{% if request.path == '/search-member'%}active{% endif %}">Members</a></li>
             <li class="nav-menu"><a href="/manual-registrations" class="{% if request.path == '/manual-registrations'%}active{% endif %}">Manual registrations</a></li>
             <li class="nav-menu"><a href="/stock-levels" class="{% if request.path == '/stock-levels'%}active{% endif %}">Update stock levels</a></li>
+            <li class="nav-menu"><a href="/product-discounts" class="{% if request.path == '/product-discounts'%}active{% endif %}">Product discounts</a></li>
           </ul>
         </nav>
       </div>
