@@ -1,0 +1,797 @@
+{
+  "alternate_image.label" : {
+    "message" : "Alternatif görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "author.label" : {
+    "message" : "Yazar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button.label" : {
+    "message" : "Düğme",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Daha fazlasını oku",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Düğme metni",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.help_text" : {
+    "message" : "Yayınlanma tarihi biçimi blog ayarlarından değiştirilebilir. <a href='https://knowledge.hubspot.com/blog/manage-your-blog-template-and-settings#set-your-blog-s-date-formats' target='_blank' rel='noopener'>Daha fazla bilgi edinin</a>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.label" : {
+    "message" : "Yayın tarihi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.default" : {
+    "message" : "Blog gönderisi özeti: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.label" : {
+    "message" : "Blog yayını özet metni",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.default" : {
+    "message" : "Öne çıkan görüntü:{{ post.featured_image_alt_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.label" : {
+    "message" : "Öne çıkan görüntü metni",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Varsayılan metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.default" : {
+    "message" : "{{ post.blog_author.display_name }} adlı kişinin resmi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.label" : {
+    "message" : "Metnin resmi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.default" : {
+    "message" : "Gönderinin tamamını okuyun: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.label" : {
+    "message" : "Tüm gönderinin metnini oku",
+    "description" : "",
+    "placeholders" : null
+  },
+  "description.label" : {
+    "message" : "Açıklama",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_image.label" : {
+    "message" : "Görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "full_image.label" : {
+    "message" : "Tam Görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Rich text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "layout_style.choices.card" : {
+    "message" : "Temel ızgara",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.list" : {
+    "message" : "Yan yana",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.single_column" : {
+    "message" : "Tek sütun",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.label" : {
+    "message" : "Düzen",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "recent-articles",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.label" : {
+    "message" : "Yayın sayısı",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.default" : {
+    "message" : "Kenar çubuğunda bir blog seçin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.label" : {
+    "message" : "Açıklama",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "Yer tutucu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.default" : {
+    "message" : "Seçilen blog için gönderi yok",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.label" : {
+    "message" : "Başlık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog.label" : {
+    "message" : "Blog seç",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts" : {
+    "message" : "Yakın zamanda gönderiler",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts_by_tag" : {
+    "message" : "Etiketlere göre yakın zamandaki gönderiler",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.label" : {
+    "message" : "Blog türünü seçin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_tag.label" : {
+    "message" : "Etiket seç",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.label" : {
+    "message" : "Üzerine gel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.label" : {
+    "message" : "Köşe",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.radius.label" : {
+    "message" : "Yarı Çap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.label" : {
+    "message" : "Görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.label" : {
+    "message" : "Yazar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.alignment.label" : {
+    "message" : "Hizalama",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.label" : {
+    "message" : "Hizalama",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.color.label" : {
+    "message" : "Renk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.label" : {
+    "message" : "Arka plan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.border.label" : {
+    "message" : "Sınır",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.label" : {
+    "message" : "Sınır",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.label" : {
+    "message" : "Köşe",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.radius.label" : {
+    "message" : "Yarı Çap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.color.label" : {
+    "message" : "Renk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.label" : {
+    "message" : "Arka plan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.border.label" : {
+    "message" : "Sınır",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.label" : {
+    "message" : "Sınır",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.label" : {
+    "message" : "Üzerine gel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.label" : {
+    "message" : "Düğme",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.large" : {
+    "message" : "Büyük",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.regular" : {
+    "message" : "Normal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.small" : {
+    "message" : "Küçük",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.label" : {
+    "message" : "Düğme boyutu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.primary" : {
+    "message" : "Birincil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.secondary" : {
+    "message" : "İkincil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.simple" : {
+    "message" : "Basit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.label" : {
+    "message" : "Düğme stili",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.help_text" : {
+    "message" : "Seçilen öğenin görünümünü önceden tanımlanmiş değerlere hızlıca ayarlamak için, ön tanımları kullan.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.label" : {
+    "message" : "Ön ayarlar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.capitalize" : {
+    "message" : "Büyük harfe çevir",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.lowercase" : {
+    "message" : "Küçük harf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.none" : {
+    "message" : "Hiçbiri",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.uppercase" : {
+    "message" : "Büyük harf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.label" : {
+    "message" : "Dönüştür",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.label" : {
+    "message" : "Yayın tarihi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.label" : {
+    "message" : "Açıklama",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.label" : {
+    "message" : "Köşe",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.radius.label" : {
+    "message" : "Yarı Çap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.label" : {
+    "message" : "Görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.color.label" : {
+    "message" : "Renk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.label" : {
+    "message" : "Kaplama",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.1/1" : {
+    "message" : "1:1",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.16/9" : {
+    "message" : "16:9",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.2/3" : {
+    "message" : "2:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/2" : {
+    "message" : "3:2",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/4" : {
+    "message" : "3:4",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.4/3" : {
+    "message" : "4:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.label" : {
+    "message" : "En-boy oranı",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.label" : {
+    "message" : "Boyut",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.width.label" : {
+    "message" : "Genişlik",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.between_image_and_content.label" : {
+    "message" : "Görüntü ve içerik arasında",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Stiller",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.color.label" : {
+    "message" : "Renk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.label" : {
+    "message" : "Arka plan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.border.label" : {
+    "message" : "Sınır",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.label" : {
+    "message" : "Sınır",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.label" : {
+    "message" : "Köşe",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.radius.label" : {
+    "message" : "Yarı Çap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.label" : {
+    "message" : "Yayınla",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.dark" : {
+    "message" : "Koyu",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.light" : {
+    "message" : "Açık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.plain" : {
+    "message" : "Düz",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.label" : {
+    "message" : "Kart stili",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.help_text" : {
+    "message" : "Seçilen öğenin görünümünü önceden tanımlanmiş değerlere hızlıca ayarlamak için, ön tanımları kullan.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.label" : {
+    "message" : "Ön ayarlar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.post_content.label" : {
+    "message" : "Gönderi içeriği",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.space_between_posts.label" : {
+    "message" : "Gönderiler arası boşluk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.label" : {
+    "message" : "Üzerine gel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.label" : {
+    "message" : "Etiketler",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.capitalize" : {
+    "message" : "Büyük harfe çevir",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.lowercase" : {
+    "message" : "Küçük harf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.none" : {
+    "message" : "Hiçbiri",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.uppercase" : {
+    "message" : "Büyük harf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.label" : {
+    "message" : "Dönüştür",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.label" : {
+    "message" : "Üzerine gel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.label" : {
+    "message" : "Başlık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.spacing.label" : {
+    "message" : "Aralık",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.font.label" : {
+    "message" : "Yazı tipi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.label" : {
+    "message" : "Metin",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.capitalize" : {
+    "message" : "Büyük harfe çevir",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.lowercase" : {
+    "message" : "Küçük harf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.none" : {
+    "message" : "Hiçbiri",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.uppercase" : {
+    "message" : "Büyük harf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.label" : {
+    "message" : "Dönüştür",
+    "description" : "",
+    "placeholders" : null
+  },
+  "tags.label" : {
+    "message" : "Etiketler",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "Başlık",
+    "description" : "",
+    "placeholders" : null
+  }
+}

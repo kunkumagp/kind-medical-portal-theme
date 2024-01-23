@@ -1,0 +1,797 @@
+{
+  "alternate_image.label" : {
+    "message" : "รูปภาพอื่น",
+    "description" : "",
+    "placeholders" : null
+  },
+  "author.label" : {
+    "message" : "ผู้เขียน",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button.label" : {
+    "message" : "ปุ่ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "อ่านเพิ่มเติม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "ข้อความบนปุ่ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.help_text" : {
+    "message" : "สามารถเปลี่ยนรูปแบบวันที่เผยแพร่ได้ในการตั้งค่าบล็อก <a href='https://knowledge.hubspot.com/blog/manage-your-blog-template-and-settings#set-your-blog-s-date-formats' target='_blank' rel='noopener'>เรียนรู้เพิ่มเติม</a>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.label" : {
+    "message" : "วันที่เผยแพร่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.default" : {
+    "message" : "สรุปโพสต์ในบล็อก: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.label" : {
+    "message" : "ข้อความสรุปโพสต์ในบล็อก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.default" : {
+    "message" : "ภาพแนะนำ: {{ post.featured_image_alt_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.label" : {
+    "message" : "ข้อความในรูปภาพที่แสดง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "ข้อความเริ่มต้น",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.default" : {
+    "message" : "รูปของ {{ post.blog_author.display_name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.label" : {
+    "message" : "ภาพของข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.default" : {
+    "message" : "อ่านโพสต์เต็ม: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.label" : {
+    "message" : "อ่านข้อความในโพสต์เต็ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "description.label" : {
+    "message" : "คำอธิบาย",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_image.label" : {
+    "message" : "รูปภาพ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "full_image.label" : {
+    "message" : "รูปภาพเต็ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Rich text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "layout_style.choices.card" : {
+    "message" : "ตารางพื้นฐาน",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.list" : {
+    "message" : "ข้างกัน",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.single_column" : {
+    "message" : "คอลัมน์เดียว",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.label" : {
+    "message" : "เลย์เอาท์",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "recent-articles",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.label" : {
+    "message" : "จำนวนโพสต์",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.default" : {
+    "message" : "เลือกบล็อกที่แถบด้านข้าง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.label" : {
+    "message" : "คำอธิบาย",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "ตัวยึดตำแหน่ง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.default" : {
+    "message" : "ไม่มีโพสต์สำหรับบล็อกที่เลือก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.label" : {
+    "message" : "ชื่อเรื่อง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog.label" : {
+    "message" : "เลือกบล็อก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts" : {
+    "message" : "โพสต์ล่าสุด",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts_by_tag" : {
+    "message" : "โพสต์ล่าสุดตามแท็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.label" : {
+    "message" : "เลือกประเภทบล็อก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_tag.label" : {
+    "message" : "เลือกแท็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.label" : {
+    "message" : "วางเมาส์เหนือ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.label" : {
+    "message" : "มุม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.radius.label" : {
+    "message" : "รัศมี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.label" : {
+    "message" : "รูปภาพ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.label" : {
+    "message" : "ผู้เขียน",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.alignment.label" : {
+    "message" : "การจัดแนว",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.label" : {
+    "message" : "การจัดแนว",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.color.label" : {
+    "message" : "สี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.label" : {
+    "message" : "พื้นหลัง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.border.label" : {
+    "message" : "ขอบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.label" : {
+    "message" : "ขอบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.label" : {
+    "message" : "มุม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.radius.label" : {
+    "message" : "รัศมี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.color.label" : {
+    "message" : "สี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.label" : {
+    "message" : "พื้นหลัง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.border.label" : {
+    "message" : "ขอบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.label" : {
+    "message" : "ขอบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.label" : {
+    "message" : "วางเมาส์เหนือ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.label" : {
+    "message" : "ปุ่ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.large" : {
+    "message" : "ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.regular" : {
+    "message" : "ปกติ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.small" : {
+    "message" : "เล็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.label" : {
+    "message" : "ขนาดปุ่ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.primary" : {
+    "message" : "หลัก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.secondary" : {
+    "message" : "รอง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.simple" : {
+    "message" : "อย่างง่าย",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.label" : {
+    "message" : "รูปแบบปุ่ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.help_text" : {
+    "message" : "ใช้ค่าที่กำหนดไว้ล่วงหน้าเพื่อปรับเปลี่ยนลักษณะที่ปรากฏของรายการที่เลือกเป็นค่าที่กำหนดไว้ล่วงหน้าอย่างรวดเร็ว",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.label" : {
+    "message" : "ค่าที่กำหนดไว้ล่วงหน้า",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.capitalize" : {
+    "message" : "ใช้ตัวพิมพ์ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.lowercase" : {
+    "message" : "ตัวพิมพ์เล็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.none" : {
+    "message" : "ไม่มี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.uppercase" : {
+    "message" : "ตัวพิมพ์ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.label" : {
+    "message" : "แปลง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.label" : {
+    "message" : "วันที่เผยแพร่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.label" : {
+    "message" : "คำอธิบาย",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.label" : {
+    "message" : "มุม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.radius.label" : {
+    "message" : "รัศมี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.label" : {
+    "message" : "รูปภาพ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.color.label" : {
+    "message" : "สี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.label" : {
+    "message" : "ซ้อนทับ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.1/1" : {
+    "message" : "1:1",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.16/9" : {
+    "message" : "16:9",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.2/3" : {
+    "message" : "2:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/2" : {
+    "message" : "3:2",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/4" : {
+    "message" : "3:4",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.4/3" : {
+    "message" : "4:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.label" : {
+    "message" : "อัตราส่วนกว้างยาว",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.label" : {
+    "message" : "ขนาด",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.width.label" : {
+    "message" : "ความกว้าง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.between_image_and_content.label" : {
+    "message" : "ระหว่างรูปภาพและเนื้อหา",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "รูปแบบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.color.label" : {
+    "message" : "สี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.label" : {
+    "message" : "พื้นหลัง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.border.label" : {
+    "message" : "ขอบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.label" : {
+    "message" : "ขอบ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.label" : {
+    "message" : "มุม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.radius.label" : {
+    "message" : "รัศมี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.label" : {
+    "message" : "โพสต์",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.dark" : {
+    "message" : "เข้ม",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.light" : {
+    "message" : "อ่อน",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.plain" : {
+    "message" : "ธรรมดา",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.label" : {
+    "message" : "รูปแบบบัตร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.help_text" : {
+    "message" : "ใช้ค่าที่กำหนดไว้ล่วงหน้าเพื่อปรับเปลี่ยนลักษณะที่ปรากฏของรายการที่เลือกเป็นค่าที่กำหนดไว้ล่วงหน้าอย่างรวดเร็ว",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.label" : {
+    "message" : "ค่าที่กำหนดไว้ล่วงหน้า",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.post_content.label" : {
+    "message" : "โพสต์เนื้อหา",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.space_between_posts.label" : {
+    "message" : "ช่องว่างระหว่างโพสต์",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.label" : {
+    "message" : "วางเมาส์เหนือ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.label" : {
+    "message" : "แท็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.capitalize" : {
+    "message" : "ใช้ตัวพิมพ์ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.lowercase" : {
+    "message" : "ตัวพิมพ์เล็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.none" : {
+    "message" : "ไม่มี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.uppercase" : {
+    "message" : "ตัวพิมพ์ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.label" : {
+    "message" : "แปลง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.label" : {
+    "message" : "วางเมาส์เหนือ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.label" : {
+    "message" : "ชื่อเรื่อง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.spacing.label" : {
+    "message" : "เว้นวรรค",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.font.label" : {
+    "message" : "แบบอักษร",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.label" : {
+    "message" : "ข้อความ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.capitalize" : {
+    "message" : "ใช้ตัวพิมพ์ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.lowercase" : {
+    "message" : "ตัวพิมพ์เล็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.none" : {
+    "message" : "ไม่มี",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.uppercase" : {
+    "message" : "ตัวพิมพ์ใหญ่",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.label" : {
+    "message" : "แปลง",
+    "description" : "",
+    "placeholders" : null
+  },
+  "tags.label" : {
+    "message" : "แท็ก",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "ชื่อเรื่อง",
+    "description" : "",
+    "placeholders" : null
+  }
+}

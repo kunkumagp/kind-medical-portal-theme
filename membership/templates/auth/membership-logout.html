@@ -1,0 +1,40 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Kind Medical - membership logout
+  screenshotPath: ../../images/template-previews/membership-logout.png
+-->
+{% extends "../layouts/base-auth.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="membership-page membership-page--centered membership-page--narrow membership-page--spaced">
+
+    {% module "logout_heading"
+      path="@hubspot/rich_text",
+      html="<h1>You are signed out</h1>"
+    %}
+
+    {% module "sign_in_button"
+      path="../../modules/button",
+      button_text="Sign back in",
+      button_link={
+        "url": {
+          "type": "EXTERNAL",
+          "href": "/_hcms/mem/login"
+        }
+      }
+    %}
+
+    {% module "logout_description"
+      path="@hubspot/rich_text",
+      extra_classes="logout-description",
+      html="<p>Or return to the <a href=\"{{ '//' ~ request.domain }}\">home page</a></p>"
+    %}
+
+  </div>
+</section>
+{% endblock body %}

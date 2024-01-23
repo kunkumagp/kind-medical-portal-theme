@@ -1,0 +1,227 @@
+{
+  "add_icon.label" : {
+    "message" : "Voeg ikoon by",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_link.label" : {
+    "message" : "Knoppie-skakel",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Vind meer uit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Knoppieteks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.icon.label" : {
+    "message" : "Ikoon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.label" : {
+    "message" : "Ikoon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.left" : {
+    "message" : "Links",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.right" : {
+    "message" : "Regs",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.label" : {
+    "message" : "Posisie",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Knoppie",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.alignment.label" : {
+    "message" : "Belyning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.label" : {
+    "message" : "Belyning",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.color.label" : {
+    "message" : "Kleur",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.label" : {
+    "message" : "Agtergrond",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.border.label" : {
+    "message" : "Raam",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.label" : {
+    "message" : "Raam",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.label" : {
+    "message" : "Hoek",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.radius.label" : {
+    "message" : "Radius",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.color.label" : {
+    "message" : "Kleur",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.label" : {
+    "message" : "Agtergrond",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.border.label" : {
+    "message" : "Raam",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.label" : {
+    "message" : "Raam",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.label" : {
+    "message" : "Sweef",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.font.label" : {
+    "message" : "Font",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Style",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.large" : {
+    "message" : "Groot",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.regular" : {
+    "message" : "Gewone",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.small" : {
+    "message" : "Klein",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.label" : {
+    "message" : "Knoppiegrootte",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.primary" : {
+    "message" : "Primêre",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.secondary" : {
+    "message" : "Sekondêre",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.simple" : {
+    "message" : "Eenvoudig",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.label" : {
+    "message" : "Knoppiestyl",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.help_text" : {
+    "message" : "Gebruik voorafinstellings om die voorkoms van die geselekteerde item vinnig na voorafgedefinieerde waardes te verstel.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.label" : {
+    "message" : "Voorafinstellings",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.label" : {
+    "message" : "Spasiëring",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.spacing.label" : {
+    "message" : "Spasiëring",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.font.label" : {
+    "message" : "Font",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.capitalize" : {
+    "message" : "Kapitaliseer",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.lowercase" : {
+    "message" : "Kleinletters",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.none" : {
+    "message" : "Geen",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.uppercase" : {
+    "message" : "Hoofletters",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.label" : {
+    "message" : "Transformeer",
+    "description" : "",
+    "placeholders" : null
+  }
+}
