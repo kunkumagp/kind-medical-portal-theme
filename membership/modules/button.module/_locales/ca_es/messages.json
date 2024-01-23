@@ -1,0 +1,227 @@
+{
+  "add_icon.label" : {
+    "message" : "Afegeix una icona",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_link.label" : {
+    "message" : "Enllaç de botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Més informació",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Text del botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.icon.label" : {
+    "message" : "Icona",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.label" : {
+    "message" : "Icona",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.left" : {
+    "message" : "Esquerra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.right" : {
+    "message" : "Dreta",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.label" : {
+    "message" : "Posició",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.alignment.label" : {
+    "message" : "Alineació",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.label" : {
+    "message" : "Alineació",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.radius.label" : {
+    "message" : "Radi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.color.label" : {
+    "message" : "Color",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.label" : {
+    "message" : "Fons",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.label" : {
+    "message" : "Cantonada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.label" : {
+    "message" : "Desplaçament",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Estils",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.large" : {
+    "message" : "Gran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.regular" : {
+    "message" : "Normal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.small" : {
+    "message" : "Petit",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.label" : {
+    "message" : "Mida del botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.primary" : {
+    "message" : "Principal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.secondary" : {
+    "message" : "Secundari",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.simple" : {
+    "message" : "Senzill",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.label" : {
+    "message" : "Estil del botó",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.help_text" : {
+    "message" : "Utilitza els valors predefinits per ajustar ràpidament l'aparença de l'element seleccionat als valors predefinits.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.label" : {
+    "message" : "Valors predefinits",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.label" : {
+    "message" : "Espaiat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.spacing.label" : {
+    "message" : "Espaiat",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.font.label" : {
+    "message" : "Tipus de lletra",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.label" : {
+    "message" : "Text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.capitalize" : {
+    "message" : "Posa en majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.lowercase" : {
+    "message" : "Minúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.none" : {
+    "message" : "Cap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.uppercase" : {
+    "message" : "Majúscula",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.label" : {
+    "message" : "Transforma",
+    "description" : "",
+    "placeholders" : null
+  }
+}

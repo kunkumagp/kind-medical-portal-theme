@@ -1,0 +1,87 @@
+[ {
+  "id" : "card",
+  "name" : "card",
+  "display_width" : null,
+  "label" : "Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "card.title",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "card.image",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "alt" : "A blue puzzle piece",
+      "height" : 32,
+      "src" : "https://cdn2.hubspot.net/hubfs/1932631/Email_Templates/Prototype/services_7.png",
+      "width" : 35
+    }
+  }, {
+    "id" : "card.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "This is a title"
+  }, {
+    "id" : "card.text",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image" : {
+      "alt" : "A blue puzzle piece",
+      "src" : "https://cdn2.hubspot.net/hubfs/1932631/Email_Templates/Prototype/services_7.png",
+      "height" : 32,
+      "width" : 35
+    },
+    "title" : "This is a title",
+    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+  }, {
+    "image" : {
+      "alt" : "A blue puzzle piece",
+      "src" : "https://cdn2.hubspot.net/hubfs/1932631/Email_Templates/Prototype/services_7.png",
+      "height" : 32,
+      "width" : 35
+    },
+    "title" : "This is a title",
+    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+  }, {
+    "image" : {
+      "alt" : "A blue puzzle piece",
+      "src" : "https://cdn2.hubspot.net/hubfs/1932631/Email_Templates/Prototype/services_7.png",
+      "height" : 32,
+      "width" : 35
+    },
+    "title" : "This is a title",
+    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+  } ]
+} ]

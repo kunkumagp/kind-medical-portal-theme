@@ -1,0 +1,29 @@
+<!--
+    templateType: global_partial
+    isAvailableForNewContent: false
+    label: Membership portal header
+-->
+
+{% set baseURL = "https://demo.ec7.co" %} 
+
+<header class="header admin-header flex padding-content">
+  <div class="header-inner flex items-center">
+    <div class="flex items-center">
+      <div class="header-logo text-center">
+        <a href="/search-member"><img src="{{ get_asset_url('../../images/admin-kind-medical-logo.svg') }}" alt="Kind Medical" /></a>
+      </div>
+
+      
+      <div class="member-navigation">
+        <nav aria-label="Main navigation">
+          <ul class="flex no-list no-padding primary-menu">
+            <li class="nav-menu"><a href="/search-member" class="{% if request.path == '/search-member'%}active{% endif %}">Members</a></li>
+            <li class="nav-menu"><a href="/manual-registrations" class="{% if request.path == '/manual-registrations'%}active{% endif %}">Manual registrations</a></li>
+            <li class="nav-menu"><a href="/stock-levels" class="{% if request.path == '/stock-levels'%}active{% endif %}">Update stock levels</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+

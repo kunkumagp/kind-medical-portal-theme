@@ -1,0 +1,45 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.our-product-heading{
+  background-image:url({{ get_asset_url('/kind-medical-portal-theme/membership/images/our-product-header-background.png') }});
+  background-size:cover;
+}
+
+/* positions */
+
+.position-relative{
+  position:relative;
+}
+
+.position-absolute{
+  position:absolute;
+}
+.d-none{
+  display:none;
+}
+
+.flex{
+  display:flex;
+}
+
+.align-center{
+  align-items:center;
+}
+
+.filter-content-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.our-product-list{
+  padding-top:65px;
+}

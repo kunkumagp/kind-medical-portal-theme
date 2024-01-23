@@ -1,0 +1,296 @@
+.product-list-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+}
+.single-product{
+  width:242px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #EBE0E6;
+}
+.product-image{
+  width:100%;
+  position:relative;
+  max-height:170px;
+}
+
+.product-image img{
+  width:100%;
+}
+
+.product-card-content{
+  padding:16px 22px 22px 22px;
+}
+
+.format-details{
+  position:absolute;
+  width:50px;
+  height:50px;
+  border-radius:50px;
+  background-color:#EBE0E6;
+  top:65%;
+  right:7%;
+  padding:6px 0px;
+  text-align:center;
+}
+.format-icon {
+  max-height:23px;
+}
+.format-text{
+  text-align: center;
+  font-family: "FS Me";
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+.thc-cbd-cat-tags-section{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.thc-tag{
+  padding: 4px 8px;
+  background-color:#A76389;
+  color:#EBE0E6;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  border-radius:4px;
+}
+
+.cbd-tag{
+  padding: 4px 8px;
+  background-color:#E8D5E5;
+  color:#A76389;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  border-radius:4px;
+}
+
+.cat-tag{
+  padding: 4px 8px;
+  background-color:#FFFFFF;
+  color:#805574;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  border-radius:4px;
+}
+
+.product-title-and-favourite{
+  margin-top:16px;
+  display:flex;
+  gap:16px;
+}
+
+.product-title{
+  color: #805574;
+  font-family: "FS Me";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.favourite-button{
+  background-color:#E8D5E5;
+  padding:5px;
+  border-radius:50px;
+  width:32px;
+  height:32px;
+}
+.product-content-description{
+  padding:8px 0px 10px 0px;
+  color: #805574;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; 
+  margin-bottom:0px;
+}
+.view-full-pi{
+  color: #805574;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration-line: underline;
+}
+
+.reported-effects-and-time-of-use-and-dr-details{
+  margin-top:16px;
+  display:flex;
+  justify-content:space-around;
+  padding: 8px 0px;
+  border-top: 1px solid #E8D5E5;
+  border-bottom: 1px solid #E8D5E5;
+  align-items:center;
+  text-align:center;
+
+}
+
+.reported-effects-details p, 
+.dominant-region-details p, 
+.time-of-use-details p{
+  color: #805574;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom:0px;
+}
+
+.reported-effects-details div, 
+.dominant-region-details div, 
+.time-of-use-details div{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height:34px;
+  margin-bottom:5px;
+}
+.dominant-terpenes{
+  padding-top:16px;
+  border-bottom: 1px solid #E8D5E5;
+}
+
+.dominant-terpenes-tags{
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+  padding-bottom:16px;
+}
+.dominant-terpenes p{
+  color: #805574;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  margin-bottom:0px;
+}
+
+.dominant-terpenes-tags > span{
+  padding:4px 2px;
+  color: #585A5D;
+  text-align: center;
+  font-family: "FS Me";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.48px;
+  min-width:96px;
+
+}
+
+.b-Caryophyllene{
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(185, 163, 143, 0.40);
+
+
+}
+.Linalool{
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(204, 191, 217, 0.50);
+}
+.b-Myrcene{
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(245, 170, 177, 0.40);
+}
+.a-Humulene{
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(167, 215, 196, 0.60);
+}
+
+.Eucalyptol{
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(214, 236, 225, 0.70);
+}
+
+.Limonene{
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(254, 237, 166, 0.60);
+}
+
+.product-price-and-stock-status{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding-top:16px;
+  justify-content: space-between;
+}
+
+.stock{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  border-radius: 4px;
+  background: #FFFFFF;
+  padding: 6px;
+  justify-content:space-between;
+}
+.product-price .price{
+  color: #805574;
+  text-align: center;
+  font-family: "FS Me";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom:0px;
+}
+
+.product-price .per{
+  color: #805574;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.stock-details .stock-status{
+  color:  #805574;
+  font-family: "FS Me";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  margin-bottom:0px;
+}
+
+.stock-details .discount-status{
+  color: #805574;
+  font-family: "FS Me";
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.stock-icon{
+  height:18px;
+}
