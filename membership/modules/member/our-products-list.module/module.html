@@ -1,0 +1,160 @@
+{% set potency = "Moderate THC" %}
+
+{% if potency == "High THC" %}
+
+  {% set mainClass = "high-thc" %}
+  {% set background_color = "bg-light-high-thc" %}
+  {% set imageSrc = get_asset_url('../../images/product-images/kind-rufus.png') %}
+  {% set text_color_dark = "text-dark-high-thc" %}
+  {% set text_color_light = "text-light-high-thc" %}
+
+{% elif potency == "Moderate THC" %}
+
+  {% set mainClass = "moderate-thc" %}
+  {% set background_color = "bg-light-moderate-thc" %}
+  {% set imageSrc = get_asset_url('../../images/product-images/kind-azure.png') %}
+  {% set text_color_dark = "text-dark-moderate-thc" %}
+  {% set text_color_light = "text-light-moderate-thc" %}
+
+{% elif potency == "Balanced" %}
+
+  {% set mainClass = "balanced" %}
+  {% set background_color = "bg-light-balanced" %}
+  {% set imageSrc = get_asset_url('../../images/product-images/kind-libra.png') %}
+  {% set text_color_dark = "text-dark-balanced" %}
+  {% set text_color_light = "text-light-balanced" %}
+
+{% elif potency == "Moderate CBD" %}
+
+  {% set mainClass = "moderate-cbd" %}
+  {% set background_color = "bg-light-moderate-cbd" %}
+  {% set imageSrc = get_asset_url('../../images/product-images/kind-dulce.png') %}
+  {% set text_color_dark = "text-dark-moderate-cbd" %}
+  {% set text_color_light = "text-light-moderate-cbd" %}
+
+{% elif potency == "High CBD" %}
+
+  {% set mainClass = "high-cbd" %}
+  {% set background_color = "bg-light-high-cbd" %}
+  {% set imageSrc = get_asset_url('../../images/product-images/kind-sol.png') %}
+  {% set text_color_dark = "text-dark-high-cbd" %}
+  {% set text_color_light = "text-light-high-cbd" %}
+
+{% endif %}
+
+
+<div class="product-list-container">
+  <div class="single-product {{mainClass}} {{background_color}} ">
+    <div class="product-image">
+      <img src="{{imageSrc}}">
+      <div class="format-details {{background_color}}">
+        <div class="format-icon">
+          {% set formatType = "Flower" %}
+          {% if formatType == "Flower" %}
+            <img class="img-svg flower" src="{{ get_asset_url('../../images/Icons/product_icons/Flower.svg') }}">
+          {% elif formatType == "Oil" %}
+            <img class="img-svg oil" src="{{ get_asset_url('../../images/Icons/product_icons/Oil.svg') }}">
+          {% elif formatType == "Vape" %}
+            <img class="img-svg vape" src="{{ get_asset_url('../../images/Icons/product_icons/Vape.svg') }}">
+          {% endif %}
+        </div>
+        <div class="format-text {{text_color_dark}}">
+          <span>Flower</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card-content">
+      <div class="thc-cbd-cat-tags-section">
+        <span class="thc-tag">THC: 24%</span>
+        <span class="cbd-tag">CBD: 1%</span>
+        <span class="cat-tag">CAT: 5</span>
+      </div>
+      <div class="product-main-details-and-favourite">
+        <div class="product-title-and-favourite">
+          <span class="product-title {{text_color_dark}}">Kind Rufus™ 24:1</span>
+          <a class="favourite-button">
+            <img class="img-svg fav active" src="{{ get_asset_url('../../images/Icons/product_icons/favourite-star.svg') }}">
+          </a>
+        </div>
+        <p class="product-content-description {{text_color_dark}}">
+          Rufus is an indica dominant hybrid with high levels of THC. Each gram of dried flower contains 24% THC and 1% CBD.
+        </p>
+        <a class="view-full-pi {{text_color_dark}}">View Full PI</a>
+      </div>
+      <div class="reported-effects-and-time-of-use-and-dr-details">
+        <div class="reported-effects-details">
+          <div>
+          {% set dominantRegionType = "Calming" %}
+          {% if dominantRegionType == "Energising" %}
+            <img width="28" class="img-svg energising" src="{{ get_asset_url('../../images/Icons/product_icons/Energising.svg') }}">
+          {% elif dominantRegionType == "Balancing" %}
+            <img width="28" class="img-svg balancing" src="{{ get_asset_url('../../images/Icons/product_icons/Balancing.svg') }}">
+          {% elif dominantRegionType == "Calming" %}
+            <img width="28" class="img-svg calming" src="{{ get_asset_url('../../images/Icons/product_icons/Calming.svg') }}">
+          {% endif %}
+          </div>
+          <p class="{{text_color_dark}}">Calming</p>
+        </div>
+        <div class="dominant-region-details">
+          <div>
+          {% set dominantRegionType = "Body" %}
+          {% if dominantRegionType == "Mind" %}
+            <img width="26" class="img-svg mind" src="{{ get_asset_url('../../images/Icons/product_icons/Mind.svg') }}">
+          {% elif dominantRegionType == "Mind & Body" %}
+            <img width="28" class="img-svg mind-body" src="{{ get_asset_url('../../images/Icons/product_icons/Mind-Body.svg') }}">
+          {% elif dominantRegionType == "Body" %}
+            <img width="21" class="img-svg body" src="{{ get_asset_url('../../images/Icons/product_icons/Body.svg') }}">
+          {% endif %}      
+          </div>
+          <p class="{{text_color_dark}}">Body</p>
+        </div>
+        <div class="time-of-use-details">
+          <div>
+            {% set timeOfUse = "Night" %}
+            {% if timeOfUse == "Day" %}
+              <img width="26" class="img-svg day" src="{{ get_asset_url('../../images/Icons/product_icons/Day.svg') }}">
+            {% elif timeOfUse == "Day or Night" %}
+              <img width="28" class="img-svg day-night" src="{{ get_asset_url('../../images/Icons/product_icons/Day or Night.svg') }}">
+            {% elif timeOfUse == "Night" %}
+              <img width="21" class="img-svg night" src="{{ get_asset_url('../../images/Icons/product_icons/Night.svg') }}">
+            {% endif %} 
+          </div>
+          <p class="{{text_color_dark}}">Day or Night</p>
+        </div>
+      </div>
+      <div class="dominant-terpenes">
+        <p class="{{text_color_dark}}">Dominant Terpenes</p>
+        <div class="dominant-terpenes-tags">
+          <span class="b-Caryophyllene">b-Caryophyllene</span>
+          <span class="Linalool">Linalool</span>
+          <span class="b-Myrcene">b-Myrcene</span>
+          <span class="a-Humulene">a-Humulene</span>
+          <span class="Eucalyptol">Eucalyptol</span>
+          <span class="Limonene">Limonene</span>
+        </div>
+      </div>
+      <div class="product-price-and-stock-status">
+        <div class="product-price {{text_color_dark}}">
+          <p class="price {{text_color_dark}}">$100 RRP <br><span class="per {{text_color_dark}}">per 10g pouch</span> </p>
+        </div>
+        <div class="stock">
+          <div class="stock-icon">
+            {% set stockLevel = "High Stock" %}
+            {% if stockLevel == "High Stock" %}
+              <img width="17" class="img-svg high-stock" src="{{ get_asset_url('../../images/Icons/product_icons/high-stock.svg') }}">
+            {% elif stockLevel == "Moderate Stock" %}
+              <img width="17" class="img-svg moderate-stock" src="{{ get_asset_url('../../images/Icons/product_icons/moderate-stock.svg') }}">
+            {% elif stockLevel == "Low Stock" %}
+              <img width="17" class="img-svg low-stock" src="{{ get_asset_url('../../images/Icons/product_icons/low-stock.svg') }}">
+            {% elif stockLevel == "Coming Soon" %}
+              <img width="17" class="img-svg no-stock" src="{{ get_asset_url('../../images/Icons/product_icons/no-stock.svg') }}">
+            {% endif %} 
+          </div>
+          <div class="stock-details">
+            <p class="stock-status {{text_color_dark}}">High Stock <br><span class="discount-status {{text_color_dark}}">Discontinued mid Apr</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

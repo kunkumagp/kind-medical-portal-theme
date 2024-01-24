@@ -1,0 +1,227 @@
+{
+  "add_icon.label" : {
+    "message" : "Προσθήκη εικονιδίου",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_link.label" : {
+    "message" : "Σύνδεσμος κουμπιού",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Περισσότερες λεπτομέρειες",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Κείμενο κουμπιού",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.icon.label" : {
+    "message" : "Εικονίδιο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.label" : {
+    "message" : "Εικονίδιο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.left" : {
+    "message" : "Αριστερά",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.right" : {
+    "message" : "Δεξιά",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.label" : {
+    "message" : "Θέση",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Κουμπί",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.alignment.label" : {
+    "message" : "Στοίχιση",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.label" : {
+    "message" : "Στοίχιση",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.color.label" : {
+    "message" : "Χρώμα",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.label" : {
+    "message" : "Φόντο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.border.label" : {
+    "message" : "Περιθώριο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.label" : {
+    "message" : "Περιθώριο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.label" : {
+    "message" : "Γωνία",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.radius.label" : {
+    "message" : "Ακτίνα καμπυλότητας",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.color.label" : {
+    "message" : "Χρώμα",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.label" : {
+    "message" : "Φόντο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.border.label" : {
+    "message" : "Περιθώριο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.label" : {
+    "message" : "Περιθώριο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.label" : {
+    "message" : "Κατάδειξη",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.font.label" : {
+    "message" : "Γραμματοσειρά",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.label" : {
+    "message" : "Κείμενο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Στυλ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.large" : {
+    "message" : "Μεγάλο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.regular" : {
+    "message" : "Κανονικό",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.small" : {
+    "message" : "Μικρό",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.label" : {
+    "message" : "Μέγεθος κουμπιού",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.primary" : {
+    "message" : "Κύριο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.secondary" : {
+    "message" : "Δευτερεύον",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.simple" : {
+    "message" : "Απλό",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.label" : {
+    "message" : "Στυλ κουμπιού",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.help_text" : {
+    "message" : "Χρησιμοποιήστε τις προεπιλογές για να προσαρμόσετε γρήγορα την εμφάνιση του επιλεγμένου στοιχείου σε προκαθορισμένες τιμές.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.label" : {
+    "message" : "Προεπιλογές",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.label" : {
+    "message" : "Διάκενο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.spacing.label" : {
+    "message" : "Διάκενο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.font.label" : {
+    "message" : "Γραμματοσειρά",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.label" : {
+    "message" : "Κείμενο",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.capitalize" : {
+    "message" : "Μετατροπή σε κεφαλαία",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.lowercase" : {
+    "message" : "Πεζά",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.none" : {
+    "message" : "Κανένα",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.uppercase" : {
+    "message" : "Κεφαλαία",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.label" : {
+    "message" : "Μετασχηματισμός",
+    "description" : "",
+    "placeholders" : null
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "content_types.blog_posts.label" : {
+    "message" : "ব্লগ পোস্টগুলি ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.label" : {
+    "message" : "জ্ঞান বিষয়ক নিবন্ধ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.label" : {
+    "message" : "সন্ধান ফলাফল অন্তর্ভুক্ত করে ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.landing_pages.label" : {
+    "message" : "ল্যান্ডিং পেজ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.name" : {
+    "message" : "search_input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.website_pages.label" : {
+    "message" : "ওয়েবসাইট পেজ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "field_label.label" : {
+    "message" : "লেবেল টেক্সট",
+    "description" : "",
+    "placeholders" : null
+  },
+  "hubdb_table_group.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.label" : {
+    "message" : "HubDB table",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.label" : {
+    "message" : "সন্ধান বোতাম অন্তর্ভুক্ত করুন",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "main_search_input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.default" : {
+    "message" : "সার্চ করুন",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "প্লেসহোল্ডার টেক্সট",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.label" : {
+    "message" : "ফলাফল",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.inline_help_text" : {
+    "message" : "লোকেরা যখন তাদের অনুসন্ধান শব্দটি অনুসন্ধান করতে ক্লিক করে তখন এখানেই যাবে৷ অনুসন্ধান ফলাফল মডিউল ধারণকারী একটি পৃষ্ঠা নির্বাচন নিশ্চিত করুন।",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.label" : {
+    "message" : "অনুসন্ধান ফলাফল পেজ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.inline_help_text" : {
+    "message" : "ডিফল্ট বিশ্বব্যাপী অনুসন্ধান ফলাফল পেজের পরিবর্তে একটি কাস্টম অনুসন্ধান ফলাফল পেজ ব্যবহার করতে এই সেটিংটি চালু করুন।",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.label" : {
+    "message" : "কাস্টম অনুসন্ধান ফলাফল পেজ ব্যবহার করুন",
+    "description" : "",
+    "placeholders" : null
+  }
+}

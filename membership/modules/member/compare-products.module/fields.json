@@ -1,0 +1,37 @@
+[ {
+  "id" : "650858e5-9b25-c605-c0f8-4f56cbfb6fe8",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3><span style=\"color: #666e5a;\">Compare products</span></h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>"
+}, {
+  "id" : "f13e9947-c1ae-ec4d-a800-b4ed24fa63c9",
+  "name" : "heading_2",
+  "display_width" : null,
+  "label" : "Heading 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h4><span style=\"color: #666e5a;\">Reported Effects &amp; Use</span></h4>\n<span style=\"font-size: 12px; color: #666e5a;\">*Based on patient self-reported data</span>"
+}, {
+  "id" : "ef0a1bd7-51ea-2a88-668a-ed7b0da8b0c0",
+  "name" : "heading_3",
+  "display_width" : null,
+  "label" : "Heading 3",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h4><span style=\"color: #666e5a;\">Medicine Classification &amp; Scheduling</span></h4>"
+}, {
+  "id" : "8d6d8715-d234-15b1-7e5c-1d577d0a80e2",
+  "name" : "heading_4",
+  "display_width" : null,
+  "label" : "Heading 4",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h4><span style=\"color: #666e5a;\">Dominant Terpenes</span></h4>"
+} ]

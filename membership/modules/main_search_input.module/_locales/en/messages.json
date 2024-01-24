@@ -1,0 +1,177 @@
+{
+  "content_types.blog_posts.label" : {
+    "message" : "Blog posts",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.label" : {
+    "message" : "Search results include",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.landing_pages.label" : {
+    "message" : "Landing pages",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.name" : {
+    "message" : "search_input",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.website_pages.label" : {
+    "message" : "Website pages",
+    "description" : "",
+    "placeholders" : null
+  },
+  "field_label.label" : {
+    "message" : "Label text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "hubdb_table_group.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.label" : {
+    "message" : "HubDB table",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.label" : {
+    "message" : "HubDB Table Group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.label" : {
+    "message" : "Include search button",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "main_search_input",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.default" : {
+    "message" : "Search",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "Placeholder text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.label" : {
+    "message" : "Results",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "results.path_id.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "results.path_id.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  }
+}

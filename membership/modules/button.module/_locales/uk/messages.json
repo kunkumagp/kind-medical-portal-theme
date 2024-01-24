@@ -1,0 +1,227 @@
+{
+  "add_icon.label" : {
+    "message" : "Додати значок",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_link.label" : {
+    "message" : "Посилання кнопки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Додаткова інформація",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Текст кнопки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.icon.label" : {
+    "message" : "Значок",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.label" : {
+    "message" : "Значок",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.left" : {
+    "message" : "По лівому краю",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.choices.right" : {
+    "message" : "По правому краю",
+    "description" : "",
+    "placeholders" : null
+  },
+  "icon.position.label" : {
+    "message" : "Положення",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Кнопка",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.alignment.label" : {
+    "message" : "Вирівнювання",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.alignment.label" : {
+    "message" : "Вирівнювання",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.color.label" : {
+    "message" : "Колір",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.background.label" : {
+    "message" : "Фон",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.border.label" : {
+    "message" : "Межа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.border.label" : {
+    "message" : "Межа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.label" : {
+    "message" : "Кут",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.corner.radius.label" : {
+    "message" : "Радіус",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.color.label" : {
+    "message" : "Колір",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.background.label" : {
+    "message" : "Фон",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.border.label" : {
+    "message" : "Межа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.border.label" : {
+    "message" : "Межа",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.label" : {
+    "message" : "При наведенні",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.font.label" : {
+    "message" : "Шрифт",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.hover.text.label" : {
+    "message" : "Текст",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Стилі",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.large" : {
+    "message" : "Великий",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.regular" : {
+    "message" : "Звичайний",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.choices.small" : {
+    "message" : "Малий",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_size.label" : {
+    "message" : "Розмір кнопки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.primary" : {
+    "message" : "Основний",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.secondary" : {
+    "message" : "Додаткові",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.choices.simple" : {
+    "message" : "Простий",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.button_style.label" : {
+    "message" : "Стиль кнопки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.help_text" : {
+    "message" : "Використовуйте попередні налаштування, щоб швидко налаштувати вигляд вибраної позиції в порівнянні з наперед визначеними значеннями.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.presets.label" : {
+    "message" : "Попередні налаштування",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.label" : {
+    "message" : "Інтервал",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.spacing.spacing.label" : {
+    "message" : "Інтервал",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.font.label" : {
+    "message" : "Шрифт",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.label" : {
+    "message" : "Текст",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.capitalize" : {
+    "message" : "Усі великі літери",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.lowercase" : {
+    "message" : "Малі літери",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.none" : {
+    "message" : "Немає",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.choices.uppercase" : {
+    "message" : "Великі літери",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.text.transform.label" : {
+    "message" : "Перетворити",
+    "description" : "",
+    "placeholders" : null
+  }
+}

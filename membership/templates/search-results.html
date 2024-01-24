@@ -1,0 +1,75 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Kind Medical - search results
+  screenshotPath: ../../images/template-previews/search-results.png
+
+-->
+
+{% extends './layouts/base-member-green-footer.html' %}
+
+{% block body %}
+
+{% set query_string = request.query %}
+{% set parameters = query_string.split('&') %}
+{% set tableIds = [] %}
+
+{% for param in parameters %}
+  {% if "tableId=" in param %}
+    {% set tableId = param.split('=')[1] %}
+    {% do tableIds.append(tableId) %}
+  {% endif %}
+{% endfor %}
+
+{% set keyword = request.query_dict.term %}
+{# {% set queryparams = "description__icontains=" ~ keyword %} #}
+{% set queryparams = "product_name__icontains=" ~ keyword %}
+
+
+{# {% set table = hubdb_table_rows(11587680, query) %} #}
+{# {% set keyword = request.query_dict.term|escape %} #}
+
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="systems-page">
+
+      <h1>Results for "{{ keyword }}"</h1>
+      
+      {% if tableIds|length > 0 %}
+        {% for id in tableIds %}
+          {% set table = hubdb_table_rows(id|int, queryparams) %}
+
+            {% for row in table %}
+  {#             {{row.description}} #}
+              {{row.product_name}}
+            {% endfor %}
+      <br/><br/><br/>
+          {% endfor %}
+      {% endif %}
+      
+      
+      
+      {% dnd_area 'dnd_area' class='body-container body-container--home', label='Search result section' %}
+      
+        {% dnd_section %}
+          {% dnd_column
+            offset=0,
+            width=12
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path="../modules/member/search-results",
+                offset=0,
+                width=12
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_section %}
+
+      {% end_dnd_area %}
+      
+    </div>
+  </section>
+</main>
+{% endblock body %}

@@ -1,0 +1,55 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: Articles and resources
+   screenshotPath: ../images/template-previews/questionaire.png
+-->
+{% extends '../layouts/base-member.html' %}
+
+{% block body %}
+{% if request_contact.is_logged_in %}
+  {% set membership_contact = crm_object('contact', request.contact.contact_vid,
+    'firstname,
+    lastname
+    ') %}
+  {% endif %}
+<div class="main-container article-listings">
+ 
+  <div class="bg-image"> {# add background image here #}
+    <div class="padding-content">
+      <div class="content-wrapper">
+        <div class="heading">
+          <h3>
+            Articles & resources
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          </p>
+        </div>
+        <div class="search-articles">
+          <i class="icon-search"></i>
+          <input type="search" name="search_member" class="search-member" placeholder="Search articles & resources">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+</div>
+
+{# <div class="padding-wrap">
+  
+   {% if request_contact.is_logged_in %}
+              <h1>You're signed in!</h1>
+              <a href="https://demo.ec7.co/_hcms/mem/logout">Logout</a>
+          {% else %}
+              <a href="/_hcms/mem/login">Log In</a>
+          {% endif %}
+  <h1>
+    Questionaire tesiting here
+  </h1>
+</div> #}
+
+{#<script src="{{ get_asset_url('/membership-project/project-files/js/articles-resources.js') }}"></script> #}
+{% endblock body %}
+

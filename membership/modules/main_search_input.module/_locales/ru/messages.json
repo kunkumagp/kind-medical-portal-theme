@@ -1,0 +1,132 @@
+{
+  "content_types.blog_posts.label" : {
+    "message" : "Публикации блога",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.label" : {
+    "message" : "Статьи базы знаний",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.label" : {
+    "message" : "Результаты поиска включают",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.landing_pages.label" : {
+    "message" : "Целевые страницы",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.name" : {
+    "message" : "search_input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.website_pages.label" : {
+    "message" : "Страницы веб-сайта",
+    "description" : "",
+    "placeholders" : null
+  },
+  "field_label.label" : {
+    "message" : "Текст метки",
+    "description" : "",
+    "placeholders" : null
+  },
+  "hubdb_table_group.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.label" : {
+    "message" : "HubDB table",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.label" : {
+    "message" : "Включить кнопку поиска",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "main_search_input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.default" : {
+    "message" : "Поиск",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "Текст заполнителя",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.label" : {
+    "message" : "Результаты",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.inline_help_text" : {
+    "message" : "После ввода поискового запроса осуществляется переход на эту страницу. Обязательно выберите страницу, содержащую модуль результатов поиска.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.label" : {
+    "message" : "Страница результатов поиска",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.inline_help_text" : {
+    "message" : "Включите эту настройку, чтобы использовать страницу результатов пользовательского поиска вместо страницы результатов глобального поиска, используемой по умолчанию.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.label" : {
+    "message" : "Использовать страницу результатов пользовательского поиска",
+    "description" : "",
+    "placeholders" : null
+  }
+}

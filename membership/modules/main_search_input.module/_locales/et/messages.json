@@ -1,0 +1,132 @@
+{
+  "content_types.blog_posts.label" : {
+    "message" : "Blogipostitused",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.knowledge_articles.label" : {
+    "message" : "Teabebaasi artiklid",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.label" : {
+    "message" : "Otsingutulemused sisaldavad",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.landing_pages.label" : {
+    "message" : "Sihtlehed",
+    "description" : "",
+    "placeholders" : null
+  },
+  "content_types.name" : {
+    "message" : "search_input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "content_types.website_pages.label" : {
+    "message" : "Veebilehed",
+    "description" : "",
+    "placeholders" : null
+  },
+  "field_label.label" : {
+    "message" : "Sildi tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "hubdb_table_group.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.label" : {
+    "message" : "HubDB table",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.hubdbtable.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "hubdb_table_group.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.label" : {
+    "message" : "Kaasa otsingunupp",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "main_search_input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.default" : {
+    "message" : "Otsing",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "Kohatäitja tekst",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.label" : {
+    "message" : "Tulemused",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.inline_help_text" : {
+    "message" : "Sinna suunatakse inimesed, kui nad klõpsavad oma otsingusõna otsimiseks. Veenduge, et valite lehe, mis sisaldab otsingutulemuste moodulit.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.path_id.label" : {
+    "message" : "Otsingutulemuste leht",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.inline_help_text" : {
+    "message" : "Lülitage see säte sisse, et kasutada kohandatud otsingutulemuste lehte üldise otsingutulemuste vaikelehe asemel.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "results.use_custom_search_results_template.label" : {
+    "message" : "Kasutage kohandatud otsingutulemuste lehte",
+    "description" : "",
+    "placeholders" : null
+  }
+}

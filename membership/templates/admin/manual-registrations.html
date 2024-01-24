@@ -1,0 +1,30 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: false
+    label: Manual registration 
+    screenshotPath: ../images/template-previews/manual-registration.png
+-->
+{% extends '../layouts/base-admin.html' %}
+
+{% block body %}
+<div class="padding-content">
+    <div class="loading"></div>
+    <div class="submission-message"></div>
+    <div class="admin-container manual-registration-container">
+        <div class="body-content text-center mtb-80">
+            
+            <h3 class="text-blue-dark">Manual registrations</h3>
+
+            <div class="mem-details-container">
+                <div class="mem-lists">
+                </div>
+            </div>
+
+            <div id="pagination" class="pagination text-center">
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="module" src="{{ get_asset_url('../../js/admin/manual-registrations.js') }}"></script>
+{% endblock body %}

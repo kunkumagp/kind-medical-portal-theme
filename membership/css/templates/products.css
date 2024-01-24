@@ -1,0 +1,737 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.our-product-heading{
+  background-image:url({{ get_asset_url('../../../membership/images/our-product-header-background.png') }});
+  background-size:cover;
+}
+
+/* positions */
+.d-none{
+  display:none;
+}
+.align-center{
+  align-items:center;
+}
+
+.filter-content-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.our-product-list{
+  padding-top:65px;
+}
+
+/************************ Product card Icons colours Change ****************************/
+
+/******** High thc - *********/
+
+/* Flower */
+.high-thc .flower path{
+  stroke:#805574;
+}
+/* Oil */
+.high-thc .oil path , .high-thc .oil rect{
+  stroke:#805574;
+  fill:none;
+}
+/* Vape */
+.high-thc .vape path , .high-thc .vape rect , .high-thc .vape ellipse {
+  stroke:#805574;
+}
+
+/* Mind */
+.high-thc .mind path{
+  stroke:#805574;
+}
+
+/* Mind and Body */
+.high-thc .mind-body path{
+  stroke:#805574;
+}
+
+/* Body */
+.high-thc .body path{
+  fill:#805574;
+}
+
+/* energising */
+.high-thc .energising path{
+  stroke:#805574;
+}
+
+/* balancing */
+.high-thc .balancing path{
+  stroke:#805574;
+}
+
+/* calming */
+.high-thc .calming path{
+  stroke:#805574;
+}
+
+/* Day */
+.high-thc .day path , .high-thc .day circle{
+  stroke:#805574;
+}
+
+/* Day or Night */
+.high-thc .day-night path{
+  stroke:#805574;
+}
+.high-thc .day-night path:nth-of-type(2), .high-thc .day-night path:nth-of-type(3){
+  stroke:none !important;
+  fill:#805574;
+}
+
+/* Night */
+.high-thc .night path{
+  stroke:#805574;
+}
+
+/* Favourite Incative */
+.high-thc .fav path{
+  stroke:#805574;
+}
+.high-thc .fav rect{
+  fill:#E8D5E5;
+}
+
+/* Favourite Active */
+.high-thc .fav.active path{
+  fill:#805574;
+}
+
+/* High Stock */
+.high-thc .high-stock path{
+  fill:#875375;
+}
+.high-thc .high-stock circle{
+  stroke:#875375;
+}
+
+/* Moderate Stock */
+.high-thc .moderate-stock path{
+  fill:#875375;
+}
+.high-thc .moderate-stock circle{
+  stroke:#875375;
+}
+
+/* Low Stock */
+.high-thc .low-stock path{
+  fill:#875375;
+}
+.high-thc .low-stock circle{
+  stroke:#875375;
+}
+
+/* No Stock */
+.high-thc .no-stock path{
+  fill:#875375;
+}
+.high-thc .no-stock circle{
+  stroke:#875375;
+}
+
+
+
+
+
+/******** moderate thc - *********/
+
+/* Flower */
+.moderate-thc .flower path{
+  stroke:#B87E47;
+}
+/* Oil */
+.moderate-thc .oil path , .moderate-thc .oil rect{
+  stroke:#B87E47;
+  fill:none;
+}
+/* Vape */
+.moderate-thc .vape path , .moderate-thc .vape rect , .moderate-thc .vape ellipse {
+  stroke:#B87E47;
+}
+
+/* Mind */
+.moderate-thc .mind path{
+  stroke:#B87E47;
+}
+
+/* Mind and Body */
+.moderate-thc .mind-body path{
+  stroke:#B87E47;
+}
+
+/* Body */
+.moderate-thc .body path{
+  fill:#B87E47;
+}
+
+/* energising */
+.moderate-thc .energising path{
+  stroke:#B87E47;
+}
+
+/* balancing */
+.moderate-thc .balancing path{
+  stroke:#B87E47;
+}
+
+/* calming */
+.moderate-thc .calming path{
+  stroke:#B87E47;
+}
+
+/* Day */
+.moderate-thc .day path , .moderate-thc .day circle{
+  stroke:#B87E47;
+}
+
+/* Day or Night */
+.moderate-thc .day-night path{
+  stroke:#B87E47;
+}
+.moderate-thc .day-night path:nth-of-type(2), .moderate-thc .day-night path:nth-of-type(3){
+  stroke:none !important;
+  fill:#B87E47;
+}
+
+/* Night */
+.moderate-thc .night path{
+  stroke:#B87E47;
+}
+
+/* Favourite Incative */
+.moderate-thc .fav path{
+  stroke:#B87E47;
+}
+.moderate-thc .fav rect{
+  fill:#F2A9002E;
+}
+
+/* Favourite Active */
+.moderate-thc .fav.active path{
+  fill:#B87E47;
+}
+
+
+/* High Stock */
+.moderate-thc .high-stock path{
+  fill:#875375;
+}
+.moderate-thc .high-stock circle{
+  stroke:#875375;
+}
+
+/* Moderate Stock */
+.moderate-thc .moderate-stock path{
+  fill:#875375;
+}
+.moderate-thc .moderate-stock circle{
+  stroke:#875375;
+}
+
+/* Low Stock */
+.moderate-thc .low-stock path{
+  fill:#875375;
+}
+.moderate-thc .low-stock circle{
+  stroke:#875375;
+}
+
+/* No Stock */
+.moderate-thc .no-stock path{
+  fill:#875375;
+}
+.moderate-thc .no-stock circle{
+  stroke:#875375;
+}
+
+
+
+/******** balanced - *********/
+
+/* Flower */
+.balanced .flower path{
+  stroke:#758067;
+}
+/* Oil */
+.balanced .oil path , .balanced .oil rect{
+  stroke:#758067;
+  fill:none;
+}
+/* Vape */
+.balanced .vape path , .balanced .vape rect , .balanced .vape ellipse {
+  stroke:#758067;
+}
+
+/* Mind */
+.balanced .mind path{
+  stroke:#758067;
+}
+
+/* Mind and Body */
+.balanced .mind-body path{
+  stroke:#758067;
+}
+
+/* Body */
+.balanced .body path{
+  fill:#758067;
+}
+
+/* energising */
+.balanced .energising path{
+  stroke:#758067;
+}
+
+/* balancing */
+.balanced .balancing path{
+  stroke:#758067;
+}
+
+/* calming */
+.balanced .calming path{
+  stroke:#758067;
+}
+
+/* Day */
+.balanced .day path , .balanced .day circle{
+  stroke:#758067;
+}
+
+/* Day or Night */
+.balanced .day-night path{
+  stroke:#758067;
+}
+.balanced .day-night path:nth-of-type(2), .balanced .day-night path:nth-of-type(3){
+  stroke:none !important;
+  fill:#758067;
+}
+
+/* Night */
+.balanced .night path{
+  stroke:#758067;
+}
+
+/* Favourite Incative */
+.balanced .fav path{
+  stroke:#758067;
+}
+.balanced .fav rect{
+  fill:#9FAD8C2B;
+}
+
+/* Favourite Active */
+.balanced .fav.active path{
+  fill:#758067;
+}
+
+/* Favourite Active */
+.balanced .fav.active path{
+  fill:#758067;
+}
+
+/* High Stock */
+.balanced .high-stock path{
+  fill:#758067;
+}
+.balanced .high-stock circle{
+  stroke:#758067;
+}
+
+/* Moderate Stock */
+.balanced .moderate-stock path{
+  fill:#758067;
+}
+.balanced .moderate-stock circle{
+  stroke:#758067;
+}
+
+/* Low Stock */
+.balanced .low-stock path{
+  fill:#758067;
+}
+.balanced .low-stock circle{
+  stroke:#758067;
+}
+
+/* No Stock */
+.balanced .no-stock path{
+  fill:#758067;
+}
+.balanced .no-stock circle{
+  stroke:#758067;
+}
+
+/******** moderate-cbd *********/
+
+/* Flower */
+.moderate-cbd .flower path{
+  stroke:#4C6580;
+}
+/* Oil */
+.moderate-cbd .oil path , .moderate-cbd .oil rect{
+  stroke:#4C6580;
+  fill:none;
+}
+/* Vape */
+.moderate-cbd .vape path , .moderate-cbd .vape rect , .moderate-cbd .vape ellipse {
+  stroke:#4C6580;
+}
+
+/* Mind */
+.moderate-cbd .mind path{
+  stroke:#4C6580;
+}
+
+/* Mind and Body */
+.moderate-cbd .mind-body path{
+  stroke:#4C6580;
+}
+
+/* Body */
+.moderate-cbd .body path{
+  fill:#4C6580;
+}
+
+/* energising */
+.moderate-cbd .energising path{
+  stroke:#4C6580;
+}
+
+/* balancing */
+.moderate-cbd .balancing path{
+  stroke:#4C6580;
+}
+
+/* calming */
+.moderate-cbd .calming path{
+  stroke:#4C6580;
+}
+
+/* Day */
+.moderate-cbd .day path , .moderate-cbd .day circle{
+  stroke:#4C6580;
+}
+
+/* Day or Night */
+.moderate-cbd .day-night path{
+  stroke:#4C6580;
+}
+.moderate-cbd .day-night path:nth-of-type(2), .moderate-cbd .day-night path:nth-of-type(3){
+  stroke:none !important;
+  fill:#4C6580;
+}
+
+/* Night */
+.moderate-cbd .night path{
+  stroke:#4C6580;
+}
+
+/* Favourite Incative */
+.moderate-cbd .fav path{
+  stroke:#4C6580;
+}
+.moderate-cbd .fav rect{
+  fill:#D7E0EA;
+}
+
+/* Favourite Active */
+.moderate-cbd .fav.active path{
+  fill:#4C6580;
+}
+
+/* Favourite Active */
+.moderate-cbd .fav.active path{
+  fill:#4C6580;
+}
+
+/* High Stock */
+.moderate-cbd .high-stock path{
+  fill:#4C6580;
+}
+.moderate-cbd .high-stock circle{
+  stroke:#4C6580;
+}
+
+/* Moderate Stock */
+.moderate-cbd .moderate-stock path{
+  fill:#4C6580;
+}
+.moderate-cbd .moderate-stock circle{
+  stroke:#4C6580;
+}
+
+/* Low Stock */
+.moderate-cbd .low-stock path{
+  fill:#4C6580;
+}
+.moderate-cbd .low-stock circle{
+  stroke:#4C6580;
+}
+
+/* No Stock */
+.moderate-cbd .no-stock path{
+  fill:#4C6580;
+}
+.moderate-cbd .no-stock circle{
+  stroke:#4C6580;
+}
+
+
+
+/******** high-cbd - *********/
+
+/* Flower */
+.high-cbd .flower path{
+  stroke:#5E5A80;
+}
+/* Oil */
+.high-cbd .oil path , .high-cbd .oil rect{
+  stroke:#5E5A80;
+  fill:none;
+}
+/* Vape */
+.high-cbd .vape path , .high-cbd .vape rect , .high-cbd .vape ellipse {
+  stroke:#5E5A80;
+}
+
+/* Mind */
+.high-cbd .mind path{
+  stroke:#5E5A80;
+}
+
+/* Mind and Body */
+.high-cbd .mind-body path{
+  stroke:#5E5A80;
+}
+
+/* Body */
+.high-cbd .body path{
+  fill:#5E5A80;
+}
+
+/* energising */
+
+.high-cbd .energising path{
+  stroke:#5E5A80;
+}
+
+/* balancing */
+
+.high-cbd .balancing path{
+  stroke:#5E5A80;
+}
+
+/* calming */
+
+.high-cbd .calming path{
+  stroke:#5E5A80;
+}
+
+/* Day */
+.high-cbd .day path , .high-cbd .day circle{
+  stroke:#5E5A80;
+}
+
+/* Day or Night */
+.high-cbd .day-night path{
+  stroke:#5E5A80;
+}
+.high-cbd .day-night path:nth-of-type(2), .high-cbd .day-night path:nth-of-type(3){
+  stroke:none !important;
+  fill:#5E5A80;
+}
+
+/* Night */
+.high-cbd .night path{
+  stroke:#5E5A80;
+}
+
+/* Favourite Incative */
+.high-cbd.fav path{
+  stroke:#5E5A80;
+}
+.high-cbd .fav rect{
+  fill:#D9D7E9;
+}
+
+/* Favourite Active */
+.high-cbd .fav.active path{
+  fill:#5E5A80;
+}
+
+/* Favourite Active */
+.high-cbd .fav.active path{
+  fill:#5E5A80;
+}
+
+/* High Stock */
+.high-cbd .high-stock path{
+  fill:#5E5A80;
+}
+.high-cbd .high-stock circle{
+  stroke:#5E5A80;
+}
+
+/* Moderate Stock */
+.high-cbd .moderate-stock path{
+  fill:#5E5A80;
+}
+.high-cbd .moderate-stock circle{
+  stroke:#5E5A80;
+}
+
+/* Low Stock */
+.high-cbd .low-stock path{
+  fill:#5E5A80;
+}
+.high-cbd .low-stock circle{
+  stroke:#5E5A80;
+}
+
+/* No Stock */
+.high-cbd .no-stock path{
+  fill:#5E5A80;
+}
+.high-cbd .no-stock circle{
+  stroke:#5E5A80;
+}
+
+
+/******************** THC-CBD-CAT Tag colors  ***********************/
+
+.high-thc .thc-tag{
+  color:#EBE0E6;
+  background-color:#A76389;
+}
+
+.high-thc .cbd-tag{
+  color:#A76389;
+  background-color:#E8D5E5;
+}
+
+.high-thc .cat-tag{
+  color:#805574;
+  background-color:#FFFFFF;
+}
+
+.moderate-thc .thc-tag{
+  color:#FAEED0;
+  background-color:#F2A900;
+}
+
+.moderate-thc .cbd-tag{
+  color:#B87E47;
+  background-color:#F2A9002E;
+}
+
+.moderate-thc .cat-tag{
+  color:#B87E47;
+  background-color:#FFFFFF;
+}
+
+.balanced .thc-tag{
+  color:#EBEFE7;
+  background-color:#9CAF88;
+}
+
+.balanced .cbd-tag{
+  color:#EBEFE7;
+  background-color:#9CAF88;
+}
+
+.balanced .cat-tag{
+  color:#758067;
+  background-color:#FFFFFF;
+}
+
+.moderate-cbd .thc-tag{
+  color:#7D9CC0;
+  background-color:#D7E0EA;
+}
+
+.moderate-cbd .cbd-tag{
+  color:#E6EAF2;
+  background-color:#7D9CC0;
+}
+
+.moderate-cbd .cat-tag{
+  color:#4C6580;
+  background-color:#FFFFFF;
+}
+
+
+.moderate-cbd .thc-tag{
+  color:#8B84D7;
+  background-color:#D9D7E9;
+}
+
+.moderate-cbd .cbd-tag{
+  color:#E8E6F7;
+  background-color:#8B84D7;
+}
+
+.moderate-cbd .cat-tag{
+  color:#5E5A80;
+  background-color:#FFFFFF;
+}
+
+/******************* Product card borders *******************/
+
+.high-thc .reported-effects-and-time-of-use-and-dr-details{
+  border-top: 1px solid #E8D5E5;
+  border-bottom: 1px solid #E8D5E5;
+}
+
+.high-thc .dominant-terpenes{
+  border-bottom: 1px solid #E8D5E5;
+}
+
+.moderate-thc .reported-effects-and-time-of-use-and-dr-details{
+  border-top: 1px solid #F9E2AB;
+  border-bottom: 1px solid #F9E2AB;
+}
+
+.moderate-thc .dominant-terpenes{
+  border-bottom: 1px solid #F9E2AB;
+}
+
+.balanced .reported-effects-and-time-of-use-and-dr-details{
+  border-top: 1px solid #DEE4D8;
+  border-bottom: 1px solid #DEE4D8;
+}
+
+.balanced .dominant-terpenes{
+  border-bottom: 1px solid #DEE4D8;
+}
+
+.moderate-cbd .reported-effects-and-time-of-use-and-dr-details{
+  border-top: 1px solid #D7E0EA;
+  border-bottom: 1px solid #D7E0EA;
+}
+
+.moderate-cbd .dominant-terpenes{
+  border-bottom: 1px solid #D7E0EA;
+}
+
+.high-cbd .reported-effects-and-time-of-use-and-dr-details{
+  border-top: 1px solid #D9D7E9;
+  border-bottom: 1px solid #D9D7E9;
+}
+
+.high-cbd .dominant-terpenes{
+  border-bottom: 1px solid #D9D7E9;
+}

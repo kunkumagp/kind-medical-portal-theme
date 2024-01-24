@@ -1,0 +1,68 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    screenshotPath: ../images/template-previews/stock-levels.png
+-->
+{% set template_css = "../../css/templates/product-discounts.css" %}
+{% extends '../layouts/base-admin.html' %}
+
+{% block body %}
+<div class="notification-bar-message" style="display:none">
+  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+    <path d="M1.5 6L4.5 9L11.5 2" stroke="#E0E0E1" stroke-width="2"/>
+  </svg>
+  <p></p>
+</div>
+<div class="padding-content">
+  <div class="loading"></div>
+  <div class="admin-container product-discount-container">
+    <div class="body-content mtb-80">
+      <h3 class="text-blue-dark text-center">
+        Product discounts
+      </h3>
+      <div id="save-product-discounts" class="" style="text-align: right;" >
+        <a class="hs-button ad-primary small">Save product discounts</a>
+      </div>
+      <form id="product-discounts" action="" class="override-style-form product-discounts">
+        
+        <div class="single-product flex">
+          <div class="prod-name text-blue-dark font-bold">
+            Kind Rufus<sup>TM</sup>
+          </div>
+          <div class="prod-discount-info flex light-secondary-label">
+            <div class="price-by-size">
+              <label for="product_size_price">RRP per 10g:</label>
+              <input type="text" name="product_size_price" value="$135">
+            </div>
+            <div class="discounted-price">
+              <label for="discount_price">Discount price</label>
+              <input type="text" name="discount_price" value="">
+            </div>
+          </div>
+        </div>
+        
+       <div class="single-product flex">
+          <div class="prod-name text-blue-dark font-bold">
+            Kind Rufus<sup>TM</sup>
+          </div>
+          <div class="prod-discount-info flex light-secondary-label">
+            <div class="price-by-size">
+              <label for="product_size_price">RRP per 10g:</label>
+              <input type="text" name="product_size_price" value="$135">
+            </div>
+            <div class="discounted-price">
+              <label for="discount_price">Discount price</label>
+              <input type="text" name="discount_price" value="">
+            </div>
+          </div>
+        </div>
+        
+        
+        
+      </form>
+      <div id="pagination" class="pagination text-center"></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="{{ get_asset_url('../../js/admin/product-discounts.js') }}"></script>
+{% endblock body %}
