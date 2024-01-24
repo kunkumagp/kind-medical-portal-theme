@@ -1,0 +1,76 @@
+<section class="tabs-wrapper">
+  
+  {# Tab #}
+  <div class="tabs" role="tablist">
+    <div class="category-list">
+      {% for item in module.categories %}
+      <div onclick="setActiveTab({{loop.index - 1}})" role="tab" aria-controls="tabs__content-{{ loop.index }}--{{ name }}" id="tabs__tab-{{ loop.index }}--{{ name }}" {{ 'tabindex="-1"' if !loop.first }} class="category">{{ item.category }}</div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {# Tab content #}
+  <div class="faqs-data">
+    {% for tab in module.categories %}
+    <div class="tabs__content" tabindex="0" role="tabpanel" id="tabs__content-{{ loop.index }}--{{ name }}" aria-labelledby="tabs__tab-{{ loop.index }}--{{ name }}" {{ 'hidden=""' if !loop.first }}>
+      <div class="active-category-title">{{ tab.category }}</div>
+      <div class="faqs-list">
+
+        {% for faq in tab.faqs %}
+        <div class="faq flex {{name}}-faq-card">
+          <div>
+            <div class="faq-title">{{ faq.question }}</div>
+            <div class="faq-description hide">{{ faq.answer }}</div>
+          </div>
+          <div class="faq-icon">
+            <img src="{{ get_asset_url('/kind-medical-portal-theme/membership/images/Icons/plus.png') }}">
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</section>
+
+
+
+<script>
+  setActiveTab(0);
+
+  function setActiveTab(index){
+    const elements = document.querySelectorAll('.category-list .category');
+    elements.forEach(element => {
+      element.classList.remove('active');
+    });
+    elements[index].classList.add('active');
+  }
+
+  var faqCard = '{{"."~name~"-faq-card"}}';
+  $(faqCard).click(function(){  
+    const notThisElements = $(".faq").not($(this));
+    const imgElement = $(this).find('.faq-icon img');
+    
+    notThisElements.removeClass("active");
+    notThisElements.find('.faq-description').addClass("hide");
+
+    $(this).toggleClass('active');
+    $(this).parent().find('.content').slideToggle(280);
+    
+    notThisElements.find('.faq-icon img').attr("src",' {{ get_asset_url('/kind-medical-portal-theme/membership/images/Icons/plus.png') }}');
+
+    if($(this).find('.faq-description')[0].classList.contains("hide")){
+      $(this).find('.faq-description').removeClass("hide");
+      imgElement.attr("src",' {{ get_asset_url('/kind-medical-portal-theme/membership/images/Icons/minus.png') }}');
+    } else {
+      $(this).find('.faq-description').addClass("hide");
+      imgElement.attr("src",' {{ get_asset_url('/kind-medical-portal-theme/membership/images/Icons/plus.png') }}');
+    }
+
+  });
+</script>
+
+
+

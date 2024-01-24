@@ -1,0 +1,36 @@
+<!--
+    templateType: page
+    label: Serverless template
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+    <meta name="description" content="{{ content.meta_description }}">
+    {% if brand_settings.primaryFavicon.src %}
+      <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
+    {% endif %}
+    {{ standard_header_includes }}
+    
+    <script>
+    var requestOptions = {
+      'method': 'GET',
+      'headers': {
+          'Content-Type': 'application/json',
+       }
+    };
+
+    fetch("https://demo.ec7.co/_hcms/api/hello", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+      
+  </script>
+  </head>
+  <body>
+   
+    {{ standard_footer_includes }}
+  </body>
+</html>

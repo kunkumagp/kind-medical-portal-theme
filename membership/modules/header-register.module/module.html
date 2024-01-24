@@ -1,0 +1,17 @@
+<div class="header-logo">
+  {% if module.logo.src %}
+    {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}"' %}
+    {% if module.logo.size_type == 'auto' %}
+      {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}" style="max-width: 100%; height: auto;"' %}
+    {% elif module.logo.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="{{ module.logo.max_width }}" height="{{ module.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+    {% endif %}
+     {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading="{{ module.logo.loading }}"' : '' %}
+    <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+  
+  {% else %}
+   <div class="header-logo">
+      <img src="{{ get_asset_url('../../images/kind-medical-logo.svg') }}" alt="" />
+   </div> 
+  {% endif %}
+</div>

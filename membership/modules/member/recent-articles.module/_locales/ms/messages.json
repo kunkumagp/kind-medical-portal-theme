@@ -1,0 +1,797 @@
+{
+  "alternate_image.label" : {
+    "message" : "Imej berselang-seli",
+    "description" : "",
+    "placeholders" : null
+  },
+  "author.label" : {
+    "message" : "Pengarang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button.label" : {
+    "message" : "Butang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.default" : {
+    "message" : "Baca lebih lanjut",
+    "description" : "",
+    "placeholders" : null
+  },
+  "button_text.label" : {
+    "message" : "Teks butang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.help_text" : {
+    "message" : "Format tarikh penerbitan boleh ditukar dalam tetapan blog. <a href='https://knowledge.hubspot.com/blog/manage-your-blog-template-and-settings#set-your-blog-s-date-formats' target='blank' rel='noopener'>Ketahui lebih lanjut</a>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "date.label" : {
+    "message" : "Tarikh penerbitan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.default" : {
+    "message" : "Ringkasan catatan blog: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.blog_post_summary_text.label" : {
+    "message" : "Teks ringkasan siaran blog",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.default" : {
+    "message" : "Imej pilihan: {{ post.featured_image_alt_text }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.featured_image_text.label" : {
+    "message" : "Teks imej yang  dipaparkan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.label" : {
+    "message" : "Teks lalai",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.default" : {
+    "message" : "Gambar daripada {{ post.blog_author.display_name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.picture_of_text.label" : {
+    "message" : "Gambar teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.default" : {
+    "message" : "Baca siaran penuh: {{ post.name }}",
+    "description" : "",
+    "placeholders" : null
+  },
+  "default_text.read_full_post_text.label" : {
+    "message" : "Baca teks siaran penuh:",
+    "description" : "",
+    "placeholders" : null
+  },
+  "description.label" : {
+    "message" : "Penerangan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "featured_image.label" : {
+    "message" : "Imej",
+    "description" : "",
+    "placeholders" : null
+  },
+  "full_image.label" : {
+    "message" : "Imej penuh",
+    "description" : "",
+    "placeholders" : null
+  },
+  "heading.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.label" : {
+    "message" : "Rich text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "heading.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "layout_style.choices.card" : {
+    "message" : "Grid asas",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.list" : {
+    "message" : "Sebelah--menyebelah",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.choices.single_column" : {
+    "message" : "Lajur tunggal",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout_style.label" : {
+    "message" : "Tataletak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "recent-articles",
+    "description" : null,
+    "placeholders" : null
+  },
+  "number_of_posts.label" : {
+    "message" : "Bilangan siaran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.default" : {
+    "message" : "Pilih blog dalam bar sisi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.description.label" : {
+    "message" : "Penerangan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "Ruang letak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.default" : {
+    "message" : "Tiada siaran untuk blog yang dipilih",
+    "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.title.label" : {
+    "message" : "Tajuk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog.label" : {
+    "message" : "Pilih blog",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts" : {
+    "message" : "Siaran baru-baru ini",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.choices.recent_posts_by_tag" : {
+    "message" : "Siaran baru-baru ini mengikut tag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_blog_type.label" : {
+    "message" : "Pilih jenis blog",
+    "description" : "",
+    "placeholders" : null
+  },
+  "select_tag.label" : {
+    "message" : "Pilih tag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.label" : {
+    "message" : "Apungan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.hover.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.label" : {
+    "message" : "Sudut",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.corner.radius.label" : {
+    "message" : "Jejari",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.image.label" : {
+    "message" : "Imej",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.label" : {
+    "message" : "Pengarang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.author.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.alignment.label" : {
+    "message" : "Penjajaran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.alignment.label" : {
+    "message" : "Penjajaran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.color.label" : {
+    "message" : "Warna",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.background.label" : {
+    "message" : "Latar belakang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.border.label" : {
+    "message" : "Sempadan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.border.label" : {
+    "message" : "Sempadan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.label" : {
+    "message" : "Sudut",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.corner.radius.label" : {
+    "message" : "Jejari",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.color.label" : {
+    "message" : "Warna",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.background.label" : {
+    "message" : "Latar belakang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.border.label" : {
+    "message" : "Sempadan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.border.label" : {
+    "message" : "Sempadan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.label" : {
+    "message" : "Apungan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.hover.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.label" : {
+    "message" : "Butang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.large" : {
+    "message" : "Besar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.regular" : {
+    "message" : "Biasa",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.choices.small" : {
+    "message" : "Kecil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_size.label" : {
+    "message" : "Saiz butang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.primary" : {
+    "message" : "Primer",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.secondary" : {
+    "message" : "Sekunder",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.choices.simple" : {
+    "message" : "Mudah",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.button_style.label" : {
+    "message" : "Gaya butang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.help_text" : {
+    "message" : "Gunakan praset untuk melaraskan rupa item yang dipilih kepada nilai yang dipratakrif dengan cepat.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.presets.label" : {
+    "message" : "Praset",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.capitalize" : {
+    "message" : "Besarkan Huruf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.lowercase" : {
+    "message" : "Huruf Kecil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.none" : {
+    "message" : "Tiada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.choices.uppercase" : {
+    "message" : "Huruf besar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.button.text.transform.label" : {
+    "message" : "Transformasi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.label" : {
+    "message" : "Tarikh penerbitan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.date.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.label" : {
+    "message" : "Penerangan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.description.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.label" : {
+    "message" : "Sudut",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.corner.radius.label" : {
+    "message" : "Jejari",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.label" : {
+    "message" : "Imej",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.color.label" : {
+    "message" : "Warna",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.overlay.label" : {
+    "message" : "Saling bertindih",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.1/1" : {
+    "message" : "1:1",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.16/9" : {
+    "message" : "16:9",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.2/3" : {
+    "message" : "2:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/2" : {
+    "message" : "3:2",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.3/4" : {
+    "message" : "3:4",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.choices.4/3" : {
+    "message" : "4:3",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.aspect_ratio.label" : {
+    "message" : "Nisbah aspek",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.label" : {
+    "message" : "Saiz",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.size.width.label" : {
+    "message" : "Lebar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.between_image_and_content.label" : {
+    "message" : "Antara imej dan kandungan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.featured_image.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.label" : {
+    "message" : "Gaya",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.color.label" : {
+    "message" : "Warna",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.background.label" : {
+    "message" : "Latar belakang",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.border.label" : {
+    "message" : "Sempadan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.border.label" : {
+    "message" : "Sempadan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.label" : {
+    "message" : "Sudut",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.corner.radius.label" : {
+    "message" : "Jejari",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.label" : {
+    "message" : "Siaran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.dark" : {
+    "message" : "Gelap",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.light" : {
+    "message" : "Cerah",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.choices.plain" : {
+    "message" : "Biasa",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.card_style.label" : {
+    "message" : "Gaya style",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.help_text" : {
+    "message" : "Gunakan praset untuk melaraskan rupa item yang dipilih kepada nilai yang dipratakrif dengan cepat.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.presets.label" : {
+    "message" : "Praset",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.post_content.label" : {
+    "message" : "Kandungan siaran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.space_between_posts.label" : {
+    "message" : "Ruang antara siaran",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.post.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.label" : {
+    "message" : "Apungan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.hover.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.label" : {
+    "message" : "Tag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.capitalize" : {
+    "message" : "Besarkan Huruf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.lowercase" : {
+    "message" : "Huruf Kecil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.none" : {
+    "message" : "Tiada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.choices.uppercase" : {
+    "message" : "Huruf besar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.tags.text.transform.label" : {
+    "message" : "Transformasi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.label" : {
+    "message" : "Apungan",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.hover.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.label" : {
+    "message" : "Tajuk",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.spacing.spacing.label" : {
+    "message" : "Jarak",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.font.label" : {
+    "message" : "Fon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.label" : {
+    "message" : "Teks",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.capitalize" : {
+    "message" : "Besarkan Huruf",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.lowercase" : {
+    "message" : "Huruf Kecil",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.none" : {
+    "message" : "Tiada",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.choices.uppercase" : {
+    "message" : "Huruf besar",
+    "description" : "",
+    "placeholders" : null
+  },
+  "styles.title.text.transform.label" : {
+    "message" : "Transformasi",
+    "description" : "",
+    "placeholders" : null
+  },
+  "tags.label" : {
+    "message" : "Tag",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "Tajuk",
+    "description" : "",
+    "placeholders" : null
+  }
+}

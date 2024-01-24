@@ -1,0 +1,110 @@
+{% require_css %}
+<style>
+  {% scope_css %}
+    .learning-module-lists .right .time:before{
+        background: url({{ get_asset_url('../../../images/time.svg') }});
+    }
+   {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set tableID = module.hubdbtable_field %}
+
+{% macro mins_to_read(content) %}
+  {% set initialPostWords = content|striptags|wordcount %}
+  {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+  {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+  {% set number = finishedPostWords|round %}
+  {% if number < 1 %}
+    1 min
+  {% else %}
+    {{ finishedPostWords|round }} mins
+  {% endif %}
+{% endmacro %}
+
+<div class="learning-modules">
+  <div class="bg-learning-modules bg-contain bg-no-repeat w-full bg-position-center" style="background-image:url('{{ get_asset_url('../../../images/bg-learning-modules.svg') }}');">
+    <div class="padding-content">
+      <div class="content-wrapper">
+        <div class="heading text-center">
+         {{ module.heading }}
+        </div>
+        <div class="search-learning-products mt-30">
+          <form id="learning-module-form" method="GET" action="" class="override-style-form">
+            <i class="icon-search"></i>
+            <input type="search" name="query" class="learning-modules override-style-form" placeholder="Search learning modules" value="{% if request.query_dict.query %}{{request.query_dict.query}}{% endif %}">
+           </form>
+         </div>
+ 
+        <div class="learning-module-lists">
+        {% if request.query_dict.query %}
+          {% set query = request.query_dict.query %}
+          {% set queryparams = "description__icontains=" ~ query %}
+          {% for row in hubdb_table_rows(tableID, queryparams) %}
+            <div class="single-module flex">
+              <div class="left">
+                <img src="{{row.feature_image.url}}" alt="{{row.name}}" />
+              </div>
+              <div class="right">
+                {{ row.description }}
+                <div class="inner-info flex">
+                  <div class="content-info">
+                    {{ row.description_info }}
+                  </div>
+                  <div class="time">
+                    {% if row.time_to_read %}
+                      {{ row.time_to_read }}
+                    {% else %}
+                      {{ mins_to_read(row.description) }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for row in hubdb_table_rows(tableID) %}
+            <div class="single-module flex">
+              <div class="left">
+                <img src="{{row.feature_image.url}}" alt="{{row.name}}" />
+              </div>
+              <div class="right">
+                {{ row.description }}
+                <div class="inner-info flex">
+                  <div class="content-info">
+                    {{ row.description_info }}
+                  </div>
+                  <div class="time">
+                    {% if row.time_to_read %}
+                      {{ row.time_to_read }}
+                    {% else %}
+                      {{ mins_to_read(row.description) }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+        </div>
+        
+        {# show all learning resources button #}
+        {% if module.button_group.button_text %}
+          <div class="button-wrap text-center">
+            {% set href = module.button_group.button_link.url.href %}
+            {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}" class="hs-button secondary small"
+              {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+              >
+              {{ module.button_group.button_text }}
+            </a>
+
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: false
+    label: Admin search 
+   screenshotPath: ../images/template-previews/admin-search.png
+-->
+{% extends '../layouts/base-admin.html' %}
+
+{% block body %}
+<div class="padding-content">
+  <div class="admin-container">
+    <div class="body-content">
+<!--        {% if request_contact.is_logged_in %}
+              <h1>You're signed in!</h1>
+              <a href="https://demo.ec7.co/_hcms/mem/logout">Logout</a>
+          {% else %}
+              <a href="/_hcms/mem/login">Log In</a>
+          {% endif %} -->
+        <div class="search-mem">
+          <i class="icon-search"></i>
+          <input type="search" name="search_member" class="search-member" placeholder="Search members">
+        </div>
+      
+        <div class="member-type">
+          <ul class="no-list no-padding flex justify-center">
+            <li> General Practitioner</li>
+            <li> Medical Specialist</li>
+            <li> Nurse or Practitioner</li>
+            <li> Allied Health Professional</li>
+            <li> Pharmacist</li>
+            <li> Pharmacist Technician</li>
+          </ul>
+         
+        </div>
+      
+        <div class="member-lists">
+           <ul class="no-list no-padding flex flex-col">
+            <li>
+              <a href="">
+                <span class="member-name"><h5>Mary Stewart</h5></span>
+                <span class="member-hcp-type">General Practitioner</span>
+              </a>
+             </li>
+             
+              <li>
+              <a href="">
+                <span class="member-name"><h5>Marie-Anne Stewart</h5></span>
+                <span class="member-hcp-type">Medical Specialist</span>
+              </a>
+             </li>
+             
+              <li>
+              <a href="">
+                <span class="member-name"><h5>Mario Lopez</h5></span>
+                <span class="member-hcp-type">Pharmacist</span>
+              </a>
+             </li>
+          </ul>
+        </div>
+      
+        <div class="pagination">
+            <nav aria-label="member pagination " role="navigation" class="pagination text-center">
+              pagination will be here
+            </nav>
+        </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+{% endblock body %}

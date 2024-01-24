@@ -1,0 +1,61 @@
+{%- macro inlineDynamicButtonStyles(styleDict) -%}
+  {%- for prop, value in styleDict.items() -%}
+    {{ prop|replace('_', '-') ~ ': ' ~ value ~ ( loop.last ? '' : '; ') }}
+  {%- endfor -%}
+{%- endmacro -%}
+{%- set buttonStyles = {
+    background_color: module.button_bg.color,
+    color: module.button_text_color.color
+  }
+-%}
+
+{% macro setLinkAttributes(field) %}
+  {% set href = (field.url.type is equalto 'EMAIL_ADDRESS') ? 'mailto:' ~ field.url.href : field.url.href %}
+  {% if href %}
+    {{ {'href': '{{ href }}'}|xmlattr }}
+  {% endif %}
+
+  {% if field.open_in_new_tab and field.no_follow %}
+    {{ {'rel': 'noopener nofollow'}|xmlattr }}
+    {{ {'target': '_blank'}|xmlattr }}
+  {% elif field.open_in_new_tab %}
+    {{ {'rel': 'noopener'}|xmlattr }}
+    {{ {'target': '_blank'}|xmlattr }}
+  {% elif field.no_follow %}
+    {{ {'rel': 'nofollow'}|xmlattr }}
+  {% endif %}
+{% endmacro %}
+
+<div class="card card--pricing">
+  {% if module.tier and module.description %}
+    <div class="card__header">
+      {% if module.tier %}
+        <h2 class="card__heading">{{ module.tier }}</h2>
+      {% endif %}
+      {% if module.description %}
+        <p class="card__subtitle"> {{ module.description }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+  <hr>
+  <div class="card__body">
+    <ul>
+      {% for feature in module.features %}
+        <li>
+          {% icon
+            name='{{ module.feature_icon.name }}'
+            purpose='decorative'
+            style='{{ module.feature_icon.type }}'
+            unicode='{{ module.feature_icon.unicode }}'
+            no_wrapper=True
+          %}{{ feature }}
+        </li>
+      {% endfor %}
+    </ul>
+    <hr>
+    <h3 class="card__heading">{{ module.price }}</h3>
+    <a class="button" {{ setLinkAttributes(module.button_link) }} style="{{ inlineDynamicButtonStyles(buttonStyles) }}">
+      {{ module.button_text }}
+    </a>
+  </div>
+</div>

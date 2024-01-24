@@ -1,0 +1,10 @@
+[ {
+  "id" : "c606ee76-4ab7-6d88-9c36-689bfe6139ca",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "content",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "<h2 style=\"font-size: 44px;\">Kind Healthcare Professional Portal registration</h2>\n<p>The Kind HCP Portal provides prescribers and pharmacists with medicinal cannabis education and resources, alongside detailed information about the Kind Medical range.</p>"
+} ]
