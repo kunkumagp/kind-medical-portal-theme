@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 68);
+/******/ 	return __webpack_require__(__webpack_require__.s = 70);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21431,12 +21431,47 @@ exports.getProperty = async (objectType, propertyName) => {
   return { data: response.data, statusCode: response.status };
 };
 
-exports.getHubDbTableRows = async (tableId, limit = 10, after = '0') => {
+exports.updateHubDbTableRows = async (tableId, rowId, properties) => {
   const accessToken = process.env.HUBSPOT_API_KEY;
-  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&after=${after}`;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/${rowId}/draft`;
+
+  const config = {
+    method: 'PATCH',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    data: properties
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
+exports.getHubDbTableRows = async (tableId, limit = 10, offset = '0') => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&offset=${offset}`;
 
   const config = {
     method: 'GET',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
+exports.publishATableFromDraft = async (tableId) => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/draft/publish`;
+
+  const config = {
+    method: 'POST',
     url: endpoint,
     headers: {
       'Authorization': `Bearer ${accessToken}`,
@@ -21468,14 +21503,16 @@ exports.getHubDbTableRows = async (tableId, limit = 10, after = '0') => {
 /* 65 */,
 /* 66 */,
 /* 67 */,
-/* 68 */
+/* 68 */,
+/* 69 */,
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(69);
+module.exports = __webpack_require__(71);
 
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 const { constant } = __webpack_require__(47);
@@ -21483,8 +21520,10 @@ const hubspotService = __webpack_require__(49);
 
 exports.main = async (context, sendResponse) => {
   try {
-    const tableId = 7946284; 
-    const result = await hubspotService.getHubDbTableRows(tableId);
+    const tableId = context.body.tableId; 
+    const limit = context.body.limit;
+    const offset = context.body.offset;
+    const result = await hubspotService.getHubDbTableRows(tableId, limit, offset);
     sendResponse({ body: { Response: result } });
   } catch (error) {
     sendResponse({ body: { Response: error } });

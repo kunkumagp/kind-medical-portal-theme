@@ -21431,12 +21431,47 @@ exports.getProperty = async (objectType, propertyName) => {
   return { data: response.data, statusCode: response.status };
 };
 
-exports.updateHubDbTableRows = async (tableId, limit = 10, after = '0') => {
+exports.updateHubDbTableRows = async (tableId, rowId, properties) => {
   const accessToken = process.env.HUBSPOT_API_KEY;
-  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&after=${after}`;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/${rowId}/draft`;
+
+  const config = {
+    method: 'PATCH',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    data: properties
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
+exports.getHubDbTableRows = async (tableId, limit = 10, offset = '0') => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&offset=${offset}`;
 
   const config = {
     method: 'GET',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
+exports.publishATableFromDraft = async (tableId) => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/draft/publish`;
+
+  const config = {
+    method: 'POST',
     url: endpoint,
     headers: {
       'Authorization': `Bearer ${accessToken}`,
@@ -21482,10 +21517,11 @@ const { constant } = __webpack_require__(47);
 const hubspotService = __webpack_require__(49);
 
 exports.main = async (context, sendResponse) => {
-  console.log(context.body);
   try {
-    const tableId = 7946284; 
-    const result = await hubspotService.updateHubDbTableRows(tableId);
+    const tableId = context.body.tableId;
+    const rowId = context.body.rowId;
+    const properties = context.body.data;
+    const result = await hubspotService.updateHubDbTableRows(tableId, rowId, properties);
     sendResponse({ body: { Response: result } });
   } catch (error) {
     sendResponse({ body: { Response: error } });

@@ -1951,10 +1951,14 @@ form .section .button-wrap {
 .text-dark-high-thc {
   color: #805574;
 }
-
-.bg-high-thc{
+.bg-light-high-thc{
+  background: #EBE0E6;
+}
+.bg-dark-high-thc{
   background: #805574;
 }
+
+
 .high-thc .dropdown-arrow svg path{
   stroke: #805574;
 }
@@ -1972,9 +1976,13 @@ form .section .button-wrap {
 .text-dark-moderate-thc {
   color: #B87E47;
 }
-.bg-moderate-thc {
+.bg-light-moderate-thc {
+  background:#FAEED0;
+}
+.bg-dark-moderate-thc {
   background:#B87E47;
 }
+
 .moderate-thc .dropdown-arrow svg path{
   stroke: #B87E47;
 }
@@ -1995,8 +2003,10 @@ form .section .button-wrap {
 .text-dark-balanced {
   color: #758067;
 }
-
-.bg-balanced {
+.bg-light-balanced {
+  background: #EBEFE7;
+}
+.bg-dark-balanced {
   background: #758067;
 }
 .balanced .dropdown-arrow svg path{
@@ -2013,19 +2023,20 @@ form .section .button-wrap {
 }
 
 
-
-
 /** MODERATE CBD **/
 .text-light-moderate-cbd {
-  color: #7D9CC0;
+  color: #E6EAF2;
 }
 .text-dark-moderate-cbd {
   color: #4C6580;
 }
-
-.bg-moderate-cbd{
-  background: #7D9CC0;
+.bg-light-moderate-cbd{
+  background: #E6EAF2;
 }
+.bg-dark-moderate-cbd{
+  background: #4C6580;
+}
+
 .moderate-cbd .dropdown-arrow svg path{
   stroke: #758067;
 }
@@ -2047,9 +2058,13 @@ form .section .button-wrap {
 .text-dark-high-cbd {
   color: #5E5A80;
 }
-.bg-high-cbd {
+.bg-light-high-cbd {
+  background: #E8E6F7;
+}
+.bg-dark-high-cbd {
   background: #5E5A80;
 }
+
 .high-cbd .dropdown-arrow svg path{
   stroke: #5E5A80;
 }
@@ -2064,7 +2079,6 @@ form .section .button-wrap {
 }
 
 /**PRODUCT SVG COLOR ***/
-
 /**product size ***/
 .high-thc .ps-css svg ellipse,
 .high-thc .ps-css svg path {
@@ -2269,8 +2283,6 @@ form .section .button-wrap {
   fill:#5E5A80;
 }
 
-
-
 /** per gram amount dollar **/
 .high-thc .pga-css svg path {
   fill:#805574;
@@ -2293,29 +2305,130 @@ form .section .button-wrap {
    stroke: none;
 }
 
-
-/**************************** Background color code based on potency ******************************************/
-/** HIGH THC **/
-.bg-high-thc {
-  color: #A76389;
+/**REPORTED EFFECTS ***/
+.high-thc .cal-css svg path {
+  stroke: #805574;
+}
+.high-thc .mind-body-css svg path {
+  stroke: #805574;
+}
+.high-thc .body-css svg path {
+  fill: #805574;
+}
+.high-thc .don-css svg path {
+   stroke: #805574;
+}
+.high-thc .don-css svg circle {
+   stroke: #805574;
 }
 
-/** MODERATE THC **/
-.bg-moderate-thc {
-  color: #F2A900;
+.high-thc .don-css svg path:nth-child(2) {
+  stroke: none;
+    fill: #805574;
+}
+.high-thc .don-css svg path:nth-child(3) {
+  stroke: none;
+    fill: #805574;
 }
 
-/** BALANCED THC **/
-.bg-balanced {
-  color: #9CAF88;
+
+.moderate-thc .cal-css svg path {
+  stroke: #B87E47;
+}
+.moderate-thc .mind-body-css svg path {
+  stroke: #B87E47;
+}
+.moderate-thc .body-css svg path {
+  fill: #B87E47;
+}
+.moderate-thc .don-css svg path {
+   stroke: #B87E47;
+}
+.moderate-thc .don-css svg circle {
+   stroke: #B87E47;
 }
 
-/** MODERATE CBD **/
-.bg-moderate-cbd {
-  color: #7D9CC0;
+.moderate-thc .don-css svg path:nth-child(2) {
+  stroke: none;
+  fill: #B87E47;
+}
+.moderate-thc .don-css svg path:nth-child(3) {
+  stroke: none;
+  fill: #B87E47;
 }
 
-/** HIGH CBD **/
-.bg-high-cbd {
-  color: #8B84D7;
+.balanced .cal-css svg path {
+  stroke: #758067;
 }
+.balanced .mind-body-css svg path {
+  stroke: #758067;
+}
+.balanced .body-css svg path {
+  fill: #758067;
+}
+
+.balanced .don-css svg path {
+   stroke: #758067;
+}
+.balanced .don-css svg circle {
+   stroke: #758067;
+}
+
+.balanced .don-css svg path:nth-child(2) {
+  stroke: none;
+  fill: #758067;
+}
+.balanced .don-css svg path:nth-child(3) {
+  stroke: none;
+  fill: #758067;
+}
+
+.moderate-cbd .cal-css svg path {
+  stroke: #4C6580;
+}
+.moderate-cbd .mind-body-css svg path {
+  stroke: #4C6580;
+}
+.moderate-cbd .body-css svg path {
+  fill: #4C6580;
+}
+.moderate-cbd .don-css svg path {
+   stroke: #4C6580;
+}
+.moderate-cbd .don-css svg circle {
+   stroke: #4C6580;
+}
+.moderate-cbd .don-css svg path:nth-child(2) {
+  stroke: none;
+  fill: #4C6580;
+}
+.moderate-cbd .don-css svg path:nth-child(3) {
+  stroke: none;
+  fill: #4C6580;
+}
+
+.high-cbd .cal-css svg path {
+  stroke: #5E5A80;
+}
+.high-cbd .mind-body-css svg path {
+  stroke: #5E5A80;
+}
+.high-cbd .body-css svg path {
+  fill: #5E5A80;
+}
+.high-cbd .don-css svg path {
+   stroke: #5E5A80;
+}
+.high-cbd .don-css svg circle {
+   stroke: #5E5A80;
+}
+
+.high-cbd .don-css svg path:nth-child(2) {
+  stroke: none;
+  fill: #4C6580;
+}
+.high-cbd .don-css svg path:nth-child(3) {
+  stroke: none;
+  fill: #4C6580;
+}
+

@@ -39,7 +39,7 @@
 
                {# Order button #}
                 <div class="order-product text-center">
-                   <a href="#" class="hs-button bg-high-thc btn-order">Order</a>
+                   <a href="#" class="hs-button bg-dark-high-thc btn-order">Order</a>
                 </div>
 
                 {# More Info #}
@@ -53,39 +53,49 @@
             </div>
              
              <div class="row stock-wrap">
-             <div class="thc-percent bg-high-thc"><b>THC:</b>&nbsp;20% w/w</div>
-             <div class="thc-percent bg-high-thc">
+             <div class="thc-percent bg-dark-high-thc"><b>THC:</b>&nbsp;20% w/w</div>
+             <div class="thc-percent bg-dark-high-thc">
                 <b>CBD:</b>&nbsp; 1% w/w
               </div>
               <div class="product-info">
                   <div class="row product-size ps-css flex items-center">
                      {# <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/1ml-full-spectrum-cartridge.svg') }}">  #}
-                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/10g-dried-flower.svg') }}"> 
+                    <div class="svg-max-width">
+                      <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/10g-dried-flower.svg') }}"> 
+                    </div>
                     <span class="value font-bold">10g Dried Flower</span>
                   </div>
                 
                   {# if value is not applicable add css next to cultivar as not-applicable #}
                   <div class="row cultivar cult-css flex items-center">
+                    <div class="svg-max-width">
                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/cultivar.svg') }}">
+                    </div>
                     <span class="value font-bold">Electric Grapefruit</span>
                   </div>
                   {# Sativa : empty, Indica: full, Hybrid: half #}
                    <div class="row species spec-css half flex items-center">
-                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/hybrid.svg') }}">
+                     <div class="svg-max-width">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/hybrid.svg') }}">
+                     </div>
                     <span class="value font-bold">Hybrid</span>
                   </div>
 
                    <div class="row total-cannabinoid tc-css flex items-center">
-                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/total-cannabinoid.svg') }}">
+                     <div class="svg-max-width">
+                      <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/total-cannabinoid.svg') }}">
+                     </div>
                     <span class="value font-bold">7800mg <span class="helper-text">Total cannabinoid</span></span>
                   </div>
                 
                   <div class="row per-gram-amount pga-css flex items-center">
-                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/dollar.svg') }}">
+                    <div class="svg-max-width">
+                      <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/dollar.svg') }}">
+                    </div>
                     <span class="value font-bold">$10 <span class="helper-text">per gram</span></span>
                   </div>
-                
-                  {# class= coming-soon, high-stock, moderate-stock, low-stock #}
+              </div>
+                {# class= coming-soon, high-stock, moderate-stock, low-stock #}
                   <div class="stock-level flex items-center">
                      <div class="stock-level-icon high-stock">
                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/high-stock.svg') }}">
@@ -95,7 +105,6 @@
                        <div class="stock-helper">Discontinued mid Apr</div>
                     </div>
                   </div>
-              </div>
             </div>  
           </div>
           
@@ -128,7 +137,7 @@
                 </div>
 
                 <div class="order-product text-center">
-                   <a href="#" class="hs-button bg-moderate-thc btn-order">Order</a>
+                   <a href="#" class="hs-button bg-dark-moderate-thc btn-order">Order</a>
                 </div>
                 <div class="more-product-info text-center">
                   <a href="#" class="hs-button simple small d-block" >learn more 
@@ -140,10 +149,10 @@
               </div>
              
              <div class="row stock-wrap">
-                <div class="thc-percent bg-moderate-thc">
+                <div class="thc-percent bg-dark-moderate-thc">
                   <b>THC:</b>&nbsp;20% w/w
                 </div>
-                <div class="thc-percent bg-moderate-thc">
+                <div class="thc-percent bg-dark-moderate-thc">
                   <b>CBD:</b>&nbsp; 1% w/w
                 </div>
                  <div class="product-info">
@@ -216,7 +225,7 @@
                 </div>
 
                 <div class="order-product text-center"> 
-                   <a href="#" class="hs-button bg-balanced btn-order">Order</a>
+                   <a href="#" class="hs-button bg-dark-balanced btn-order">Order</a>
                 </div>
                 <div class="more-product-info text-center">
                   <a href="#" class="hs-button simple small d-block" >learn more 
@@ -228,10 +237,10 @@
               </div>
              
              <div class="row stock-wrap">
-              <div class="thc-percent bg-balanced">
+              <div class="thc-percent bg-dark-balanced">
                 <b>THC:</b>&nbsp;20% w/w
               </div>
-              <div class="thc-percent bg-balanced">
+              <div class="thc-percent bg-dark-balanced">
                 <b>CBD:</b>&nbsp; 1% w/w
               </div>
                 <div class="product-info">
@@ -303,7 +312,7 @@
               </div>
             
               <div class="order-product text-center">
-                 <a href="#" class="hs-button bg-high-cbd btn-order">Order</a>
+                 <a href="#" class="hs-button bg-dark-high-cbd btn-order">Order</a>
               </div>
               <div class="more-product-info text-center">
                 <a href="#" class="hs-button simple small d-block" >learn more 
@@ -314,10 +323,10 @@
               </div>
              </div>
               <div class="row stock-wrap">
-                  <div class="thc-percent bg-high-cbd">
+                  <div class="thc-percent bg-dark-high-cbd">
                     <b>THC:</b>&nbsp;20% w/w
                   </div>
-                  <div class="thc-percent bg-high-cbd">
+                  <div class="thc-percent bg-dark-high-cbd">
                     <b>CBD:</b>&nbsp; 1% w/w
                   </div>
                   <div class="product-info">
@@ -367,21 +376,130 @@
              {{ module.heading_2 }}
           </div>
            <div class="inner flex">
-             <div class="col four-col">
+             {# first col #}
+             <div class="col four-col high-thc">
+                {# use cal-css for all #}
                <div class="row calming cal-css flex items-center">
-                   <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/calming.svg') }}"> 
+                   <div class="svg-max-width">
+                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/calming.svg') }}"> 
+                    </div>
                     <span class="value font-bold">Calming</span>
                </div>
-                <div class="row body body-css flex items-center">
-                  <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/body.svg') }}"> 
+                {# use body-css for body else use mind-body-css #}
+                <div class="row mind mind-body-css flex items-center">
+                  <div class="svg-max-width">
+                    {# <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/body.svg') }}"> #}
+                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/mind.svg') }}">
+                  </div>
                   <span class="value font-bold">Body</span>
                </div>
-                <div class="row day-or-night cal-css flex items-center">
-                   <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/day-or-night.svg') }}"> 
+               
+                {# use don-css for day, night, day-or-night #}
+                <div class="row day-or-night don-css flex items-center">
+                   <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/day.svg') }}"> 
+                   </div>
+                  <span class="value font-bold">Day</span>
+                 
+               </div>
+             </div>
+             
+              {# second col #}
+             <div class="col four-col moderate-thc">
+               <div class="row very-calming cal-css flex items-center">
+                   <div class="svg-max-width">
+                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/very-calming.svg') }}"> 
+                    </div>
+                    <span class="value font-bold">Calming</span>
+               </div>
+                <div class="row mind-and-body mind-body-css flex items-center">
+                  <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/mind-and-body.svg') }}">
+                  </div>
+                  <span class="value font-bold">Body</span>
+               </div>
+                <div class="row night don-css flex items-center">
+                   <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/night.svg') }}"> 
+                   </div>
                   <span class="value font-bold">Day or Night</span>
                  
                </div>
              </div>
+             
+             
+            {# third col #}
+             <div class="col four-col balanced">
+               <div class="row calming cal-css flex items-center">
+                   <div class="svg-max-width">
+                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/calming.svg') }}"> 
+                    </div>
+                    <span class="value font-bold">Calming</span>
+               </div>
+                {# use body-css for body else use mind-body-css #}
+                <div class="row mind-body mind-body-css flex items-center">
+                  <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/mind-and-body.svg') }}">
+                  </div>
+                  <span class="value font-bold">Body</span>
+               </div>
+                <div class="row day-or-night don-css flex items-center">
+                   <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/day-or-night.svg') }}"> 
+                   </div>
+                  <span class="value font-bold">Day or Night</span>
+                 
+               </div>
+             </div>
+             
+             
+              {# four col #}
+             <div class="col four-col high-cbd">
+               <div class="row calming cal-css flex items-center">
+                   <div class="svg-max-width">
+                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/calming.svg') }}"> 
+                    </div>
+                    <span class="value font-bold">Calming</span>
+               </div>
+                <div class="row body body-css flex items-center">
+                  <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/body.svg') }}">
+                  </div>
+                  <span class="value font-bold">Body</span>
+               </div>
+                <div class="row day-or-night don-css flex items-center">
+                   <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/day-or-night.svg') }}"> 
+                   </div>
+                  <span class="value font-bold">Day or Night</span>
+                 
+               </div>
+             </div>
+             
+             {# fifth col #}
+             {#<div class="col four-col moderate-cbd">
+               <div class="row calming cal-css flex items-center">
+                   <div class="svg-max-width">
+                     <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/calming.svg') }}"> 
+                    </div>
+                    <span class="value font-bold">Calming</span>
+               </div>
+                <div class="row body mind-body-css flex items-center">
+                  <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/body.svg') }}">
+                  </div>
+                  <span class="value font-bold">Body</span>
+               </div>
+                <div class="row day-or-night don-css flex items-center">
+                   <div class="svg-max-width">
+                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/day-or-night.svg') }}"> 
+                   </div>
+                  <span class="value font-bold">Day or Night</span>
+                 
+               </div>
+             </div> #}
+             
+             
           </div>
         </div>
       </div>

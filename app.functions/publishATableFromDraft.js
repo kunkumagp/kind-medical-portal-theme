@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 58);
+/******/ 	return __webpack_require__(__webpack_require__.s = 72);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -21493,60 +21493,37 @@ exports.publishATableFromDraft = async (tableId) => {
 /* 55 */,
 /* 56 */,
 /* 57 */,
-/* 58 */
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(59);
+module.exports = __webpack_require__(73);
 
 
 /***/ }),
-/* 59 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 const { constant } = __webpack_require__(47);
 const hubspotService = __webpack_require__(49);
 
-function extractProperties(context) {
-  const fields = [
-    'firstname', 'lastname', 'hcp_type', 'ahpra_number', 'practice_name', 
-    'practice_address', 'phone', 'email', 
-    'what_is_your_level_of_medicinal_cannabis_education', 
-    'how_many_medicinal_cannabis_scripts_do_you_write_or_dispense_on_average_each_month', 
-    'what_information_do_you_want_from_the_portal_other', 
-    'what_is_your_area_of_interest_relating_to_medical_cannabis_other'
-  ];
-
-  const properties = fields.reduce((acc, field) => {
-    if (context.body.data[field]) {
-      acc[field] = context.body.data[field];
-    }
-    return acc;
-  }, {});
-
-  const checkBoxHandling = (fields) => fields.map(field => 
-    context.body.data[field] === 'on' && field).filter(Boolean).join(';');
-
-  properties['what_information_do_you_want_from_the_portal'] = checkBoxHandling([
-    'general_education_about_medicinal_cannabis', 
-    'kind_product_stock_status',
-    'information_about_kind_products',
-    'prescriber_guidance',
-    'patient_support_tools',
-  ]);
-
-  properties['what_is_your_area_of_interest_relating_to_medical_cannabis'] = checkBoxHandling([
-    'mood_disorders', 'sleep', 'pain'
-  ]);
-
-  return properties;
-}
-
 exports.main = async (context, sendResponse) => {
   try {
-    console.log(context);
-    const properties = extractProperties(context);
-    const id = new URL(context.headers.Referer).searchParams.get('id');
-    const result = await hubspotService.updateObject('contacts', id, properties);
+    const tableId = context.body.tableId; 
+    const result = await hubspotService.publishATableFromDraft(tableId);
     sendResponse({ body: { Response: result } });
   } catch (error) {
     sendResponse({ body: { Response: error } });

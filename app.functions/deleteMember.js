@@ -21431,12 +21431,47 @@ exports.getProperty = async (objectType, propertyName) => {
   return { data: response.data, statusCode: response.status };
 };
 
-exports.updateHubDbTableRows = async (tableId, limit = 10, after = '0') => {
+exports.updateHubDbTableRows = async (tableId, rowId, properties) => {
   const accessToken = process.env.HUBSPOT_API_KEY;
-  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&after=${after}`;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/${rowId}/draft`;
+
+  const config = {
+    method: 'PATCH',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    data: properties
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
+exports.getHubDbTableRows = async (tableId, limit = 10, offset = '0') => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows?limit=${limit}&offset=${offset}`;
 
   const config = {
     method: 'GET',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
+exports.publishATableFromDraft = async (tableId) => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/draft/publish`;
+
+  const config = {
+    method: 'POST',
     url: endpoint,
     headers: {
       'Authorization': `Bearer ${accessToken}`,

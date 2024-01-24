@@ -45,6 +45,14 @@
     "updateHubDbTableRows": {
       "method": "POST",
       "file": "updateHubDbTableRows.js"
+    },
+    "getHubDbTableRows": {
+      "method": "POST",
+      "file": "getHubDbTableRows.js"
+    },
+    "publishATableFromDraft": {
+      "method": "POST",
+      "file": "publishATableFromDraft.js"
     }
   }
 }
