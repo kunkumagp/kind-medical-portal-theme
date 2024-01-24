@@ -1,0 +1,31 @@
+<!--
+    templateType: global_partial
+    isAvailableForNewContent: false
+    label: Membership portal header
+-->
+<header class="header mem-header">
+  <div class="header-inner flex items-center justify-between">
+    <div class="logo-with-navigation flex items-center">
+      <div class="header-logo text-center">
+        <img src="{{ get_asset_url('../../images/kind-medical-logo.svg') }}" alt="Kind Medical" />
+      </div>
+
+      <div class="member-navigation">
+        <nav aria-label="Main navigation">
+          <ul class="flex no-list no-padding">
+            <li><b>For You</b></li>
+            <li>Learning & Resources</li>
+            <li>Our Products</li>
+            <li>Account</li>
+            <li>Contact us</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main-search pos-relative">
+      <i class="main-icon-search"></i>
+      <input type="search" name="search_member" class="search-member" placeholder="Products, Articles, Modules & More">
+    </div>
+  </div>
+</header>
+

@@ -1,0 +1,19 @@
+[ {
+  "id" : "650858e5-9b25-c605-c0f8-4f56cbfb6fe8",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3><span style=\"color: #666e5a;\">Compare products</span></h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>"
+}, {
+  "id" : "f13e9947-c1ae-ec4d-a800-b4ed24fa63c9",
+  "name" : "heading_2",
+  "display_width" : null,
+  "label" : "Heading 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h4><span style=\"color: #666e5a;\">Reported Effects &amp; Use</span></h4>\n<span style=\"font-size: 12px; color: #666e5a;\">*Based on patient self-reported data</span>"
+} ]

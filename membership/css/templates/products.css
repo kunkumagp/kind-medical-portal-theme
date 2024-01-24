@@ -1,0 +1,294 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.our-product-heading{
+  background-image:url({{ get_asset_url('/kind-medical-portal-theme/membership/images/our-product-header-background.png') }});
+  background-size:cover;
+}
+
+/* positions */
+
+.position-relative{
+  position:relative;
+}
+
+.position-absolute{
+  position:absolute;
+}
+.d-none{
+  display:none;
+}
+
+.flex{
+  display:flex;
+}
+
+.align-center{
+  align-items:center;
+}
+
+.filter-content-wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.our-product-list{
+  padding-top:65px;
+}
+
+/************************ Product card Icons colours Change ****************************/
+
+/******** High thc - *********/
+
+/* Flower */
+.high-thc .flower path{
+  stroke:#805574;
+}
+/* Oil */
+.high-thc .oil path , .high-thc .oil rect{
+  stroke:#805574;
+  fill:none;
+}
+/* Vape */
+.high-thc .vape path , .high-thc .vape rect , .high-thc .vape ellipse {
+  stroke:#805574;
+}
+
+/* Mind */
+.high-thc .mind path{
+  stroke:#805574;
+}
+
+/* Mind and Body */
+.high-thc .mind-body path{
+  stroke:#805574;
+}
+
+/* Body */
+.high-thc .body path{
+  fill:#805574;
+}
+
+/* energising */
+
+.high-thc .energising path{
+  stroke:#805574;
+}
+
+/* balancing */
+
+.high-thc .balancing path{
+  stroke:#805574;
+}
+
+/* calming */
+
+.high-thc .calming path{
+  stroke:#805574;
+}
+
+
+
+/******** moderate thc - *********/
+
+/* Flower */
+.moderate-thc .flower path{
+  stroke:#B87E47;
+}
+/* Oil */
+.moderate-thc .oil path , .moderate-thc .oil rect{
+  stroke:#B87E47;
+  fill:none;
+}
+/* Vape */
+.moderate-thc .vape path , .moderate-thc .vape rect , .moderate-thc .vape ellipse {
+  stroke:#B87E47;
+}
+
+/* Mind */
+.moderate-thc .mind path{
+  stroke:#B87E47;
+}
+
+/* Mind and Body */
+.moderate-thc .mind-body path{
+  stroke:#B87E47;
+}
+
+/* Body */
+.moderate-thc .body path{
+  fill:#B87E47;
+}
+
+/* energising */
+
+.moderate-thc .energising path{
+  stroke:#B87E47;
+}
+
+/* balancing */
+
+.moderate-thc .balancing path{
+  stroke:#B87E47;
+}
+
+/* calming */
+
+.moderate-thc .calming path{
+  stroke:#B87E47;
+}
+
+/******** balanced - *********/
+
+/* Flower */
+.balanced .flower path{
+  stroke:#758067;
+}
+/* Oil */
+.balanced .oil path , .balanced .oil rect{
+  stroke:#758067;
+  fill:none;
+}
+/* Vape */
+.balanced .vape path , .balanced .vape rect , .balanced .vape ellipse {
+  stroke:#758067;
+}
+
+/* Mind */
+.balanced .mind path{
+  stroke:#758067;
+}
+
+/* Mind and Body */
+.balanced .mind-body path{
+  stroke:#758067;
+}
+
+/* Body */
+.balanced .body path{
+  fill:#758067;
+}
+
+/* energising */
+
+.balanced .energising path{
+  stroke:#758067;
+}
+
+/* balancing */
+
+.balanced .balancing path{
+  stroke:#758067;
+}
+
+/* calming */
+
+.balanced .calming path{
+  stroke:#758067;
+}
+
+/******** moderate-cbd *********/
+
+/* Flower */
+.moderate-cbd .flower path{
+  stroke:#4C6580;
+}
+/* Oil */
+.moderate-cbd .oil path , .moderate-cbd .oil rect{
+  stroke:#4C6580;
+  fill:none;
+}
+/* Vape */
+.moderate-cbd .vape path , .moderate-cbd .vape rect , .moderate-cbd .vape ellipse {
+  stroke:#4C6580;
+}
+
+/* Mind */
+.moderate-cbd .mind path{
+  stroke:#4C6580;
+}
+
+/* Mind and Body */
+.moderate-cbd .mind-body path{
+  stroke:#4C6580;
+}
+
+/* Body */
+.moderate-cbd .body path{
+  fill:#4C6580;
+}
+
+/* energising */
+
+.moderate-cbd .energising path{
+  stroke:#4C6580;
+}
+
+/* balancing */
+
+.moderate-cbd .balancing path{
+  stroke:#4C6580;
+}
+
+/* calming */
+
+.moderate-cbd .calming path{
+  stroke:#4C6580;
+}
+
+/******** high-cbd - *********/
+
+/* Flower */
+.high-cbd .flower path{
+  stroke:#5E5A80;
+}
+/* Oil */
+.high-cbd .oil path , .high-cbd .oil rect{
+  stroke:#5E5A80;
+  fill:none;
+}
+/* Vape */
+.high-cbd .vape path , .high-cbd .vape rect , .high-cbd .vape ellipse {
+  stroke:#5E5A80;
+}
+
+/* Mind */
+.high-cbd .mind path{
+  stroke:#5E5A80;
+}
+
+/* Mind and Body */
+.high-cbd .mind-body path{
+  stroke:#5E5A80;
+}
+
+/* Body */
+.high-cbd .body path{
+  fill:#5E5A80;
+}
+
+/* energising */
+
+.high-cbd .energising path{
+  stroke:#5E5A80;
+}
+
+/* balancing */
+
+.high-cbd .balancing path{
+  stroke:#5E5A80;
+}
+
+/* calming */
+
+.high-cbd .calming path{
+  stroke:#5E5A80;
+}

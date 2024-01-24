@@ -1,0 +1,148 @@
+[ {
+  "id" : "7df1b782-aebc-3292-98ea-60249e87b013",
+  "name" : "categories",
+  "display_width" : null,
+  "label" : "Categories",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "80142a93-57f3-0985-1fab-b6774609ff38",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "80142a93-57f3-0985-1fab-b6774609ff38",
+    "name" : "category",
+    "display_width" : null,
+    "label" : "Category",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Category"
+  }, {
+    "id" : "d3b0199d-d07c-16bb-b2cf-bbee234cedd4",
+    "name" : "faqs",
+    "display_width" : null,
+    "label" : "FAQs",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "97c7ba6f-4187-375b-f699-197f03395dd6",
+      "name" : "question",
+      "display_width" : null,
+      "label" : "Question",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "Question"
+    }, {
+      "id" : "fcc1deec-3dff-3052-f3e3-8e55ae747db0",
+      "name" : "answer",
+      "display_width" : null,
+      "label" : "Answer",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "Answer"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question" : "Question",
+      "answer" : "Answer"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "category" : "Category",
+    "faqs" : [ {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    } ]
+  }, {
+    "category" : "Category",
+    "faqs" : [ {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    } ]
+  }, {
+    "category" : "Category",
+    "faqs" : [ {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    } ]
+  }, {
+    "category" : "Category",
+    "faqs" : [ {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    }, {
+      "question_2" : "Question",
+      "answer_2" : "Answer",
+      "question" : "Question",
+      "answer" : "Answer"
+    } ]
+  } ]
+} ]
