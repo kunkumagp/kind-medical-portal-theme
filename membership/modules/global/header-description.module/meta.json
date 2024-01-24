@@ -1,9 +1,0 @@
-{
-  "global" : true,
-  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
-  "smart_type" : "NOT_SMART",
-  "host_template_types" : [ "PAGE" ],
-  "module_id" : 152424492184,
-  "label" : "Header description",
-  "is_available_for_new_content" : true
-}
