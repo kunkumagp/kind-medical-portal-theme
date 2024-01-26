@@ -1150,6 +1150,7 @@ form .light-secondary-label input {
   -webkit-backdrop-filter: blur(5px);
   z-index: 100;
 }
+/**remove blur ***/
 .modal.distinct{
    background: rgba(0, 0, 0, 0.7);
   backdrop-filter: none;
@@ -1177,12 +1178,30 @@ form .light-secondary-label input {
   width: 530px;
 }
 .modal .modal-content.large {
-  width: 1000px;
+  width: 1040px;
 }
-
 .modal.open {
     display: block;
 }
+.btn-close {
+  display: flex;
+  background: #EBEFE4;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 45px;
+  top: 35px;
+  cursor: pointer;
+}
+.product-modal .modal-content {
+  text-align: left;
+}
+
 
 /*** Account details ****/
 .mem-account-details{

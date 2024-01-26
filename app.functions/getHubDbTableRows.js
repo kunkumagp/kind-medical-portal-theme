@@ -21483,6 +21483,24 @@ exports.publishATableFromDraft = async (tableId) => {
   return { data: response.data, statusCode: response.status };
 };
 
+exports.batchUpdateHubDbTableRows = async (tableId, properties) => {
+  const accessToken = process.env.HUBSPOT_API_KEY;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/draft/batch/replace`;
+
+  const config = {
+    method: 'POST',
+    url: endpoint,
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    data: properties
+  };
+
+  const response = await axios.request(config);
+  return { data: response.data, statusCode: response.status };
+};
+
 
 /***/ }),
 /* 50 */,

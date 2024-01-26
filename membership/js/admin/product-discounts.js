@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
   const limit = 3;
   let totalPages;
   $('.loading').show();
-  console.log("02");
+  console.log("11");
 
   async function getHubDbTableRows() {
     $('.loading').show();
@@ -102,7 +102,7 @@ jQuery(document).ready(function ($) {
       var product = item.values;
 
       var stockItemHtml = `
-        <div class="single-product flex">
+        <div class="single-product flex" data-row-id="${item.id}">
            <div class="prod-name text-blue-dark font-bold">
                 ${product.product_name}<sup>TM</sup>
             </div>
@@ -113,7 +113,7 @@ jQuery(document).ready(function ($) {
             </div>
             <div class="discounted-price">
                <label for="discount_price">Discount price ($)</label>
-                <input type="text" name="discount_price" value="">
+                <input type="text" name="discount_price" value="${product.discount_price_per_10g ? product.discount_price_per_10g : ''}">
             </div>
           </div>
         </div>
@@ -125,23 +125,30 @@ jQuery(document).ready(function ($) {
   }
 
   $('#save-product-discounts').click(function(e) {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault();
 
-    var allProductsData = [];
+    var productsData = [];
 
     $('.single-product').each(function() {
-      var productData = {
-        productName: $(this).find('.prod-name').text().trim(),
-        rrp: $(this).find('input[name="product_size_price"]').val(),
-        discountPrice: $(this).find('input[name="discount_price"]').val()
+      var inputs = {
+        id: $(this).data('row-id'),
+        values: {
+          //product_name: $(this).find('.prod-name').text().trim(),
+          rrp: $(this).find('input[name="product_size_price"]').val(),
+          //discount_price_per_10g: $(this).find('input[name="discount_price"]').val(),
+        }
       };
-      allProductsData.push(productData);
+      productsData.push(inputs);
     });
 
-    console.log(allProductsData); // Contains all products' data
-    // You can now send this data to your backend
-  });
+    var properties = {
+      inputs: productsData,
+    }
 
+    updateHubDbTableRows(properties);
+
+    console.log(properties);
+  });
 
   function publishATableFromDraft() {
     var requestOptions = {
@@ -198,6 +205,39 @@ jQuery(document).ready(function ($) {
       $(".submission-message").html("<span class='error-msg'>" + msg.message + "</span>");
     }
   }
+
+  function updateHubDbTableRows(jsonData) {
+    var requestOptions = {
+      'method': 'POST',
+      'headers': {
+        'Content-Type': 'application/json',
+      },
+      'body': JSON.stringify({
+        tableId: tableId,
+        data: jsonData
+      }),
+    };
+    return fetch("/_hcms/api/batchUpdateHubDbTableRows", requestOptions)
+      .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+      .then(data => {
+      console.log(data.Response);
+      if (data.Response.statusCode === 200) {
+        publishATableFromDraft();
+      } else {
+      }
+      return data.Response.statusCode;
+    })
+      .catch(error => {
+      throw error;
+    });
+  }
+
+
 
   getHubDbTableRows();
 

@@ -1,0 +1,46 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Compare products
+  screenshotPath: ../images/template-previews/.png
+-->
+{% extends '../layouts/base-member-green-footer.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--home', label='Main section' %}
+
+ {# Main section #}
+    {% dnd_section
+      max_width=1040,
+       padding={
+        "default": { "top": 60, "bottom": 100 },
+         "mobile": { "top": 50, "bottom": 20 }
+      },
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text'
+            horizontal_alignment='CENTER'
+          %}
+            {% module_attribute 'html' %}
+              <h3 style="text-align: center;"><span style="color: #666e5a;">Compare products</span></h3>
+              <p style="color: black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module path='../../modules/member/compare-products'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    {# End main section #}
+
+
+  {% end_dnd_area %}
+</main>
+<script src="{{ get_asset_url('../../js/member/compare-products.js') }}"></script>
+{% endblock body %}

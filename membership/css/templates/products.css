@@ -228,34 +228,34 @@
 
 /* High Stock */
 .moderate-thc .high-stock path{
-  fill:#875375;
+  fill:#B87E47;
 }
 .moderate-thc .high-stock circle{
-  stroke:#875375;
+  stroke:#B87E47;
 }
 
 /* Moderate Stock */
 .moderate-thc .moderate-stock path{
-  fill:#875375;
+  fill:#B87E47;
 }
 .moderate-thc .moderate-stock circle{
-  stroke:#875375;
+  stroke:#B87E47;
 }
 
 /* Low Stock */
 .moderate-thc .low-stock path{
-  fill:#875375;
+  fill:#B87E47;
 }
 .moderate-thc .low-stock circle{
-  stroke:#875375;
+  stroke:#B87E47;
 }
 
 /* No Stock */
 .moderate-thc .no-stock path{
-  fill:#875375;
+  fill:#B87E47;
 }
 .moderate-thc .no-stock circle{
-  stroke:#875375;
+  stroke:#B87E47;
 }
 
 
@@ -674,17 +674,17 @@
 }
 
 
-.moderate-cbd .thc-tag{
+.high-cbd .thc-tag{
   color:#8B84D7;
   background-color:#D9D7E9;
 }
 
-.moderate-cbd .cbd-tag{
+.high-cbd .cbd-tag{
   color:#E8E6F7;
   background-color:#8B84D7;
 }
 
-.moderate-cbd .cat-tag{
+.high-cbd .cat-tag{
   color:#5E5A80;
   background-color:#FFFFFF;
 }

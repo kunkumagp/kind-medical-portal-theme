@@ -27,11 +27,20 @@
   "default" : "<h4><span style=\"color: #666e5a;\">Medicine Classification &amp; Scheduling</span></h4>"
 }, {
   "id" : "8d6d8715-d234-15b1-7e5c-1d577d0a80e2",
-  "name" : "heading_4",
+  "name" : "heading_4_zss",
   "display_width" : null,
-  "label" : "Heading 4",
+  "label" : "Heading 4   zss",
   "required" : false,
   "locked" : false,
   "type" : "richtext",
   "default" : "<h4><span style=\"color: #666e5a;\">Dominant Terpenes</span></h4>"
+}, {
+  "id" : "96d3cb93-bbd0-e2f8-1d1a-d23a11bab18c",
+  "name" : "hubdbtable",
+  "display_width" : null,
+  "label" : "HubDB table",
+  "required" : false,
+  "locked" : false,
+  "type" : "hubdbtable",
+  "default" : 7946284
 } ]

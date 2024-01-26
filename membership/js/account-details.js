@@ -1,8 +1,5 @@
  import { updateContact } from "{{ get_asset_url('../../membership/js/hubspot.js') }}";
 
-// const greet_scaler = greet("Scaler");
-// console.log(greet_scaler);
-// console.log(message);
 // console.log(config.endpoint.updateContact);
 // import { Hubspot } from "{{ get_asset_url('../../membership/js/hubspot.js') }}";
 

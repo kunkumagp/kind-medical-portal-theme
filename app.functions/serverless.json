@@ -53,6 +53,10 @@
     "publishATableFromDraft": {
       "method": "POST",
       "file": "publishATableFromDraft.js"
+    },
+    "batchUpdateHubDbTableRows": {
+      "method": "POST",
+      "file": "batchUpdateHubDbTableRows.js"
     }
   }
 }

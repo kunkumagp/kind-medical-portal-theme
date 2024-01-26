@@ -1,14 +1,15 @@
 .compare-products .heading p {
   color: #000;
 }
-.compare-product-lists{
-  margin-top:70px;
+.compare-products{
+  margin-top:40px;
 }
 .four-col {
-      width: 23.0576%;
+  width: 21.0576%;
+  border: 1px solid black;
 }
 .four-col:not(:last-child){
-  margin-right: 2.5%;
+  margin-right: 5%;
 }
 .reported-effects,
 .compare-product-lists .inner {
@@ -45,6 +46,7 @@
 .pd-tag {
   height: 40px;
   width: 40px;
+  cursor:pointer;
 }
 
 .cbd-percent,
@@ -100,14 +102,15 @@
   font-weight: 400;
   display: block;
 }
-.stock-wrap .product-info .img-svg {
+/* .stock-wrap .product-info .img-svg {
   margin-right: 15px;
-}
+} */
 .stock-wrap .stock-level {
   background:#fff;
   padding: 10px 10px;
   border-radius: 8px;
   min-height: 72px;
+  box-shadow: 0 4px 38px 0 rgba(102,110,90,.17);
 }
 .stock-wrap .stock-level .stock-helper {
   font-size: 12px;
@@ -141,6 +144,12 @@
   max-width: 45px;
   width: 100%;
 }
+ .stock-level-icon svg,
+.svg-max-width img,
+.svg-max-width svg {
+  width: 28px;
+  height: 28px;
+}
 .dominant-terpenes .col{
   max-width: 198px;
 }
@@ -154,7 +163,10 @@
   margin-bottom: 30px;
 }
 .col-inner-padding {
-  padding: 0px 20px;
+  padding: 0px 12px;
+}
+.filter-text {
+  font-size: 16px;
 }
 
 
