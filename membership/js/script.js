@@ -22,7 +22,27 @@ jQuery(document).ready(function($) {
   });
   
   
+  // close modal close X button
   $(".close-modal").click(function() {
     $(this).parents('.modal').removeClass('open');
+  });
+  
+  
+  // Open modal
+  $(document).on("click",".open-form",function() {
+    var formTargetModal = $(this).attr("data-formId");
+    console.log(formTargetModal);
+    $(formTargetModal).closest('.modal').addClass("open");
+    $("body").addClass("no-scroll");
+
+  });
+  
+  // close modal on click outside 
+  $('body').on("click", function(e){ 
+    console.log(e.target);
+     if(!(($(e.target).closest(".modal-content").length > 0 ) || ($(e.target).closest(".open-form").length > 0))){
+      $(".modal").removeClass("open");
+      $("body").removeClass("no-scroll");
+    }
   });
 });

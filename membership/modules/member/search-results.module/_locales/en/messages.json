@@ -1,4 +1,19 @@
 {
+  "icon_field.default.name" : {
+    "message" : "Alternate Long Arrow Right",
+    "description" : null,
+    "placeholders" : null
+  },
+  "icon_field.default.type" : {
+    "message" : "SOLID",
+    "description" : null,
+    "placeholders" : null
+  },
+  "icon_field.default.unicode" : {
+    "message" : "f30b",
+    "description" : null,
+    "placeholders" : null
+  },
   "name" : {
     "message" : "search-results",
     "description" : "",

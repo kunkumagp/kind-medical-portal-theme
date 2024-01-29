@@ -20,7 +20,7 @@
   "allow_new_line" : false,
   "show_emoji_picker" : false,
   "type" : "text",
-  "default" : "Search"
+  "default" : "Products, Articles, Modules & More"
 }, {
   "id" : "132b5655-eccf-c251-9ed4-d04901e91987",
   "name" : "include_search_button",

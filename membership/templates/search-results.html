@@ -7,6 +7,7 @@
 -->
 
 {% extends './layouts/base-member-green-footer.html' %}
+{{ require_css(get_asset_url("../css/templates/search.css")) }} 
 
 {% block body %}
 
@@ -22,36 +23,45 @@
 {% endfor %}
 
 {% set keyword = request.query_dict.term %}
-{# {% set queryparams = "description__icontains=" ~ keyword %} #}
-{% set queryparams = "product_name__icontains=" ~ keyword %}
+{% set queryparams = "description__icontains=" ~ keyword %}
+{# {% set queryparams = "product_name__icontains=" ~ keyword %} #}
 
 
 {# {% set table = hubdb_table_rows(11587680, query) %} #}
 {# {% set keyword = request.query_dict.term|escape %} #}
 
-<main class="body-container-wrapper">
+<main class="body-container-wrapper search-body">
   <section class="content-wrapper">
-    <div class="systems-page">
-
-      <h1>Results for "{{ keyword }}"</h1>
+    <div class="systems-page search-result-page">
       
-      {% if tableIds|length > 0 %}
+      <div class="search-result-heading">
+        <h3>Results for "{{ keyword }}"</h3>
+        <div>
+          {% module "module_170624619977615" path="../modules/main_search_input", label="main_search_input" %}
+        </div>
+      </div>
+
+      
+{#       {% if tableIds|length > 0 %}
         {% for id in tableIds %}
           {% set table = hubdb_table_rows(id|int, queryparams) %}
 
             {% for row in table %}
-  {#             {{row.description}} #}
-              {{row.product_name}}
+              {{row.description}}
             {% endfor %}
-      <br/><br/><br/>
           {% endfor %}
-      {% endif %}
+      {% endif %} #}
       
       
       
-      {% dnd_area 'dnd_area' class='body-container body-container--home', label='Search result section' %}
+      {% dnd_area 'dnd_area' class='body-container body-container--home search-result-area', label='Search result section' %}
       
-        {% dnd_section %}
+        {% dnd_section 
+          padding={
+            'default':{'top':0, 'bottom':0, 'left':0, 'right':0},
+            'mobile':{'top':0, 'bottom':0, 'left':0, 'right':0}
+          }
+        %}
           {% dnd_column
             offset=0,
             width=12

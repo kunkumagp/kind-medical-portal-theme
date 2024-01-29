@@ -1,3 +1,10 @@
+form{
+  background: unset;
+  border-radius: 0px;
+  box-shadow: unset;
+  padding: 0px;
+}
+
 .hs-search-field {
   position: relative;
 }

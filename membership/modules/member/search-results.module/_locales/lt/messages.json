@@ -1,7 +1,7 @@
 {
   "name" : {
-    "message" : "Paieškos rezultatai",
-    "description" : "",
+    "message" : "search-results",
+    "description" : null,
     "placeholders" : null
   }
 }

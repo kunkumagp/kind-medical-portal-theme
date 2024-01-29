@@ -1,7 +1,7 @@
 {
   "name" : {
-    "message" : "Resultats de la cerca",
-    "description" : "",
+    "message" : "search-results",
+    "description" : null,
     "placeholders" : null
   }
 }

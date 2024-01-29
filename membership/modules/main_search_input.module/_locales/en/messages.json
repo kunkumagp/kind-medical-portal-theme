@@ -115,13 +115,28 @@
     "placeholders" : null
   },
   "placeholder.default" : {
-    "message" : "Search",
+    "message" : "Products, Articles, Modules & More",
     "description" : "",
     "placeholders" : null
   },
+  "placeholder.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
   "placeholder.label" : {
-    "message" : "Placeholder text",
+    "message" : "",
     "description" : "",
+    "placeholders" : null
+  },
+  "placeholder.placeholder" : {
+    "message" : "",
+    "description" : null,
     "placeholders" : null
   },
   "results.label" : {

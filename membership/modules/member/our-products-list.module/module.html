@@ -1,5 +1,49 @@
 <div class="product-list-container">
-      {% set potency = "High CBD" %}
+{% for product in hubdb_table_rows(7946284) %}
+<!--   <p> -->
+<!--     product name -->
+<!--  potency -->
+{#     {{product.potency.name}} #}
+<!--     format -->
+{#     {{product.format.name}} #}
+<!--     tch -->
+{#     {{product.thc_}} #}
+<!--     cbd -->
+{#     {{product.cbd}} #}
+<!--     cat -->
+{#        {{product.tga_category.name}} #}
+{#     {{???????????????????}} #}
+<!--     product content -->
+{#     {{product.product_description}} #}
+<!--    Pi Link  -->
+{#     {{product.product_page_url}} #}
+<!-- effects  -->
+{#     {{product.effects.name}}   #}
+<!--dominant_region -->
+{#     {{product.dominant_region.name}} #}
+<!--     time_of_use -->
+{#     {{product.time_of_use.name}} #}
+    
+{#     {{ product.b_caryophyllene}}   #}
+{#     {{product.linalool}}   #}
+{#     {{product.b_myrcene}}  #}
+{#     {{product.a_humulene}}  #}
+{#     {{product.eucalyptol_}}  #}
+{#     {{product.limonene_}} #}
+    
+<!--     RRP -->
+{#     {{product.rrp}} #}
+    
+<!--     stock -->
+{#     {{product.stock_levels.name}} #}
+    
+<!--     product size -->
+{#     {{product.product_size.name}} #}
+    
+<!--     shipment -->
+{#     {{product.next_shipment.name~" "~product.time.name~" "~product.month.name}} #}
+<!-- </p> -->
+      {% set potency = product.potency.name %}
 
       {% if potency == "High THC" %}
 
@@ -47,7 +91,7 @@
           <img src="{{imageSrc}}">
           <div class="format-details {{background_color}}">
             <div class="format-icon">
-              {% set formatType = "Flower" %}
+              {% set formatType = product.format.name %}
               {% if formatType == "Flower" %}
               <img class="img-svg flower" src="{{ get_asset_url('../../images/Icons/product_icons/Flower.svg') }}">
               {% elif formatType == "Oil" %}
@@ -57,83 +101,102 @@
               {% endif %}
             </div>
             <div class="format-text {{text_color_dark}}">
-              <span>Flower</span>
+              <span>{{product.format.name}}</span>
             </div>
           </div>
         </div>
         <div class="product-card-content">
           <div class="thc-cbd-cat-tags-section">
-            <span class="thc-tag">THC: 24%</span>
-            <span class="cbd-tag">CBD: 1%</span>
-            <span class="cat-tag">CAT: 5</span>
+            <span class="thc-tag">THC: {{product.thc_ or '0'}}%</span>
+            <span class="cbd-tag">CBD: {{product.cbd or '0%'}}</span>
+            <span class="cat-tag">CAT: {{product.tga_category.name or '-'}}</span>
           </div>
           <div class="product-main-details-and-favourite">
             <div class="product-title-and-favourite">
-              <span class="product-title {{text_color_dark}}">Kind Rufus™ 24:1</span>
+              <span class="product-title {{text_color_dark}}">{{product.product_name}}</span>
               <a class="favourite-button">
                 <img class="img-svg fav active" src="{{ get_asset_url('../../images/Icons/product_icons/favourite-star.svg') }}">
               </a>
             </div>
-            <p class="product-content-description {{text_color_dark}}">
-              Rufus is an indica dominant hybrid with high levels of THC. Each gram of dried flower contains 24% THC and 1% CBD.
+            <p style="font-size:12px !important" class="product-content-description {{text_color_dark}}" >
+              {{product.product_description}}
             </p>
-            <a class="view-full-pi {{text_color_dark}}">View Full PI</a>
+            <a href="{{product.product_page_url}}" class="view-full-pi {{text_color_dark}}">View Full PI</a>
           </div>
           <div class="reported-effects-and-time-of-use-and-dr-details">
-            <div class="reported-effects-details">
-              <div>
-                {% set dominantRegionType = "Calming" %}
-                {% if dominantRegionType == "Energising" %}
-                <img width="28" class="img-svg energising" src="{{ get_asset_url('../../images/Icons/product_icons/Energising.svg') }}">
-                {% elif dominantRegionType == "Balancing" %}
-                <img width="28" class="img-svg balancing" src="{{ get_asset_url('../../images/Icons/product_icons/Balancing.svg') }}">
-                {% elif dominantRegionType == "Calming" %}
-                <img width="28" class="img-svg calming" src="{{ get_asset_url('../../images/Icons/product_icons/Calming.svg') }}">
-                {% endif %}
+            {% set dominantRegionTypeEffects = product.effects.name %}
+            {% set dominantRegionTypeDominantRegion = product.dominant_region.name %}
+            {% set dominantRegionTypeTimeOfUse = product.time_of_use.name %}
+            
+            {% if dominantRegionTypeEffects %}
+              <div class="reported-effects-details">
+                <div>
+                  {% if dominantRegionTypeEffects == "Energising" %}
+                  <img width="28" class="img-svg energising" src="{{ get_asset_url('../../images/Icons/product_icons/Energising.svg') }}">
+                  {% elif dominantRegionTypeEffects == "Balancing" %}
+                  <img width="28" class="img-svg balancing" src="{{ get_asset_url('../../images/Icons/product_icons/Balancing.svg') }}">
+                  {% elif dominantRegionTypeEffects == "Calming" %}
+                  <img width="28" class="img-svg calming" src="{{ get_asset_url('../../images/Icons/product_icons/Calming.svg') }}">
+                  {% endif %}
+                </div>
+                <p class="{{text_color_dark}}">{{dominantRegionTypeEffects}}</p>
               </div>
-              <p class="{{text_color_dark}}">Calming</p>
-            </div>
-            <div class="dominant-region-details">
+            {% endif %}
+            {% if dominantRegionTypeDominantRegion %}
+              <div class="dominant-region-details">
               <div>
-                {% set dominantRegionType = "Body" %}
-                {% if dominantRegionType == "Mind" %}
+                {% if dominantRegionTypeDominantRegion == "Mind" %}
                 <img width="26" class="img-svg mind" src="{{ get_asset_url('../../images/Icons/product_icons/Mind.svg') }}">
-                {% elif dominantRegionType == "Mind & Body" %}
+                {% elif dominantRegionTypeDominantRegion == "Mind & Body" %}
                 <img width="28" class="img-svg mind-body" src="{{ get_asset_url('../../images/Icons/product_icons/Mind-Body.svg') }}">
-                {% elif dominantRegionType == "Body" %}
+                {% elif dominantRegionTypeDominantRegion == "Body" %}
                 <img width="21" class="img-svg body" src="{{ get_asset_url('../../images/Icons/product_icons/Body.svg') }}">
                 {% endif %}      
               </div>
-              <p class="{{text_color_dark}}">Body</p>
+              <p class="{{text_color_dark}}">{{dominantRegionTypeDominantRegion}}</p>
             </div>
-            <div class="time-of-use-details">
+            {% endif %}
+            {% if dominantRegionTypeTimeOfUse %}
+              <div class="time-of-use-details">
               <div>
-                {% set timeOfUse = "Night" %}
-                {% if timeOfUse == "Day" %}
+                {% if dominantRegionTypeTimeOfUse == "Day" %}
                 <img width="26" class="img-svg day" src="{{ get_asset_url('../../images/Icons/product_icons/Day.svg') }}">
-                {% elif timeOfUse == "Day or Night" %}
+                {% elif dominantRegionTypeTimeOfUse == "Day or Night" %}
                 <img width="28" class="img-svg day-night" src="{{ get_asset_url('../../images/Icons/product_icons/Day or Night.svg') }}">
-                {% elif timeOfUse == "Night" %}
-                <img width="21" class="img-svg night" src="{{ get_asset_url('../../images/Icons/product_icons/Night.svg') }}">
+                {% elif dominantRegionTypeTimeOfUse == "Night" %}
+                <img width="25" class="img-svg night" src="{{ get_asset_url('../../images/Icons/product_icons/Night.svg') }}">
                 {% endif %} 
               </div>
-              <p class="{{text_color_dark}}">Day or Night</p>
+              <p class="{{text_color_dark}}">{{dominantRegionTypeTimeOfUse}}</p>
             </div>
+            {% endif %}
           </div>
           <div class="dominant-terpenes">
             <p class="{{text_color_dark}}">Dominant Terpenes</p>
             <div class="dominant-terpenes-tags">
+              {% if product.b_caryophyllene > 0 and product.b_caryophyllene != " "  %}
               <span class="b-Caryophyllene">b-Caryophyllene</span>
+              {% endif %}
+              {% if product.linalool > 0 and product.linalool != " " %}
               <span class="Linalool">Linalool</span>
+              {% endif %}
+              {% if product.b_myrcene > 0 and product.b_myrcene != " " %}
               <span class="b-Myrcene">b-Myrcene</span>
+              {% endif %}
+              {% if product.a_humulene > 0 and product.a_humulene != " " %}
               <span class="a-Humulene">a-Humulene</span>
+              {% endif %}
+              {% if product.eucalyptol_ > 0 and product.eucalyptol_ != " " %}
               <span class="Eucalyptol">Eucalyptol</span>
+              {% endif %}
+              {% if product.limonene_ > 0 and product.limonene_ != " " %}
               <span class="Limonene">Limonene</span>
+              {% endif %}
             </div>
           </div>
           <div class="product-price-and-stock-status">
             <div class="product-price {{text_color_dark}}">
-              <p class="price {{text_color_dark}}">$100 RRP <br><span class="per {{text_color_dark}}">per 10g pouch</span> </p>
+              <p class="price {{text_color_dark}}">${{product.rrp or '0'}} RRP <br><span class="per {{text_color_dark}}">per 10g pouch</span> </p>
             </div>
             <div class="stock">
               <div class="stock-icon">
@@ -155,4 +218,5 @@
           </div>
         </div>
       </div>
-</div>
+{% endfor %}
+  </div>

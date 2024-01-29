@@ -9,7 +9,7 @@
 
 <header class="header mem-header">
 
-        <div class="header-inner flex items-center justify-between padding-content">
+  <div class="header-inner flex items-center justify-between padding-content">
     <div class="logo-with-navigation flex items-center">
       <div class="header-logo text-center">
         <a href="/dashboard"><img src="{{ get_asset_url('../../images/kind-medical-logo.svg') }}" alt="Kind Medical" /></a>
@@ -20,35 +20,35 @@
           <ul class="flex no-list no-padding primary-menu">
             <li class="nav-menu"><a href="#">For You</a></li>
             <li class="nav-menu has-sub-menu">
-                <a href="javascript:void(0);" class="{% if content.absolute_url == baseURL~'/learning-and-resources/learning-modules'%}active{% endif %}">Learning & Resources</a>
-                 <ul class="sub-menu no-list no-padding">
-                     <li>
-                      <a href="{{baseURL}}/learning-and-resources/learning-modules"  class="sub-menu__link flex flex-col justify-center ">
-                        <span class="menu-icon"><img src="{{ get_asset_url('../../images/learning-modules.svg') }}" alt="Learning modules" /></span>
-                       <span class="menu-title">Learning modules</span>
-                       <span class="menu-desc">Lorem ipsum dolor sit amet</span>
-                      </a> 
-                      <a href="{{baseURL}}/articles-and-resources" class="sub-menu__link flex flex-col justify-center">
-                        <span class="menu-icon"><img src="{{ get_asset_url('../../images/resource-articles.svg') }}" alt="Resource Articles" /></span>
-                        <span class="menu-title">Resource Articles</span>
-                        <span class="menu-desc">Lorem ipsum dolor sit amet</span>
-                      </a> 
-                      <a href="{{baseURL}}/learning-and-resources/faqs" class="sub-menu__link flex flex-col justify-center">
-                        <span class="menu-icon"><img src="{{ get_asset_url('../../images/faqs.svg') }}" alt="FAQs" /></span>
-                        <span class="menu-title">FAQs</span>
-                        <span class="menu-desc">Lorem ipsum dolor sit amet</span>
-                       </a>
-                     </li>
-                </ul>
+              <a href="javascript:void(0);" class="{% if content.absolute_url == baseURL~'/learning-and-resources/learning-modules'%}active{% endif %}">Learning & Resources</a>
+              <ul class="sub-menu no-list no-padding">
+                <li>
+                  <a href="{{baseURL}}/learning-and-resources/learning-modules"  class="sub-menu__link flex flex-col justify-center ">
+                    <span class="menu-icon"><img src="{{ get_asset_url('../../images/learning-modules.svg') }}" alt="Learning modules" /></span>
+                    <span class="menu-title">Learning modules</span>
+                    <span class="menu-desc">Lorem ipsum dolor sit amet</span>
+                  </a> 
+                  <a href="{{baseURL}}/articles-and-resources" class="sub-menu__link flex flex-col justify-center">
+                    <span class="menu-icon"><img src="{{ get_asset_url('../../images/resource-articles.svg') }}" alt="Resource Articles" /></span>
+                    <span class="menu-title">Resource Articles</span>
+                    <span class="menu-desc">Lorem ipsum dolor sit amet</span>
+                  </a> 
+                  <a href="{{baseURL}}/learning-and-resources/faqs" class="sub-menu__link flex flex-col justify-center">
+                    <span class="menu-icon"><img src="{{ get_asset_url('../../images/faqs.svg') }}" alt="FAQs" /></span>
+                    <span class="menu-title">FAQs</span>
+                    <span class="menu-desc">Lorem ipsum dolor sit amet</span>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="nav-menu has-sub-menu">
               <a href="javascript:void(0);" class="{% if content.absolute_url == baseURL~'/our-products/all-products'%}active{% endif %}">Our Products</a>
-               <ul class="sub-menu no-list no-padding">
-                 <li>
+              <ul class="sub-menu no-list no-padding">
+                <li>
                   <a href="{{baseURL}}/our-products/all-products"  class="sub-menu__link flex flex-col justify-center ">
                     <span class="menu-icon"><img src="{{ get_asset_url('../../images/all-products.svg') }}" alt="All products" /></span>
-                   <span class="menu-title">All Products</span>
-                   <span class="menu-desc">Explore our product catalogue</span>
+                    <span class="menu-title">All Products</span>
+                    <span class="menu-desc">Explore our product catalogue</span>
                   </a> 
                   <a href="{{baseURL}}/our-products/compare-products" class="sub-menu__link flex flex-col justify-center">
                     <span class="menu-icon"><img src="{{ get_asset_url('../../images/compare-products.svg') }}" alt="Compare products" /></span>
@@ -60,40 +60,48 @@
                     <span class="menu-title">Stock Status</span>
                     <span class="menu-desc">view our catalogues availability</span>
                   </a> 
-                   <a href="{{baseURL}}/our-products/favourites" class="sub-menu__link flex flex-col justify-center">
+                  <a href="{{baseURL}}/our-products/favourites" class="sub-menu__link flex flex-col justify-center">
                     <span class="menu-icon"><img src="{{ get_asset_url('../../images/favourites.svg') }}" alt="Favourites" /></span>
                     <span class="menu-title">Favourites</span>
                     <span class="menu-desc">view products you have started</span>
                   </a> 
-                 </li>
+                </li>
               </ul>
             </li>
             <li class="nav-menu has-sub-menu">
-               <a href="javascript:void(0);" class="{% if content.absolute_url == baseURL~'/member/account-details'%}active{% endif %}">Account</a>
-               <ul class="sub-menu no-list no-padding">
-                 <li>
+              <a href="javascript:void(0);" class="{% if content.absolute_url == baseURL~'/member/account-details'%}active{% endif %}">Account</a>
+              <ul class="sub-menu no-list no-padding">
+                <li>
                   <a href="{{baseURL}}/member/account-details"  class="sub-menu__link flex flex-col justify-center ">
                     <span class="menu-icon"><img src="{{ get_asset_url('../../images/person.svg') }}" alt="Account Details" /></span>
-                   <span class="menu-title">Account Details</span>
-                   <span class="menu-desc">Lorem ipsum dolor sit amet</span>
+                    <span class="menu-title">Account Details</span>
+                    <span class="menu-desc">Lorem ipsum dolor sit amet</span>
                   </a> 
                   <a href="{{baseURL}}/_hcms/mem/logout" class="sub-menu__link flex flex-col justify-center">
                     <span class="menu-icon"><img src="{{ get_asset_url('../../images/logout.svg') }}" alt="Account Details" /></span>
-                   <span class="menu-title">Log out</span>
+                    <span class="menu-title">Log out</span>
                   </a> 
-                 </li>
+                </li>
               </ul>
-              </li>
+            </li>
             <li class="nav-menu"> <a href="{{baseURL}}/contact-us-1" class="">Contact us</a></li>
           </ul>
         </nav>
       </div>
     </div>
-    <div class="main-search pos-relative">
-      <i class="main-icon-search"></i>
-      <input type="search" name="search_member" class="search-member" placeholder="Products, Articles, Modules & More">
+        <div class="main-search pos-relative">
+<!--       <i class="main-icon-search"></i>
+      <input type="search" name="search_member" class="search-member" placeholder="Products, Articles, Modules & More"> -->
+    {% module "module_170624619977615" path="../../modules/main_search_input", label="main_search_input" %}
+          
     </div>
+
+    
+    
   </div> 
   
+  
+  
+
 </header>
 

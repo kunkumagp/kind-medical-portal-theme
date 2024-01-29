@@ -1,0 +1,79 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+
+.search-body{
+  /*   padding-top: 68px; */
+  background-image: url(https://2660972.fs1.hubspotusercontent-na1.net/hubfs/2660972/search-result-bg.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.search-result-heading{
+  text-align: center;
+  font-weight: 700; 
+  color: #63666A;
+  margin: 48px 0px;
+}
+
+.search-result-heading h3{
+  margin-bottom: 38px;
+}
+
+.search-result-page{
+  padding: 20px 0px;
+}
+
+
+.search-result-heading .main-search {
+  max-width: none;
+  width: 100%;
+}
+
+.search-result-area{
+  margin: 56px 0px 0px;
+}
+
+.hs-search__no-results{
+  text-align: center;
+}
+
+@media(max-width:1160px) {
+  .search-body{
+    padding: 0px 20px;
+  }
+}
+
+@media(max-width: 576px) {
+  .search-result-heading{
+    margin: 20px 0;
+  }
+
+  .search-result-heading h3 {
+    margin-bottom: 15px;
+  }
+  .search-result-area {
+    margin: 20px 0px 0px;
+  }
+  .hs-search-results__listing {
+    padding: 15px 0px 0px !important;
+  }
+  
+  .hs-search-results__listing li .hs-search-results__description {
+    margin-bottom: 14px !important ;
+}
+
+  .hs-search-results__listing li {
+    margin-bottom: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+}

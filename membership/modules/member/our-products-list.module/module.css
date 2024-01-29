@@ -48,7 +48,7 @@
 .thc-cbd-cat-tags-section{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
+  gap:5px;
 }
 .thc-tag{
   padding: 4px 8px;
@@ -133,12 +133,13 @@
 .reported-effects-and-time-of-use-and-dr-details{
   margin-top:16px;
   display:flex;
-  justify-content:space-around;
+  justify-content:center;
   padding: 8px 0px;
   border-top: 1px solid #E8D5E5;
   border-bottom: 1px solid #E8D5E5;
   align-items:center;
   text-align:center;
+  gap:22px;
 
 }
 
@@ -243,4 +244,11 @@
 
 .stock-icon{
   height:18px;
+}
+.product-main-details-and-favourite > p{
+  font-size:12px !important;
+  font-family: "FS Me" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 16px !important;
 }

@@ -21485,7 +21485,7 @@ exports.publishATableFromDraft = async (tableId) => {
 
 exports.batchUpdateHubDbTableRows = async (tableId, properties) => {
   const accessToken = process.env.HUBSPOT_API_KEY;
-  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/draft/batch/replace`;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/draft/batch/update`;
 
   const config = {
     method: 'POST',

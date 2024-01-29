@@ -164,6 +164,9 @@ img {
   display: -webkit-flex;
   display: flex;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -1140,7 +1143,9 @@ form .light-secondary-label input {
 /**modal ****/
 .modal {
   position: fixed;
-  display: none;
+  visibility:hidden;  
+  opacity:0;
+  transition: visibility 0.5s, opacity 0.5s;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -1181,7 +1186,8 @@ form .light-secondary-label input {
   width: 1040px;
 }
 .modal.open {
-    display: block;
+  visibility:visible; 
+  opacity:1
 }
 .btn-close {
   display: flex;
@@ -1982,7 +1988,7 @@ form .section .button-wrap {
   background: #805574;
 }
 
-
+.check-box-icon-wrapper.high-thc svg path,
 .high-thc .dropdown-arrow svg path{
   stroke: #805574;
 }
@@ -2007,6 +2013,7 @@ form .section .button-wrap {
   background:#B87E47;
 }
 
+.check-box-icon-wrapper.moderate-thc svg path,
 .moderate-thc .dropdown-arrow svg path{
   stroke: #B87E47;
 }
@@ -2033,6 +2040,7 @@ form .section .button-wrap {
 .bg-dark-balanced {
   background: #758067;
 }
+.check-box-icon-wrapper.balanced svg path,
 .balanced .dropdown-arrow svg path{
   stroke: #758067;
 }
@@ -2061,8 +2069,9 @@ form .section .button-wrap {
   background: #4C6580;
 }
 
+.check-box-icon-wrapper.moderate-cbd svg path,
 .moderate-cbd .dropdown-arrow svg path{
-  stroke: #758067;
+  stroke: #4C6580;
 }
 .moderate-cbd.favourite .pd-tag svg path{
   fill: #7D9CC0;
@@ -2072,7 +2081,7 @@ form .section .button-wrap {
 }
 
 .moderate-cbd .pd-tag svg path{
-  fill: #758067;
+  fill: #4C6580;
 }
 
 /** HIGH CBD **/
@@ -2089,6 +2098,7 @@ form .section .button-wrap {
   background: #5E5A80;
 }
 
+.check-box-icon-wrapper.high-cbd svg path,
 .high-cbd .dropdown-arrow svg path{
   stroke: #5E5A80;
 }

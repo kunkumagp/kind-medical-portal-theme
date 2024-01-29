@@ -1,8 +1,8 @@
-{% set all_formats = hubdb_table_column(module.hubdbtable , 7)  %} 
-{% set times_of_use = hubdb_table_column(module.hubdbtable , 25)  %} 
-{% set potencies = hubdb_table_column(module.hubdbtable , 23)  %} 
-{% set reported_effects = hubdb_table_column(module.hubdbtable , 27)  %}
-{% set tga_categories = hubdb_table_column(module.hubdbtable , 22)  %} 
+{% set all_formats = hubdb_table_column(7946284, 7)  %} 
+{% set times_of_use = hubdb_table_column(7946284, 25)  %} 
+{% set potencies = hubdb_table_column(7946284, 23)  %} 
+{% set reported_effects = hubdb_table_column(7946284, 27)  %}
+{% set tga_categories = hubdb_table_column(7946284, 22)  %}
 
 
 <div class="filter-container">
@@ -25,7 +25,7 @@
           <div class="checkbox-row flex">
             <div class="flex align-center checkbox-label-wrapper">
               <span class="check-box-icon-wrapper">
-                <img class="format-checkbox-icon" src="{{ get_asset_url('../../../images/Icons/product_icons/'~format.name~'.svg') }}">
+                <img class="format-checkbox-icon" src="{{ get_asset_url('../../images/Icons/product_icons/'~format.name~'.svg') }}">
               </span>
               <span><label>{{format.name}}</label></span>
             </div>
@@ -53,7 +53,7 @@
           <div class="checkbox-row flex">
             <div class="flex align-center checkbox-label-wrapper">
               <span class="check-box-icon-wrapper">
-                <img class="img-svg" src="{{ get_asset_url('../../../images/Icons/product_icons/'~time_of_use.name|lower~'.svg') }}">
+                <img class="img-svg" src="{{ get_asset_url('../../images/Icons/product_icons/'~time_of_use.name~'.svg') }}">
               </span>
               <span><label>{{time_of_use.name}}</label></span>
             </div>
@@ -81,7 +81,7 @@
           <div class="checkbox-row flex">
             <div class="flex align-center checkbox-label-wrapper">
               <span class="check-box-icon-wrapper">
-                <img src="{{ get_asset_url('../../../images/Icons/product_icons/'~potency.name|lower~'.svg') }}">
+                <img src="{{ get_asset_url('../../images/Icons/product_icons/'~potency.name~'.svg') }}">
               </span>
               <span><label>{{potency.name}}</label></span>
             </div>
@@ -109,7 +109,7 @@
           <div class="checkbox-row flex">
             <div class="flex align-center checkbox-label-wrapper">
               <span class="check-box-icon-wrapper">
-                <img src="{{ get_asset_url('../../../images/Icons/product_icons/'~reported_effect.name~'.svg') }}">
+                <img src="{{ get_asset_url('../../images/Icons/product_icons/'~reported_effect.name~'.svg') }}">
               </span>
               <span><label>{{reported_effect.name}}</label></span>
             </div>

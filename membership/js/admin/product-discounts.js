@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
   const limit = 3;
   let totalPages;
   $('.loading').show();
-  console.log("11");
+  console.log("01");
 
   async function getHubDbTableRows() {
     $('.loading').show();
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
       }
 
       const data = await response.json();
-      console.log(data.Response.data.results);
+      console.log(response);
       updatePagination(data.Response.data.total);
       apendData(data.Response.data.results);
 
@@ -124,7 +124,16 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  function startLoadingIcon() {
+    $('#save-product-discounts').find(".submit-spin").addClass("show");
+  }
+
+  function removeLoadingIcon() {
+    $('#save-product-discounts').find(".submit-spin").removeClass("show");
+  }
+
   $('#save-product-discounts').click(function(e) {
+    startLoadingIcon();
     e.preventDefault();
 
     var productsData = [];
@@ -133,21 +142,26 @@ jQuery(document).ready(function ($) {
       var inputs = {
         id: $(this).data('row-id'),
         values: {
-          //product_name: $(this).find('.prod-name').text().trim(),
           rrp: $(this).find('input[name="product_size_price"]').val(),
-          //discount_price_per_10g: $(this).find('input[name="discount_price"]').val(),
+          discount_price_per_10g: Number($(this).find('input[name="discount_price"]').val()),
         }
       };
-      productsData.push(inputs);
+
+      if (!$.isNumeric(inputs.values.rrp) || !$.isNumeric(inputs.values.discount_price_per_10g)) {
+        const msg = { "msg_type": "error-msg", "message": "Please enter only numbers!" };
+        showMessage(msg);
+        removeLoadingIcon();
+        return false;
+      } else {
+        productsData.push(inputs);
+
+        var properties = {
+          inputs: productsData,
+        }
+
+        updateHubDbTableRows(properties);
+      }
     });
-
-    var properties = {
-      inputs: productsData,
-    }
-
-    updateHubDbTableRows(properties);
-
-    console.log(properties);
   });
 
   function publishATableFromDraft() {
@@ -201,8 +215,14 @@ jQuery(document).ready(function ($) {
         });
       }, 3000);
     } else if (msg.msg_type == "error-msg") {
-      $("html, body").animate({ scrollTop: 0 }, 600);
+      $(".submission-message").html("");
       $(".submission-message").html("<span class='error-msg'>" + msg.message + "</span>");
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      setTimeout(() => {
+        $(".submission-message .error-msg").fadeOut('slow', function () {
+          $(this).remove();
+        });
+      }, 3000);
     }
   }
 
@@ -225,20 +245,21 @@ jQuery(document).ready(function ($) {
       return response.json();
     })
       .then(data => {
-      console.log(data.Response);
+      removeLoadingIcon();
       if (data.Response.statusCode === 200) {
+        const msg = { "msg_type": "success-msg", "message": "Product discounts have been updated!" };
+        showNotificationMessage(msg);
         publishATableFromDraft();
       } else {
+        const msg = { "msg_type": "error-msg", "message": "Product discounts have been update Failed!" };
+        showMessage(msg);
       }
       return data.Response.statusCode;
     })
       .catch(error => {
+      removeLoadingIcon();
       throw error;
     });
   }
-
-
-
   getHubDbTableRows();
-
 });

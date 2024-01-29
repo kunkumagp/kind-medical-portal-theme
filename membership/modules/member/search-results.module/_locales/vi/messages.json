@@ -1,7 +1,7 @@
 {
   "name" : {
-    "message" : "Kết quả tìm kiếm",
-    "description" : "",
+    "message" : "search-results",
+    "description" : null,
     "placeholders" : null
   }
 }

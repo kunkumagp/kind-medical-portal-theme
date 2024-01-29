@@ -1,3 +1,61 @@
+{% set all_formats = hubdb_table_column(module.hubdbtable , 7)  %} 
+{% set times_of_use = hubdb_table_column(module.hubdbtable , 25)  %} 
+{% set potencies = hubdb_table_column(module.hubdbtable , 23)  %} 
+{% set reported_effects = hubdb_table_column(module.hubdbtable , 27)  %}
+{% set tga_categories = hubdb_table_column(module.hubdbtable , 22)  %} 
+
+{#  Flower: sativa.svg, Vape: vape.svg, Oil: oil.svg #}
+{% macro formatIcon(name) %}
+{% set image = get_asset_url('../../../images/product_icons/sativa.svg') %}
+{% if name == 'Flower' %}
+{% set image = get_asset_url('../../../images/product_icons/sativa.svg') %}
+{% elif name == 'Vape' %}
+{% set image = get_asset_url('../../../images/product_icons/vape.svg') %}
+{% elif name == 'Oil' %}
+{% set image= get_asset_url('../../../images/product_icons/oil.svg') %}
+{% endif %}
+{{image}}
+{% endmacro %}
+
+
+{#  Day: day.svg, Night: night.svg, Day or night : anytime.svg #}
+{% macro timeOfUse(name) %}
+{% set image = get_asset_url('../../../images/product_icons/day.svg') %}
+{% if name == 'Day' %}
+{% set image = get_asset_url('../../../images/product_icons/day.svg') %}
+{% elif name == 'Night' %}
+{% set image = get_asset_url('../../../images/product_icons/night.svg') %}
+{% elif name == 'Day or Night' %}
+{% set image= get_asset_url('../../../images/product_icons/anytime.svg') %}
+{% endif %}
+{{image}}
+{% endmacro %}
+
+{#  For all potency same image #}
+{% macro potency(name) %}
+{% set image = get_asset_url('../../../images/product_icons/potency.svg') %}
+{{image}}
+{% endmacro %}
+
+{% macro potencyClass(name) %}
+{% set classname = 'high-thc' %}
+
+{% if name == 'High THC' %}
+{% set classname = 'high-thc' %}
+{% elif name == 'Moderate THC' %}
+{% set classname = 'moderate-thc' %}
+{% elif name == 'Balanced' %}
+{% set classname = 'balanced' %}
+{% elif name == 'Moderate CBD' %}
+{% set classname = 'moderate-cbd' %}
+{% elif name == 'High CBD' %}
+{% set classname = 'high-cbd' %}
+{% endif %}
+{{classname}}
+{% endmacro %}
+
+
+
 <div class="compare-products">
   <div class="padding-content">
     <div class="content-wrapper">
@@ -8,11 +66,11 @@
       
        <div class="compare-product-lists">
         <div class="inner flex">
-          {# First column #}
+          {#**************************************************** First column ****************************************************#}
           <div class="col four-col high-thc">
             <div class="row product-wrap">
               <div class="product-with-tag flex items-center">
-                  <div class="product-name flex items-center">
+                  <div class="product-name flex items-center open-form" data-formId="#productmodal-1">
                     <span class="name text-light-high-thc">Kind Sativa Smalls<sup>TM</sup>20:1</span>
                     <div class="dropdown-arrow">
                       <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,22 +157,24 @@
               </div>
                 {# Hig stock :high-stock, Low stock:low-stock, Moderate stock: moderate-stock, Coming soon: no-stock#}
                   <div class="stock-level flex items-center">
-                     <div class="stock-level-icon high-stock">
-                       <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/high-stock.svg') }}">
-                     </div>
-                     <div class="stock-info text-dark-high-thc">
-                       <div class="type font-bold">High Stock</div>
-                       <div class="stock-helper">Discontinued mid Apr</div>
-                    </div>
+                     <div class="stock-level-icon high-stock flex items-center w-full">
+                       <div class="svg-max-width">
+                        <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/high-stock.svg') }}">
+                       </div>
+                       <div class="stock-info text-dark-high-thc">
+                           <div class="type font-bold">High Stock</div>
+                           <div class="stock-helper">Discontinued mid Apr</div>
+                        </div>
+                     </div> 
                   </div>
             </div>  
           </div>
           
-           {# Second column #}
+           {#**************************************************** Second column ****************************************************#}
            <div class="col four-col moderate-thc">
               <div class="row product-wrap">
                 <div class="product-with-tag flex items-center">
-                  <div class="product-name flex items-center">
+                  <div class="product-name flex items-center open-form" data-formId="#productmodal-2">
                   <span class="name text-light-moderate-thc"> Kind Azure<sup>TM</sup>17:1</span>
                    <div class="dropdown-arrow">
                       <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,25 +254,27 @@
                         <span class="value font-bold">$10 <span class="helper-text">per gram</span></span>
                       </div>
                   </div>
-                  <div class="stock-level flex items-center">
-                    <div class="stock-level-icon coming-soon">
+                  <div class="stock-level flex items-center flex items-center">
+                    <div class="stock-level-icon coming-soon flex items-center w-full">
                       <div class="svg-max-width">
                         <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/coming-soon.svg') }}">
                       </div>
+                        <div class="stock-info text-dark-moderate-thc">
+                        <div class="type font-bold">Coming Soon</div>
+                        <div class="stock-helper">Restock mid Apr</div>
+                      </div>
+                    
                     </div>
-                    <div class="stock-info text-dark-moderate-thc">
-                      <div class="type font-bold">Coming Soon</div>
-                      <div class="stock-helper">Restock mid Apr</div>
-                    </div>
+                    
                   </div>
               </div>
           </div>
           
-           {# Third column #}
+           {#**************************************************** Third column ****************************************************#}
            <div class="col four-col balanced">
               <div class="row product-wrap">
                <div class="product-with-tag flex items-center">
-                <div class="product-name flex items-center">
+                <div class="product-name flex items-center open-form" data-target="modal-4">
                   <span class="name text-light-balanced"> Kind Balanced Cartridge<sup>TM</sup>40:40</span>
                  <div class="dropdown-arrow">
                       <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,23 +357,26 @@
                   </div>
                     {# class= coming-soon, high-stock, moderate-stock, low-stock #}
                       <div class="stock-level flex items-center">
-                         <div class="stock-level-icon coming-soon">
+                         <div class="stock-level-icon coming-soon flex items-center w-full">
+                           <div class="svg-max-width">
                             <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/coming-soon.svg') }}">
+                           </div>
+                            <div class="stock-info text-dark-balanced">
+                             <div class="type font-bold">Coming Soon</div>
+                             <div class="stock-helper">Restock mid Apr</div>
+                            </div>
                          </div>
-                         <div class="stock-info text-dark-balanced">
-                           <div class="type font-bold">Coming Soon</div>
-                           <div class="stock-helper">Restock mid Apr</div>
-                        </div>
+                        
                       </div>
               </div>
           </div>
           
-           {# fourth column #}
+           {#*********************************************fourth column ****************************************************#}
            <div class="col four-col high-cbd">
               <div class="row product-wrap">
               <div class="product-with-tag flex items-center">
                 <div class="product-name flex items-center">
-                <span class="name text-light-high-cbd">  Kind Sol™ 16:1<sup>TM</sup>40:40</span>
+                <span class="name text-light-high-cbd">  Kind Sol™ 16:1<sup>TM</sup></span>
                  <div class="dropdown-arrow">
                       <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11 1.5L6 6.5L1 1.5" stroke="#A76389" stroke-width="2"/>
@@ -390,21 +455,24 @@
                       </div>
                   </div>
                   {# class= coming-soon, high-stock, moderate-stock, low-stock #}
-                <div class="stock-level flex items-center">
-                  <div class="stock-level-icon coming-soon">
-                    <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/coming-soon.svg') }}">
+                <div class="stock-level flex items-center flex items-center">
+                  <div class="stock-level-icon coming-soon flex items-center w-full">
+                    <div class="svg-max-width">
+                      <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/coming-soon.svg') }}">
+                    </div>
+                     <div class="stock-info text-dark-high-cbd">
+                        <div class="type font-bold">Coming Soon</div>
+                        <div class="stock-helper">Restock mid Apr</div>
+                     </div>
                   </div>
-                  <div class="stock-info text-dark-high-cbd">
-                    <div class="type font-bold">Coming Soon</div>
-                    <div class="stock-helper">Restock mid Apr</div>
-                  </div>
+                 
                 </div>
              </div>
           </div>
         </div>
         
         {# Reported Effects & Use #}
-        <div class="reported-effects">
+        <div class="reported-effects-use">
            <div class="heading">
              {{ module.heading_2 }}
           </div>
@@ -418,10 +486,9 @@
                     </div>
                     <span class="value font-bold">Calming</span>
                </div>
-                {# use body-css for body else use mind-body-css #}
+               / use body-css for body else use mind-body-css #}
                 <div class="row mind mind-body-css flex items-center">
                   <div class="svg-max-width">
-                    {# <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/body.svg') }}"> #}
                      <img class="img-svg" src="{{ get_asset_url('../../../../membership/images/product_icon/mind.svg') }}">
                   </div>
                   <span class="value font-bold">Body</span>
@@ -653,38 +720,170 @@
     </div>
   </div>
 </div>
-  
-
-
-{% for row in hubdb_table_rows(module.hubdbtable) %}
-<p>
-  {{loop.index}}
-</p>
-{% endfor %}
 
 
 {# modal pop up #}
-  <div id="modal-1" class="modal distinct product-modal">
-      <div class="modal-content large">
-        <div class="btn-close close-modal" >&#x2715;</div>
-        <div class="modal-body">
-          <h3 class="font-bold mb-10">
-            Select a product
-          </h3>
-          <div class="filter-text light-tertiary font-bold">
-            Select one or more filters
+<div id="productmodal-1" class="modal distinct product-modal">
+  <div class="modal-content large">
+    <div class="btn-close close-modal" >&#x2715;</div>
+    <div class="modal-body">
+      <h3 class="font-bold mb-10"> Select a product</h3>
+      <div class="filter-text light-tertiary font-bold">
+        Select one or more filters:
+      </div>
+    
+      <div class="filter-box-container flex">
+
+        <!--     Format -->
+        {#  Flower: sativa.svg, Night: night.svg, Oil. Oil.svg #}
+        <div id="format" class="filter-box position-relative">
+          <p class="title">Format:</p>
+          <div class="filter-block format flex">
+            <span id="format-checked-checkbox-count-port">All formats</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M16.6773 8.80566L12.1002 13.3727L7.5232 8.80566L6.11719 10.2117L12.1002 16.1947L18.0833 10.2117L16.6773 8.80566Z" fill="#666E5A"/>
+            </svg>
           </div>
+          <div id="format-dropbox-container" class="drop-checkbox-container format-drop position-absolute d-none">
+            {% for format in all_formats.options  %}
+            <div class="checkbox-row flex">
+              <div class="flex align-center checkbox-label-wrapper">
+                <span class="check-box-icon-wrapper">
+                  <img class="format-checkbox-icon" src="{{formatIcon(format.name)}}">
+                </span>
+                <span><label>{{format.name}}</label></span>
+              </div>
+              <div class="round-checkbox">
+                <input type="checkbox" id="{{format.name}}" value="{{format.name}}">
+                <label for="{{format.name}}"></label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="format-dropbox-container-tag" class="up-arrow format-drop position-absolute d-none"></div>
         </div>
-      </div>
-  </div>
 
-{# <div id="modal-2" class="modal distinct product-modal">
-      <div class="modal-content large">
-        <div class="btn-close" onclick='close-modal'>&#x2715;</div>
-      </div>
-  </div>
+        <!--     Time-of-use -->
+        <div id="time-of-use" class="filter-box position-relative">
+          <p class="title">Time of use:</p>
+          <div class="filter-block time-of-use flex">
+            <span id="time-of-use-checked-checkbox-count-port" >All times</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M16.6773 8.80566L12.1002 13.3727L7.5232 8.80566L6.11719 10.2117L12.1002 16.1947L18.0833 10.2117L16.6773 8.80566Z" fill="#666E5A"/>
+            </svg>
+          </div>
+          <div id="time-of-use-dropbox-container" class="drop-checkbox-container time-of-use-drop position-absolute d-none">
+            {% for time_of_use in times_of_use.options  %}
+            <div class="checkbox-row flex">
+              <div class="flex align-center checkbox-label-wrapper">
+                <span class="check-box-icon-wrapper">
+                  <img class="img-svg" src="{{timeOfUse(time_of_use.name)}}">
+                </span>
+                <span><label>{{time_of_use.name}}</label></span>
+              </div>
+              <div class="round-checkbox">
+                <input type="checkbox" id="{{time_of_use.name}}" value="{{time_of_use.name}}">
+                <label for="{{time_of_use.name}}"></label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="time-of-use-dropbox-container-tag" class="up-arrow time-of-use-drop position-absolute d-none"></div>
+        </div>
 
- <div id="modal-3" class="modal distinct product-modal">
+        <!--     Potency -->
+        <div id="potency" class="filter-box position-relative">
+          <p class="title">Potency:</p>
+          <div class="filter-block potency flex">
+            <span id="potency-checked-checkbox-count-port">All potencies</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M16.6773 8.80566L12.1002 13.3727L7.5232 8.80566L6.11719 10.2117L12.1002 16.1947L18.0833 10.2117L16.6773 8.80566Z" fill="#666E5A"/>
+            </svg>
+          </div>
+          <div id="potency-dropbox-container" class="drop-checkbox-container potency-drop position-absolute d-none">
+            {% for potency in potencies.options  %}
+            <div class="checkbox-row flex">
+              <div class="flex align-center checkbox-label-wrapper">
+                 <span class="check-box-icon-wrapper {{potencyClass(potency.name)}}">
+                  <img class="img-svg" src="{{potency(potency.name)}}" loading="lazy">
+                </span>
+                <span><label>{{potency.name}}</label></span>
+              </div>
+              <div class="round-checkbox">
+                <input type="checkbox" id="{{potency.name}}" value="{{potency.name}}">
+                <label for="{{potency.name}}"></label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="potency-dropbox-container-tag" class="up-arrow potency-drop position-absolute d-none"></div>
+        </div>
+
+        <!--     Reported effects -->
+        <div id="Reported-effects" class="filter-box position-relative">
+          <p class="title">Reported effects:</p>
+          <div class="filter-block reported-effects flex">
+            <span id="Reported-effects-checked-checkbox-count-port">All effects</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M16.6773 8.80566L12.1002 13.3727L7.5232 8.80566L6.11719 10.2117L12.1002 16.1947L18.0833 10.2117L16.6773 8.80566Z" fill="#666E5A"/>
+            </svg>
+          </div>
+          <div id="Reported-effects-dropbox-container" class="drop-checkbox-container Reported-effects-drop position-absolute d-none">
+            {% for reported_effect in reported_effects.options  %}
+            <div class="checkbox-row flex">
+              <div class="flex align-center checkbox-label-wrapper">
+                <span class="check-box-icon-wrapper">
+                 {# <img src="{{ get_asset_url('../../../images/Icons/product_icons/'~reported_effect.name~'.svg') }}"> #}
+                </span>
+                <span><label>{{reported_effect.name}}</label></span>
+              </div>
+              <div class="round-checkbox">
+                <input type="checkbox" id="{{reported_effect.name}}" value="{{reported_effect.name}}">
+                <label for="{{reported_effect.name}}"></label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="Reported-effects-dropbox-container-tag" class="up-arrow Reported-effects-drop position-absolute d-none"></div>
+        </div>
+
+        <!--     TGA Category -->
+        <div id="TGA-Category" class="filter-box position-relative">
+          <p class="title">TGA Category:</p>
+          <div class="filter-block tga flex">
+            <span id="TGA-Category-checked-checkbox-count-port">All categories</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M16.6773 8.80566L12.1002 13.3727L7.5232 8.80566L6.11719 10.2117L12.1002 16.1947L18.0833 10.2117L16.6773 8.80566Z" fill="#666E5A"/>
+            </svg>
+          </div>
+          <div id="TGA-Category-dropbox-container" class="drop-checkbox-container TGA-Category-drop position-absolute d-none">
+            {% for tga_category in tga_categories.options  %}
+            <div class="checkbox-row flex">
+              <div class="flex align-center checkbox-label-wrapper">
+                <span><label>{{tga_category.name}}</label></span>
+              </div>
+              <div class="round-checkbox">
+                <input type="checkbox" id="{{tga_category.name}}" value="{{tga_category.name}}">
+                <label for="{{tga_category.name}}"></label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="TGA-Category-dropbox-container-tag" class="up-arrow TGA-Category-drop position-absolute d-none"></div>
+        </div> 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="productmodal-2" class="modal distinct product-modal">
+  <div class="modal-content large">
+    <div class="btn-close close-modal">&#x2715;</div>
+  </div>
+</div>
+
+{#  <div id="modal-3" class="modal distinct product-modal">
       <div class="modal-content large">
         <div class="btn-close" onclick='close-modal'>&#x2715;</div>
       </div>

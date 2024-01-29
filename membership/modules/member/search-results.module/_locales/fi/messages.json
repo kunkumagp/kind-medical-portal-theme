@@ -1,7 +1,7 @@
 {
   "name" : {
-    "message" : "Hakutulokset",
-    "description" : "",
+    "message" : "search-results",
+    "description" : null,
     "placeholders" : null
   }
 }

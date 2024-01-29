@@ -52,11 +52,15 @@ var hsResultsPage = function(_resultsClass) {
           return true;
         }
       }
+      
+      var trimmedDescription = description.substring(0, 300);
+      
       newResult.querySelector('.hs-search-results__title').innerHTML = title;
       newResult.querySelector('.hs-search-results__title').href = url;
+      newResult.querySelector('.hs-search-results__button').href = url;
       newResult.querySelector(
         '.hs-search-results__description'
-      ).innerHTML = description;
+      ).innerHTML = trimmedDescription;
       if (typeof featuredImage !== 'undefined' && isFeaturedImageEnabled()) {
         newResult.querySelector(
           '.hs-search-results__featured-image > img'

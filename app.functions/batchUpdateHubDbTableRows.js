@@ -21485,7 +21485,7 @@ exports.publishATableFromDraft = async (tableId) => {
 
 exports.batchUpdateHubDbTableRows = async (tableId, properties) => {
   const accessToken = process.env.HUBSPOT_API_KEY;
-  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/draft/batch/replace`;
+  const endpoint = `https://api.hubapi.com/cms/v3/hubdb/tables/${tableId}/rows/draft/batch/update`;
 
   const config = {
     method: 'POST',
@@ -21541,12 +21541,11 @@ const { constant } = __webpack_require__(47);
 const hubspotService = __webpack_require__(49);
 
 exports.main = async (context, sendResponse) => {
-  // console.log(context);
+  console.log(context);
   try {
     const tableId = context.body.tableId;
     const properties = context.body.data;
     const result = await hubspotService.batchUpdateHubDbTableRows(tableId, properties);
-    console.log(result);
     sendResponse({ body: { Response: result } });
   } catch (error) {
     sendResponse({ body: { Response: error } });

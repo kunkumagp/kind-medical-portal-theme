@@ -1,7 +1,7 @@
 {
   "name" : {
-    "message" : "Keresési eredmények",
-    "description" : "",
+    "message" : "search-results",
+    "description" : null,
     "placeholders" : null
   }
 }

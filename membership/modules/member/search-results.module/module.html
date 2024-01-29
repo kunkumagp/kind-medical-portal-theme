@@ -6,8 +6,11 @@
           <img src="">
         </div>
       {% endif %}
-      <a href="#" class="hs-search-results__title">Content Title</a>
+      <div class="seatch-result-title">
+        <a href="#" class="hs-search-results__title">Content Title</a>
+      </div>
       <p class="hs-search-results__description">Description</p>
+      <span class="read_more_btn"><a href="#" class="hs-search-results__button">Read More <img width="15" src="{{ get_asset_url('../../../images/Icons/right-arrow.png') }}"></a></span>
     </li>
   </template>
   <ul id="hsresults" class="hs-search-results__listing"></ul>
